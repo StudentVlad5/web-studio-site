@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/web-studio-site/static/css/main.095281ad.css",
+    "main.js": "/web-studio-site/static/js/main.944d1cee.js",
+    "static/media/IMG_4810.MOV": "/web-studio-site/static/media/IMG_4810.f108a44414e87d0c43c1.MOV",
+    "static/media/ph.png": "/web-studio-site/static/media/ph.a94c50f2aefac565c0d8.png",
+    "static/media/heorhii_blackAndWhite.webp": "/web-studio-site/static/media/heorhii_blackAndWhite.00fd070ca62edfc84da0.webp",
+    "static/media/filmoteka_project.webp": "/web-studio-site/static/media/filmoteka_project.2bec8113289975675b3b.webp",
+    "static/media/julia_blackAndWhite.webp": "/web-studio-site/static/media/julia_blackAndWhite.f551a84a1563edaeb2e0.webp",
+    "static/media/julia.webp": "/web-studio-site/static/media/julia.777e0259a2841496e308.webp",
+    "static/media/heorhii.webp": "/web-studio-site/static/media/heorhii.64eebcfbd38b2901e0e9.webp",
+    "static/media/animal_welfare_project.webp": "/web-studio-site/static/media/animal_welfare_project.180cb798d0af78c06a5a.webp",
+    "static/media/barber_project.webp": "/web-studio-site/static/media/barber_project.73b8ab5cddc4fa96fbd8.webp",
+    "static/media/ice_cream_project.webp": "/web-studio-site/static/media/ice_cream_project.f4cc36397ad12a3bb988.webp",
+    "static/media/vlad_warm_color.webp": "/web-studio-site/static/media/vlad_warm_color.268aa7ed8c294fbc1a5c.webp",
+    "static/media/vlad_blackAndWhite.webp": "/web-studio-site/static/media/vlad_blackAndWhite.dbb2c583713241cb38bc.webp",
+    "static/media/logo2.svg": "/web-studio-site/static/media/logo2.1491924fb6d5ef47be444ed89ae821d9.svg",
+    "static/media/sprite.svg": "/web-studio-site/static/media/sprite.0367c5dc17fd329c94021438004f9b66.svg",
+    "static/media/mdi_light_flask.svg": "/web-studio-site/static/media/mdi_light_flask.7609e70b400637f20ff905513016d470.svg",
+    "index.html": "/web-studio-site/index.html",
+    "static/media/mdi_light_gift.svg": "/web-studio-site/static/media/mdi_light_gift.e03b0021908503d87058b82b6b6b0ccf.svg",
+    "static/media/mdi_light_chart-pie.svg": "/web-studio-site/static/media/mdi_light_chart-pie.8ab8da0cea2054c17744fd4120678ed3.svg",
+    "static/media/mdi_light_chart-bar.svg": "/web-studio-site/static/media/mdi_light_chart-bar.4b99fcbf4f0881024811e2bd5961c271.svg",
+    "main.095281ad.css.map": "/web-studio-site/static/css/main.095281ad.css.map",
+    "main.944d1cee.js.map": "/web-studio-site/static/js/main.944d1cee.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.095281ad.css",
+    "static/js/main.944d1cee.js"
+  ]
+}
