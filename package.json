@@ -1,70 +1,44 @@
 {
   "name": "web-studio-site",
   "version": "0.1.0",
-  "private": true,
+  "description": "Этот проект был создан при помощи Parcel. Для знакомства и настройки дополнительных возможностей [обратись к документации](https://parceljs.org/).",
   "homepage": "https://studentvlad5.github.io/web-studio-site/",
-  "dependencies": {
-    "@testing-library/jest-dom": "^5.16.3",
-    "@testing-library/react": "^12.1.4",
-    "@testing-library/user-event": "^13.5.0",
-    "aos": "^2.3.4",
-    "i18next": "^23.2.11",
-    "i18next-browser-languagedetector": "^7.1.0",
-    "install": "^0.13.0",
-    "modern-normalize": "^2.0.0",
-    "npm": "^9.7.2",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
-    "react-helmet-async": "^1.3.0",
-    "react-i18next": "^13.0.2",
-    "react-icons": "^4.10.1",
-    "react-image-gallery": "^1.2.12",
-    "react-player": "^2.12.0",
-    "react-redux": "^8.1.1",
-    "react-router-dom": "^6.14.1",
-    "react-scripts": "5.0.1",
-    "redux": "^4.2.1",
-    "redux-persist": "^6.0.0",
-    "styled-components": "^6.0.2",
-    "swiper": "^10.0.3",
-    "web-vitals": "^2.1.3"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint:js": "eslint src/**/*.{js,jsx}"
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /web-studio-site/"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "description": "We are creators of exceptional brands. This is the embodiment of our business. Under one virtual roof, we do incredible things to achieve this goal: we build better brands.",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/StudentVlad5/web-studio-site.git"
   },
-  "author": "Vlad Popov",
+  "keywords": [],
+  "author": "Vlad Popov <vlad_np@ukr.net>",
   "license": "UNLICENSED",
   "bugs": {
-    "url": "https://github.com/StudentVlad5/web-studio-site/issues"
+    "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
-  "devDependencies": {}
+  "dependencies": {
+    "@firebase/app": "^0.8.4",
+    "animejs": "^3.2.1",
+    "axios": "^1.2.0",
+    "darkmode-js": "^1.5.7",
+    "debounce": "^1.2.1",
+    "firebase": "^9.14.0",
+    "firebaseui": "^6.0.2",
+    "jquery": "^3.6.1",
+    "letterizejs": "^2.0.1",
+    "modern-normalize": "^1.1.0",
+    "scroll-smooth": "^1.1.1",
+    "tui-pagination": "^3.4.1"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.0",
+    "buffer": "^6.0.3",
+    "parcel": "^2.6.0",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "posthtml-include": "^1.7.4",
+    "process": "^0.11.10"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "main": "index.js"
 }

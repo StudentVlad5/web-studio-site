@@ -1,0 +1,28 @@
+:root {
+  --main-white: #ffffff;
+  --main-black: #000000;
+  --bad-request-color: #ff001b; // вывод информации в случае плохого запроса (поиск по названию)/ отображение активной страници;
+  --subtitle-color: #ff6b08; // название жанров + год ;
+  --backdrop-bg-color: rgba(0, 0, 0, 0.25);
+  --modal-bg-color: #ffffff;
+  --active-btn-color: #ff6b01;
+  --btn-color: rgba(0, 0, 0, 0.56);
+  --modal-subTitle-color: #8c8c8c;
+  --library-page-header-bcg-color: rgba(
+    0,
+    0,
+    0,
+    0.56
+  ); // используем сверху на background img
+  --darkmode-main: #111417;
+  --darkmode-secondary: #490b10;
+  --darkmode-modal: #000000eb;
+  --darkmode-library: #080000;
+
+  --footer-background:#f7f7f7;
+  --footer-text: #545454;
+  --footer-api-text: #00000075;
+  --dev-modal-link: #ff6b08d4;
+  --dev-modal-link-hover: rgba(255, 107, 1, 1);
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}

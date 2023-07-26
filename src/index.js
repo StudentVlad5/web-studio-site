@@ -1,21 +1,24 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
-import { App } from "components/App";
-import { GlobalStyle } from "components/baseStyles/GlobalStyle";
-import { ThemeStatus } from "components/ThemeStatus/ThemeProvider";
-import { I18nextProvider } from "react-i18next";
-import i18n from "./i18n";
+import { darkmode } from './js/functions/darkmode';
+import './js/functions/pagination';
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <BrowserRouter basename="web-studio-site">
-      <I18nextProvider i18n={i18n}>
-        <ThemeStatus>
-          <GlobalStyle />
-          <App />
-        </ThemeStatus>
-      </I18nextProvider>
-    </BrowserRouter>
-  </React.StrictMode>
-);
+import { moviesListMarkupFirstRender } from './js/functions/render-home-page';
+import { setGenreOptions } from './js/functions/local-storage';
+import { openMovieInfo } from './js/functions/open-movie-info';
+import { listRef, backdropRef } from './js/refs/refs';
+import './js/functions/search-film';
+import './js/functions/login';
+import './js/functions/pagination';
+import './js/functions/developers-modal';
+import { btnUp } from './js/components/to-top-button';
+import { darkmode } from './js/functions/darkmode';
+
+document.addEventListener('DOMContentLoaded', () => {
+  setGenreOptions();
+  moviesListMarkupFirstRender();
+  listRef.addEventListener('click', evt => {
+    backdropRef.style.display = 'block';
+    openMovieInfo(evt);
+  });
+  btnUp.addEventListener();
+  darkmode();
+});

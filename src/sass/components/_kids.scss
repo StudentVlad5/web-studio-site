@@ -1,0 +1,341 @@
+.kids-header {
+  display: block;
+  margin: 0 auto;
+  min-height: 233px;
+  width: 100%;
+  padding-top: 40px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+      to right,
+      var(--btn-color),
+      var(--btn-color)
+    ),
+    url('../images/kids/kids-320-1@.jpg');
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(
+        to right,
+        var(--btn-color),
+        var(--btn-color)
+      ),
+      url('../images/kids/kids-320-2@.jpg');
+  }
+
+  @media screen and (min-width: 768px) {
+    min-height: 215px;
+    background-image: linear-gradient(
+        to right,
+        var(--btn-color),
+        var(--btn-color)
+      ),
+      url('../images/kids/kids-768-1@.jpg');
+    @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          var(--btn-color),
+          var(--btn-color)
+        ),
+        url('../images/kids/kids-768-2@.jpg');
+    }
+  }
+
+  @media screen and (min-width: 1280px) {
+    min-height: 220px;
+    background-image: linear-gradient(
+        to right,
+        var(--btn-color),
+        var(--btn-color)
+      ),
+      url('../images/kids/kids-1200-1@.jpg');
+    @media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(
+          to right,
+          var(--btn-color),
+          var(--btn-color)
+        ),
+        url('../images/kids/kids-1200-2@.jpg');
+    }
+  }
+  @media screen and (min-width: 1900px) {
+    min-height: 340px;
+  }
+}
+
+.navigation-wrapper {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+
+  @media screen and (max-width: 767px) {
+    margin-bottom: 56px;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: baseline;
+}
+
+.logo-img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 30px;
+  line-height: 1.17;
+  font-weight: 500;
+  color: var(--main-white);
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+.logo-text__accent {
+  color: pink;
+}
+
+.navigation {
+  display: block;
+}
+
+.navigation__list {
+  display: flex;
+}
+
+.navigation__item {
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  transform: scale(1);
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+.navigation__item:hover,
+.navigation__item:focus {
+  transform: scale(1.2);
+}
+.navigation__link {
+  text-transform: uppercase;
+  color: var(--main-white);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.17;
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navigation__link:hover,
+.navigation__link:focus {
+  color: var(--bad-request-color);
+}
+.navigation__link.current:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  height: 3px;
+  width: 100%;
+  background-color: var(--bad-request-color);
+}
+
+.kids-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.kids-page.hidden {
+  display: none;
+}
+.kids-page > .movie-list {
+  padding-top: 25px;
+}
+// ============= Kids animation & filter movie ===========
+
+.kids-animation {
+  padding-top: 15px;
+}
+
+.kids-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 15px;
+  gap: 10px;
+  @media screen and (max-width: 279.9px) {
+    flex-direction: column;
+  }
+}
+
+// ============= block button's ===========================
+.button-zero,
+.button-six,
+.button-twelve,
+.btn-games,
+.game-list__btn,
+.exit-game {
+  text-decoration: none;
+  color: #6b5770;
+  background-image: linear-gradient(90deg, #fd7f34, #bd155b);
+  display: inline-block;
+  padding: 14px 30px;
+  border: 1px solid;
+  position: relative;
+  z-index: 0;
+  border-radius: 5px;
+  box-sizing: border-box;
+  outline: none;
+  cursor: pointer;
+  user-select: none;
+  appearance: none;
+  touch-action: manipulation;
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-zero:before,
+.button-six:before,
+.button-twelve:before,
+.btn-games:before,
+.game-list__btn:before,
+.exit-game:before {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  background: linear-gradient(90deg, #fd7f34, #bd155b);
+  z-index: -2;
+  transition: 0.4s;
+  border-radius: 5px;
+}
+.button-zero:after,
+.button-six:after,
+.button-twelve:after,
+.btn-games:after,
+.game-list__btn:after,
+.exit-game:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #fff, #fff);
+  z-index: -1;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+.button-zero:hover,
+.button-six:hover,
+.button-twelve:hover,
+.btn-games:hover,
+.game-list__btn:hover,
+.exit-game:hover {
+  color: #fff;
+  transition: 0.3s;
+}
+.button-zero:hover:after,
+.button-six:hover:after,
+.button-twelve:hover:after,
+.btn-games:hover:after,
+.game-list__btn:hover:after,
+.exit-game:hover:after {
+  background: linear-gradient(90deg, #fd7f34, #bd155b);
+}
+.button-zero:active:after,
+.button-six:active:after,
+.button-twelve:active:after,
+.btn-games:active:after,
+.game-list__btn:active:after,
+.exit-game:active:after {
+  background: linear-gradient(90deg, #d96d2d, #760f3a);
+}
+.button-zero:focus-visible,
+.button-six:focus-visible,
+.button-twelve:focus-visible,
+.btn-games:focus-visible,
+.game-list__btn:focus-visible,
+.exit-game:focus-visible {
+  box-shadow: 0 0 0 3px #fd7f34;
+}
+.button-zero:disabled,
+.button-six:disabled,
+.button-twelve:disabled,
+.btn-games:disabled,
+.game-list__btn:disabled,
+.exit-game:disabled {
+  pointer-events: none;
+}
+.button-zero:disabled:before,
+.button-six:disabled:before,
+.button-twelve:disabled:before,
+.btn-games:disabled:before,
+.game-list__btn:disabled:before,
+.exit-game:disabled:before {
+  filter: grayscale(100%);
+}
+
+// ==================== Snell ===================
+.kids-animation__snell {
+  position: absolute;
+  top: 133px;
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    top: 115px;
+  }
+  @media screen and (min-width: 1280px) {
+    top: 120px;
+  }
+  @media screen and (min-width: 1900px) {
+    top: 240px;
+  }
+}
+#eye1 {
+  animation: swing ease-in-out 0.6s infinite alternate;
+  transform-origin: bottom;
+  transform-box: fill-box;
+  left: calc(52% - 0rem);
+}
+#eye2 {
+  animation: swing ease-in-out 0.5s infinite alternate;
+  transform-origin: bottom;
+  transform-box: fill-box;
+  left: calc(40% - 0rem);
+}
+
+//  Kids animation text
+.kids-animation__text {
+  color: var(--subtitle-color);
+  text-align: center;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  letter-spacing: 6px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding-top: 15px;
+  font-family: Khula, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.2;
+  display: flex;
+
+  @media screen and (min-width: 768px) {
+    // height: 100px;
+    font-size: 26px;
+  }
+  @media screen and (min-width: 1280px) {
+    // height: 100px;
+    font-size: 30px;
+  }
+}
