@@ -4,7 +4,7 @@
 // import { moviesListMarkupFirstRender } from "./js/functions/render-home-page";
 // import { setGenreOptions } from "./js/functions/local-storage";
 // import { openMovieInfo } from "./js/functions/open-movie-info";
-import { listRef, backdropRef } from "./js/refs/refs";
+// import { listRef, backdropRef } from "./js/refs/refs";
 // import './js/functions/search-film';
 // import './js/functions/login';
 // import './js/functions/pagination';
