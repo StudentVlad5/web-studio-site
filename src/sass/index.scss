@@ -1,17 +1,21 @@
-@import './utils/common';
-@import './utils/reset';
-@import './utils/vars';
+@import './utils/mixins';
+@import './utils/variables';
 @import './utils/visually-hidden';
 
-@import './components/about_me';
-@import './components/cases';
-@import './components/contacts';
-@import './components/faq';
-@import './components/home';
-@import './components/services';
-@import './components/sidebar';
-@import './components/testimonials';
+@import './base/global';
+@import './base/common';
+@import './base/reset';
+@import './base/container';
+@import './base/title';
+
+@import './layouts/sidebar';
+@import './layouts/home';
+@import './layouts/about_me';
+@import './layouts/cases';
+@import './layouts/contacts';
+@import './layouts/faq';
+@import './layouts/services';
+@import './layouts/testimonials';
 
 
 @import './components/to-top-button';
-@import './components/fonts';
