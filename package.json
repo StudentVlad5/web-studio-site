@@ -1,7 +1,7 @@
 {
   "name": "web-studio-site",
   "version": "0.1.0",
-  "description": "Этот проект был создан при помощи Parcel. Для знакомства и настройки дополнительных возможностей [обратись к документации](https://parceljs.org/).",
+  "description": "",
   "homepage": "https://studentvlad5.github.io/web-studio-site/",
   "scripts": {
     "start": "parcel src/*.html",
