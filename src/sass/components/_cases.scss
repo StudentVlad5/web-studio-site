@@ -1,11 +1,45 @@
+@keyframes flowerAnim {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+  }
+
 .cases-wrap {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
     width: 375px;
     height: 667px;
     background-color: blue;
 }
 .title-cases{
     color: white;
+}
+.scroll-cases{
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.text-cases__toScroll{
+    color: gray;
+}
+.scroll-flower-cases{
+    margin: 4px;
+    animation: flowerAnim 2s 1s infinite normal linear;
 }
