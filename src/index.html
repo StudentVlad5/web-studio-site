@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="Movies, TV Shows, Streaming, Reviews, API, Actors, Actresses, Photos, User Ratings, Synopsis, Trailers, Teasers, Credits, Cast">
-    <meta name="description" content="The Movie Database is a popular, user editable database for movies and TV shows.">
-    <link rel="icon" type="image/png" sizes="32x32" href="../src/images/icon.png">
-    <title>Home page</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <!-- <link rel="preconnect" href="https://api.themoviedb.org/3/"> -->
-    <script type="module" src="./index.js"></script>
-  </head>
-  <body>
-    <include src="./partials/components/sidebar.html"></include>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Website, landing, create website, design">
+  <meta name="description" content="Create websites for businesses that help to become market leaders.">
+  <link rel="icon" type="image/png" sizes="32x32" href="../src/images/icon.png">
+  <title>Website for businesses</title>
+  <!-- ======= Project fonts ======= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;700;800&family=Libre+Caslon+Display&family=Manrope:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+  <!-- ======= Custom styles ======= -->
+  <link rel="stylesheet" href="./sass/index.scss" />
+  <!-- ======= JavaScript ======= -->
+  <script type="module" src="./index.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <include src="./partials/header.html"></include>
+    <include src="./partials/sidebar.html"></include>
     <main>
-      <include src="./partials/components/home.html"></include>
-      <include src="./partials/components/cases.html"></include>
-      <include src="./partials/components/testimonials.html"></include>
-      <include src="./partials/components/services.html"></include>
-      <include src="./partials/components/about_me.html"></include>
-      <include src="./partials/components/faq.html"></include>
-      <include src="./partials/components/contacts.html"></include>
+      <include src="./partials/home.html"></include>
+      <include src="./partials/cases.html"></include>
+      <include src="./partials/testimonials.html"></include>
+      <include src="./partials/services.html"></include>
+      <include src="./partials/about_me.html"></include>
+      <include src="./partials/faq.html"></include>
+      <include src="./partials/contacts.html"></include>
     </main>
-    <!-- <include src="./partials/components/footer.html"></include> -->
-    <include src="./partials/components/to-top-button.html"></include>
-  </body>
+  </div>
+  <!-- <include src="./partials/footer.html"></include> -->
+  <include src="./partials/to-top-button.html"></include>
+</body>
+
 </html>

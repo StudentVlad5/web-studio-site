@@ -1,23 +1,20 @@
 .visually-hidden {
   position: absolute;
+  white-space: nowrap;
+  margin: -1px;
+
   width: 1px;
   height: 1px;
-  margin: -1px;
+
+  overflow: hidden;
   border: 0;
   padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
   clip: rect(0 0 0 0);
-  overflow: hidden;
+  clip-path: inset(50%);
 }
 
 .is-hidden {
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
-}
-
-.hidden-game {
-  display: none;
 }

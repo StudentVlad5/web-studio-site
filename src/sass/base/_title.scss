@@ -1,0 +1,19 @@
+.title {
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 525;
+    line-height: 50px;
+    letter-spacing: -2.6px;
+    text-transform: uppercase;
+
+    @include mq(desktop) {
+        font-size: 78px;
+        font-weight: 600;
+        line-height: 70px;
+        letter-spacing: -4.29px;
+    }
+}
+
+.title.is-hidden {
+    display: none;
+}
