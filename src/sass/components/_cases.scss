@@ -43,3 +43,17 @@
     margin: 4px;
     animation: flowerAnim 2s 1s infinite normal linear;
 }
+// client wrap
+.client-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 50px;
+}
+.client-data{
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
