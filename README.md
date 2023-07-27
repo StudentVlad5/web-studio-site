@@ -1,14 +1,9 @@
-#Filmoteka
+# WebSite
 
-The site allows users to select the films they would like to watch. By selecting
-a movie, the user can view the rating, read the description, watch the trailer,
-and add the movie to the queue list. The site also has a section for children,
-where they can also play some games.
+Ми можемо створити такий класний сайт і для вас!
 
-Used technologies: HTML, CSS, JavaScript, Parcel, Git / GitHub, Figma, TMDB API.
+## Команда
 
-Libraries: Axios, Firebase, AnimeJS, DarkmodeJS, Debounce, JQuery, Letterizejs,
-Scroll-smooth, Tui-pagination.
-
-Developers team: Sergii Poluliakh, Vlad Popov, Liubov Yermakova, Kirill
-Afanasiev, Yehor Derkach, Viktor Biletskyi, Andrii Tkachov, Aleksandra Pauk.
+- [Vlad Popov](https://github.com/StudentVlad5)
+- [Julia Golban](https://github.com/JuliaGolban)
+- [Heorgii Rushchak](https://github.com/Heorgii)
