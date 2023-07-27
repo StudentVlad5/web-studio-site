@@ -5,8 +5,8 @@
   "description": "",
   "homepage": "https://studentvlad5.github.io/web-studio-site/",
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build"
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /web-studio-site/"
   },
   "repository": {
     "type": "git",
