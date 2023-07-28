@@ -1,0 +1,31 @@
+.sound {
+    color: var(--cl-txt-main);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: -0.7px;
+
+    transition: color var(--anim);
+
+    &:hover,
+    &:focus {
+        color: var(--cl-txt-accent);
+    }
+
+    & svg {
+        fill: currentColor;
+    }
+
+    &__on,
+    &__off {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    &__off {
+        display: none;
+        color: var(--cl-txt-grey);
+    }
+}

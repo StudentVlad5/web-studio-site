@@ -1,0 +1,41 @@
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 11;
+
+    width: 100%;
+    height: 100%;
+
+    margin: auto 0;
+    padding: 185px 20px 20px 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--bgc-main);
+
+    transform: translateX(120%);
+    transition: transform var(--anim);
+
+    &.is-open {
+        visibility: visible;
+        transform: translateX(0);
+        transition: transform var(--anim);
+    }
+
+    @include mq(mobile) {
+        width: 100%;
+    }
+
+    @include mq(desktop) {
+        display: none;
+    }
+}
+
+//========== mobile footer ==========
+.mobile-menu__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
