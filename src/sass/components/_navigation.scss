@@ -1,0 +1,27 @@
+.navigation {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__link {
+        color: var(--cl-txt-main);
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 33px;
+        letter-spacing: -1.8px;
+
+        transition: color var(--anim);
+
+        &--active {
+            color: var(--cl-txt-accent);
+        }
+
+        &:hover,
+        &:focus {
+            color: var(--cl-txt-accent);
+        }
+    }
+}
