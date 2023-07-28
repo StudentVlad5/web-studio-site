@@ -1,0 +1,143 @@
+.home {
+    &__container {
+        padding-top: 20px;
+
+        @include mq(desktop) {
+            padding-top: 30px;
+        }
+    }
+
+    &__text {
+        margin-bottom: 50px;
+
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: -0.7px;
+
+        @include mq(desktop) {
+            margin-bottom: 85px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 20px;
+
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 525;
+        line-height: 33px;
+        letter-spacing: -2.1px;
+        text-transform: uppercase;
+
+        @include mq(desktop) {
+            max-width: 990px;
+            margin-bottom: 50px;
+
+            font-size: 78px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 70px;
+            letter-spacing: -4.29px;
+        }
+    }
+}
+
+.hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 270px;
+    margin-bottom: 168px;
+
+    @include mq(desktop) {
+        margin-bottom: 242px;
+    }
+
+    &__border {
+        font-family: 'Inter';
+        font-size: 80px;
+        font-style: normal;
+        font-weight: 100;
+        line-height: 55px;
+        letter-spacing: -4px;
+        color: var(--cl-txt-accent);
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__avatar {
+        margin: 0 19px;
+    }
+
+    &__descr {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 18px;
+        letter-spacing: -0.7px;
+        color: var(--cl-txt-accent);
+    }
+
+    &__icon {
+        position: absolute;
+        top: 1px;
+        right: -10px;
+        fill: var(--cl-txt-red);
+
+        animation: flowerAnim 3s 2s infinite normal linear;
+    }
+}
+
+.player {
+    display: flex;
+    color: var(--cl-txt-white);
+
+    &__road {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: calc(100% - 36px);
+        max-width: 304px;
+        padding: 9px 12px;
+
+        background-color: var(--bgc-accent);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    &__name {
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: -0.56px;
+    }
+
+    &__btn {
+        color: currentColor;
+        background-color: var(--bgc-accent);
+        border: none;
+    }
+
+    &__text {
+        display: flex;
+        width: 36px;
+        height: 36px;
+        padding: 4px;
+        justify-content: center;
+        align-items: center;
+        gap: 2px;
+        flex-shrink: 0;
+
+        color: var(--cl-txt-white);
+        background-color: var(--bgc-accent);
+        border: none;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    &__icon {
+        fill: currentColor;
+    }
+}

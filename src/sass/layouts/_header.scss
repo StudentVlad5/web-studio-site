@@ -1,0 +1,206 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 10;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    align-content: center;
+    text-align: left;
+
+    padding: 36px 16px 16px;
+
+    background-color: var(--bgc-main);
+    border-bottom: 1px solid var(--bgc-stroke);
+
+    @include mq(desktop) {
+        display: none;
+    }
+}
+
+// ========== logo ==========
+.logo {
+    z-index: 12;
+    font-family: 'Libre Caslon Display';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18.602px;
+    letter-spacing: -0.593px;
+    color: var(--cl-txt-accent);
+
+    &__name {
+        font-weight: 700;
+        line-height: 18.602px;
+        letter-spacing: -0.814px;
+    }
+}
+
+// ========== mobile button ==========
+.mobile-btn {
+    z-index: 11;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+
+    color: var(--cl-txt-main);
+    background: transparent;
+    border: none;
+
+    cursor: pointer;
+    transition: color var(--anim);
+
+    &:hover,
+    &:focus {
+        color: var(--cl-txt-accent);
+    }
+
+    &.is-open {
+        position: fixed;
+        top: 36px;
+        right: 16px;
+        z-index: 12;
+        color: var(--cl-txt-grey);
+    }
+
+    @include mq(desktop) {
+        display: none;
+    }
+
+
+    &__icon {
+        fill: currentColor;
+
+        &-open {
+            display: block;
+
+            .mobile-btn.is-open & {
+                display: none;
+            }
+        }
+    }
+
+    &__icon-close {
+        display: none;
+
+        .mobile-btn.is-open & {
+            position: fixed;
+            top: 36px;
+            right: 16px;
+            display: block;
+        }
+    }
+}
+
+// ========== mobile menu ==========
+.header__mobile-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 11;
+
+    width: 100%;
+    height: 100vh;
+
+    margin: auto 0;
+    padding: 185px 20px 20px 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: var(--bgc-main);
+
+    transform: translateX(120%);
+    transition: transform var(--anim);
+
+    // visibility: hidden;
+    overflow-y: scroll;
+
+    &.is-open {
+        visibility: visible;
+        transform: translateX(0);
+        transition: transform var(--anim);
+    }
+
+    @include mq(mobile) {
+        width: 100%;
+    }
+
+    @include mq(desktop) {
+        display: none;
+    }
+}
+
+//========== mobile footer ==========
+.mobile-menu__footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+}
+
+.sound {
+    color: var(--cl-txt-main);
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: -0.7px;
+
+    transition: color var(--anim);
+
+    &:hover,
+    &:focus {
+        color: var(--cl-txt-accent);
+    }
+
+    & svg {
+        fill: currentColor;
+    }
+
+    &__on,
+    &__off {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    &__off {
+        display: none;
+        color: var(--cl-txt-grey);
+    }
+}
+
+.translate {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+    color: var(--cl-txt-grey);
+    text-align: right;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: -0.56px;
+
+    transition: color var(--anim);
+
+    &:hover,
+    &:focus {
+        color: var(--cl-txt-accent);
+    }
+
+    &__text.active {
+        color: var(--cl-txt-accent);
+    }
+
+    & svg {
+        fill: currentColor;
+        cursor: pointer;
+    }
+}
