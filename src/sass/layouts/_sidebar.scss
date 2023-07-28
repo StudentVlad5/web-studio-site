@@ -26,6 +26,32 @@
         margin-bottom: 34px;
     }
 
+    & .navigation__item {
+        position: relative;
+
+        &:hover,
+        &:focus {
+            color: var(--cl-txt-accent);
+
+            &::before {
+                position: absolute;
+                top: 50%;
+                left: -14px;
+                transform: translateY(-50%);
+
+                content: '';
+                display: block;
+                width: 10px;
+                height: 12px;
+
+                background-image: url(/src/images/flower.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                fill: currentColor;
+            }
+        }
+    }
+
     & .navigation__link {
         font-size: 14px;
         font-style: normal;

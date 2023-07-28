@@ -111,5 +111,8 @@
 <symbol id="play" viewBox="0 0 24 32">
 <path d="M24 16l-24 13.857v-27.713l24 13.856z"></path>
 </symbol>
+<symbol id="pause" viewBox="0 0 32 32">
+<path d="M4 4h10v24h-10zM18 4h10v24h-10z"></path>
+</symbol>
 </defs>
 </svg>

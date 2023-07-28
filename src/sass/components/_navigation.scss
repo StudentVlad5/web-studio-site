@@ -5,8 +5,17 @@
         gap: 20px;
     }
 
-    &__link {
+    &__item {
         color: var(--cl-txt-main);
+
+        &:hover,
+        &:focus {
+            color: var(--cl-txt-accent);
+        }
+    }
+
+
+    &__link {
         font-size: 30px;
         font-style: normal;
         font-weight: 600;
@@ -16,11 +25,6 @@
         transition: color var(--anim);
 
         &--active {
-            color: var(--cl-txt-accent);
-        }
-
-        &:hover,
-        &:focus {
             color: var(--cl-txt-accent);
         }
     }
