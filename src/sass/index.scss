@@ -5,9 +5,13 @@
 @import './base/global';
 @import './base/common';
 @import './base/reset';
-@import './base/container';
-@import './base/title';
+@import './base/framer';
+@import './base/section';
 
+@import './components/navigation';
+@import './components/to-top-button';
+
+@import './layouts/header';
 @import './layouts/sidebar';
 @import './layouts/home';
 @import './layouts/about_me';
@@ -16,6 +20,3 @@
 @import './layouts/faq';
 @import './layouts/services';
 @import './layouts/testimonials';
-
-
-@import './components/to-top-button';

@@ -1,0 +1,22 @@
+.framer {
+    position: relative;
+
+    width: auto;
+    height: 100%;
+
+    margin: 0 auto;
+    padding: 0px;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+
+    margin-top: 73px;
+
+    @include mq(desktop) {
+        margin-top: 0;
+        margin-left: 290px;
+    }
+}
