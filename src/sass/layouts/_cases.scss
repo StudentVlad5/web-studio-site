@@ -1,22 +1,3 @@
-@keyframes flowerAnim {
-    0% {
-      transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(90deg);
-    }
-    50% {
-        transform: rotate(180deg);
-    }
-    75% {
-        transform: rotate(270deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-  }
-
 .cases-wrap {
     display: flex;
     justify-content: center;
@@ -26,23 +7,28 @@
     height: 667px;
     background-color: blue;
 }
-.title-cases{
+
+.title-cases {
     color: white;
 }
-.scroll-cases{
+
+.scroll-cases {
     display: flex;
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translate(-50%, 0%);
 }
-.text-cases__toScroll{
+
+.text-cases__toScroll {
     color: gray;
 }
-.scroll-flower-cases{
+
+.scroll-flower-cases {
     margin: 4px;
-    animation: flowerAnim 2s 1s infinite normal linear;
+    animation: flowerAnim 3s 2s infinite normal linear;
 }
+
 // client wrap
 .client-wrap {
     display: flex;
@@ -52,7 +38,8 @@
     width: 250px;
     height: 50px;
 }
-.client-data{
+
+.client-data {
     padding: 5px;
     display: flex;
     flex-direction: column;
