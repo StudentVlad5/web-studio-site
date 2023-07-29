@@ -1,0 +1,240 @@
+@keyframes flowerAnim {
+    0% {
+      transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+  }
+
+.cases-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 375px;
+    height: 667px;
+    background-color: blue;
+}
+.cases-title{
+    color: white;
+}
+.cases-scroll{
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.cases-text__toScroll{
+    color: gray;
+}
+.cases-scroll-flower{
+    margin: 4px;
+    animation: flowerAnim 2s 1s infinite normal linear;
+}
+// client wrap
+.cases-client-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.cases-client-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 250px;
+    height: 70px;
+}
+.cases-client-data {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+// AUDIO STYLES
+
+.music-container {
+  border-radius: 1em;
+  display: flex;
+  position: relative;
+  z-index: 10;
+  width: 300px;
+  height: 40px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  background-color: #ffffff;
+  padding: 0.125em 0;
+  border-radius: 0.5em;
+  width: 100%;
+}
+
+.action-btn {
+  background-color: rgba(0, 0, 0, 0);
+  border: 0;
+  color: #fff;
+  font-size: 0.875rem;
+  width: 2em;
+  cursor: pointer;
+  margin: 0 0.5em;
+  padding: 0.5em 0.25em;
+}
+
+.action-btn.action-btn-big {
+  color: #fff;
+  font-size: 0.95rem;
+}
+
+.action-btn:hover {
+  outline: 0;
+  color: goldenrod;
+}
+
+.speaker {
+  margin-right: 0 20px;
+  color: #fff;
+}
+
+.music-info {
+  padding: .2px;
+  text-align: center;
+  margin-left: 5px;
+}
+
+.music-container .music-info {
+  opacity: 1;
+  border: 0.125em solid blue;
+  width: 100%;
+}
+.range-container__wraper{
+  width: 120px;
+}
+.range-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.progress-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.85px;
+  position: relative;
+  cursor: pointer;
+  margin: 1.5px;
+  height: 15px;
+}
+
+.progress {
+  display: inline;
+  background-color: blue;
+  border-radius: 0.25em;
+  height: 12px;
+  width: 1.5px;
+  border-left: 2px solid blue;
+  transition: height 0.1s linear;
+}
+#progress1 {
+  height: 5px;
+}
+#progress2 {
+  height: 7.5px;
+}
+#progress3 {
+  height: 10px;
+}
+#progress4 {
+  height: 7.5px;
+}
+#progress5 {
+  height: 5px;
+}
+
+.player_slider {
+  width: 0.75rem;
+  height: 3rem;
+}
+.short-title{
+  color: #1E2EB8;
+}
+input[type='range'] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  width: 50px;
+  margin: 0 10px;
+}
+input[type='range']:focus {
+  outline: none;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 3px;
+  cursor: pointer;
+  box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+  background: blue;
+  border-radius: 50px;
+  border: 0.2px solid rgba(1, 1, 1, 0);
+}
+input[type='range']::-webkit-slider-thumb {
+  height: 0.75em;
+  width: 1em;
+  border-radius: 0.25em;
+  background: blue;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -4px;
+  box-shadow: 0 0 2px rgb(15, 14, 80);
+}
+
+input[type='range']::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+  background: #ffffff;
+  border-radius: 1.3px;
+  border: 0.2px solid rgba(1, 1, 1, 0);
+}
+input[type='range']::-moz-range-thumb {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(13, 13, 13, 0);
+  height: 12px;
+  width: 17px;
+  border-radius: 50px;
+  background: #fe8daa;
+  cursor: pointer;
+}
+
+.time {
+  color: blue;
+  font-size: 12px;
+  padding-right: 5px;
+  width: 10px;
+  /* had to add that to stop the width shifting from NaN */
+  /* width: 6em; */
+}
+.is-hide{
+  display: none;
+}
+.fas{
+  width: 20px;
+  height: 20px;
+}

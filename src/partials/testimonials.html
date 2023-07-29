@@ -1,1 +1,63 @@
-<h1>Testimonials section</h1>
+<section>
+    <div class="cases-wrap">
+        <h2 class="cases-title">WHAT MY<br />CLIENTS SAY</h2>
+        <div class="cases-scroll">
+            <p class="cases-text__toScroll">Keep scrolling</p>
+            <img class="cases-scroll-flower" src="./images/flower.png" alt="scrolling flower" />
+        </div>
+    </div>
+    <div>
+        <ul>
+            <li class="cases-client-container">
+                <div class="cases-client-wrap">
+                  <img class="cases-client-img" src="/src/images/clients/client_1.jpg" alt="client number 1" />
+                  <div class="cases-client-data">
+                      <p>Name Surname</p>
+                      <p>Company name</p>
+                  </div>
+                </div>
+                <!-- (B) AUDIO PLAYERS -->
+                    <div class="wrapper">
+                      <div class="music-container" id="music-container">
+                        <audio src="/src/mp3/Voicy_Allahu Akbar BANG.mp3" id="audio" class="audio audio_player" preload="metadata" loop="true"></audio>
+               
+                        <div class="navigation">
+                          <button type="button" id="play" class="action-btn action-btn-big">
+                              <img src="./images/play.svg"
+                                class="fas fa-play" alt="play button"
+                                />
+                          </button>
+                          <button type="button" id="pause" class="action-btn action-btn-big is-hide">
+                            <img src="./images/pause.svg"
+                              class="fas fa-pause" alt="pause button"
+                              />
+                        </button>
+                          <p class="short-title">Short title</p>
+                          <div class="range-container__wraper">
+                            <div class="range-container">
+                              <img src="./images/volumeMute.svg" alt="sound-mute" class="fas"/>
+                              <input title="range" type="range" name="volume" class="player_slider" min="0" max="1" step="0.05" value="1"></input>
+                              <img src="./images/soundUp.svg" alt="sound-mute" class="fas"/>
+                            </div>
+                          </div>
+                          <button type="button" class="action-btn speaker" id="speaker_icon">
+                          <div class="music-info">
+                              <div class="progress-container progress-range" id="progress-container">
+                                  <div class="progress progress-bar" id="progress1"></div>
+                                  <div class="progress progress-bar" id="progress2"></div>
+                                  <div class="progress progress-bar" id="progress3"></div>
+                                  <div class="progress progress-bar" id="progress4"></div>
+                                  <div class="progress progress-bar" id="progress5"></div>
+                              </div>
+                            </div>
+                          </button>          
+                          <div class="time">
+                            <span class="time-elapsed">00:10</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+            </li>
+        </ul>
+    </div>
+</section>
