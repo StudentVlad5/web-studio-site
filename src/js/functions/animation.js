@@ -7,14 +7,12 @@ if (animItems.length > 0) {
       const animItem = animItems[index];
       const animItemHeight = animItem.offsetHeight;
       const animItemOffset = offset(animItem).top;
-      let animStart = 100;
+      let animStart = 50;
 
       let animItemPoint = window.innerHeight - animItemHeight / animStart;
       if (animItemHeight > window.innerHeight) {
         animItemPoint = window.innerHeight - window.innerHeight / animStart;
       }
-      console.log("animItemHeight", animItemHeight);
-      console.log("animItemOffset", animItemOffset);
 
       if (
         scrollY > animItemOffset - animItemPoint &&

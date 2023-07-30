@@ -9,3 +9,4 @@ import "./js/functions/audio-player_4";
 import "./js/functions/audio-player_5";
 import "./js/functions/audio-player_6";
 import "./js/functions/animation";
+import "./js/functions/subtitels";
