@@ -1,31 +1,26 @@
-const { random } = require("animejs");
-
-const musicContainer = document.getElementById("music-container");
-const audioPlayer = musicContainer.querySelector(".audio_player");
-const title = document.getElementById("title");
-const progressRange = document.querySelector(".progress-range");
-const progressBar = document.querySelector(".progress-bar");
-const currentTime = document.querySelector(".time-elapsed");
-const duration = document.querySelector(".time-duration");
-const audio = document.getElementById("audio");
-const playBtn = document.getElementById("play");
-const pauseBtn = document.getElementById("pause");
-const controlSoundBtn = document.getElementById("speaker_icon");
-const controlSoundMute = document.querySelector(".range-container");
-const speaker = musicContainer.querySelector(".speaker");
-const ranges = musicContainer.querySelectorAll(".player_slider");
+const musicContainer = document.getElementById("music-container4");
+const audioPlayer = musicContainer.querySelector(".audio_player4");
+const progressRange = document.querySelector(".progress-range4");
+const progressBar = document.querySelector(".progress-bar_4");
+const currentTime = document.querySelector(".time-elapsed_4");
+const audio = document.getElementById("audio_4");
+const playBtn = document.getElementById("play4");
+const pauseBtn = document.getElementById("pause4");
+const controlSoundBtn = document.getElementById("speaker_icon4");
+const controlSoundMute = document.querySelector(".range-container_4");
+const muteOnBtn = document.querySelector(".soundUp_4");
+const muteOffBtn = document.querySelector(".volumeMute_4");
+const ranges = musicContainer.querySelectorAll(".player_slider_4");
+const range = document.querySelector(".player_slider_4");
 const volInput = musicContainer.querySelector('input[name="volume"]');
-const progress1 = document.getElementById("progress1");
-const progress2 = document.getElementById("progress2");
-const progress3 = document.getElementById("progress3");
-const progress4 = document.getElementById("progress4");
-const progress5 = document.getElementById("progress5");
+const progress1 = document.getElementById("progress1_4");
+const progress2 = document.getElementById("progress2_4");
+const progress3 = document.getElementById("progress3_4");
+const progress4 = document.getElementById("progress4_4");
+const progress5 = document.getElementById("progress5_4");
 let timerId = "";
 
-let songIndex = 0;
-
 function playSong() {
-  console.log("clickOn play");
   musicContainer.classList.add("play");
   playBtn.classList.add("is-hide");
   pauseBtn.classList.remove("is-hide");
@@ -34,7 +29,6 @@ function playSong() {
 }
 
 function pauseSong() {
-  console.log("clickOn pause");
   musicContainer.classList.remove("play");
   playBtn.classList.remove("is-hide");
   pauseBtn.classList.add("is-hide");
@@ -44,7 +38,7 @@ function pauseSong() {
 
 function viewSoundControl(e) {
   e.stopPropagation();
-  console.log("clickOn viewSoundControl");
+  e.preventDefault();
   const isViewMuteControl = controlSoundMute.classList.contains("is-hide");
   isViewMuteControl
     ? controlSoundMute.classList.remove("is-hide")
@@ -67,7 +61,6 @@ function displayTime(time) {
 }
 
 function updateProgress() {
-  let duration = 0;
   progressBar.style.width = `${
     (audioPlayer.currentTime / audioPlayer.duration) * 100
   }%`;
@@ -93,18 +86,16 @@ function handleRangeUpdate() {
   //   : (speakerIcon.className = "fa fa-volume-up");
 }
 
-let muted = false;
-
 function mute() {
-  if (!muted) {
-    audioPlayer["volume"] = 0;
-    volInput.value = 0;
-    muted = true;
-  } else {
-    audioPlayer["volume"] = 1;
-    volInput.value = 1;
-    muted = false;
-  }
+  audioPlayer["volume"] = 0;
+  volInput.value = 0;
+  range.value = 0;
+}
+
+function soundOn() {
+  audioPlayer["volume"] = 1;
+  volInput.value = 1;
+  range.value = 1;
 }
 
 playBtn.addEventListener("click", () => {
@@ -135,7 +126,9 @@ ranges.forEach((range) => range.addEventListener("change", handleRangeUpdate));
 ranges.forEach((range) =>
   range.addEventListener("mousemove", handleRangeUpdate)
 );
-speaker.addEventListener("click", mute);
+
+muteOnBtn.addEventListener("click", soundOn);
+muteOffBtn.addEventListener("click", mute);
 
 // progress bar controls
 let mouseDown = false;
