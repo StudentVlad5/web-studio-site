@@ -15,6 +15,18 @@
     background-color: var(--bgc-main);
     border-bottom: 1px solid var(--bgc-stroke);
 
+    transition: transform var(--anim);
+
+    &-hide {
+        display: none;
+        transform: translateY(-73px);
+    }
+
+    &-show {
+        display: flex;
+        transform: translateY(0);
+    }
+
     @include mq(desktop) {
         display: none;
     }
