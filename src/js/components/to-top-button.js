@@ -53,7 +53,7 @@ export const btnUp = {
     });
   },
   closeModalCheck() {
-    if (window.pageYOffset > 850) {
+    if (window.scrollY > 850) {
       this.show();
     }
   },

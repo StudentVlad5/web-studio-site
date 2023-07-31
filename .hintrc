@@ -13,7 +13,8 @@
       "default",
       {
         "ignore": [
-          "backface-visibility"
+          "backface-visibility",
+          "scrollbar-width"
         ]
       }
     ],
