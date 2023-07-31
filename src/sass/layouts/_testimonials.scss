@@ -52,7 +52,7 @@
     opacity: 0.9;
     background-color: blue;
   }
-.cases-wrap {
+.testimonials-wrap {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,10 +71,10 @@
     height: 667px;
     background-color: blue;
 }
-.cases-title{
+.testimonials-title{
     color: white;
 }
-.cases-scroll{
+.testimonials-scroll{
     display: flex;
     position: absolute;
     bottom: 20px;
@@ -105,10 +105,10 @@
     display: flex;
     flex-direction: column;
 }
-.cases-text__toScroll {
+.testimonials-text__toScroll {
     color: gray;
 }
-.cases-scroll-flower {
+.testimonials-scroll-flower {
     margin: 4px;
     animation: flowerAnim 2s 1s infinite normal linear;
 }
