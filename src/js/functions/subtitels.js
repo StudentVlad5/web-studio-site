@@ -1,10 +1,36 @@
-const subtitleBtn_1 = document.querySelector(".swithSubtitleBtn_1");
-const subtitleOpacity_1 = document.querySelector(".testimonials-subtitles_1");
+const subtitleBtn = document.querySelectorAll(".switchSubtitleBtn");
 
-function swichSubtitles() {
-  const opacityStatus = subtitleOpacity_1.classList.contains("is-opacity");
-  !opacityStatus
-    ? subtitleOpacity_1.classList.add("is-opacity")
-    : subtitleOpacity_1.classList.remove("is-opacity");
+function swichSubtitles(e) {
+  e.preventDefault();
+
+  let opacityStatus = "";
+  switch (e.currentTarget.dataset.count) {
+    case "switchSubtitleBtn_1":
+      opacityStatus = document.querySelector(".testimonials-subtitles_1");
+      break;
+    case "switchSubtitleBtn_2":
+      opacityStatus = document.querySelector(".testimonials-subtitles_2");
+      break;
+    case "switchSubtitleBtn_3":
+      opacityStatus = document.querySelector(".testimonials-subtitles_3");
+      break;
+    case "switchSubtitleBtn_4":
+      opacityStatus = document.querySelector(".testimonials-subtitles_4");
+      break;
+    case "switchSubtitleBtn_5":
+      opacityStatus = document.querySelector(".testimonials-subtitles_5");
+      break;
+    case "switchSubtitleBtn_6":
+      opacityStatus = document.querySelector(".testimonials-subtitles_6");
+      break;
+    default:
+      break;
+  }
+
+  !opacityStatus.classList.contains("is-opacity")
+    ? opacityStatus.classList.add("is-opacity")
+    : opacityStatus.classList.remove("is-opacity");
 }
-subtitleBtn_1.addEventListener("click", () => swichSubtitles());
+subtitleBtn.forEach((item) =>
+  item.addEventListener("click", (e) => swichSubtitles(e))
+);
