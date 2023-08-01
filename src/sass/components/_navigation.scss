@@ -9,7 +9,8 @@
         color: var(--cl-txt-main);
 
         &:hover,
-        &:focus {
+        &:focus,
+        &:active {
             color: var(--cl-txt-accent);
         }
     }
