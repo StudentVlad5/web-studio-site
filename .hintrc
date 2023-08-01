@@ -14,7 +14,8 @@
       {
         "ignore": [
           "backface-visibility",
-          "scrollbar-width"
+          "scrollbar-width",
+          "scroll-behavior"
         ]
       }
     ],

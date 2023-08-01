@@ -1,15 +1,18 @@
 <section class="testimonials-section">
-    <div class="cases-wrap ">
+    <div class="cases-wrap">
         <h2 class="cases-title">WHAT MY<br />CLIENTS SAY</h2>
         <div class="cases-scroll">
             <p class="cases-text__toScroll">Keep scrolling</p>
             <img class="cases-scroll-flower" src="./images/flower.png" alt="scrolling flower" />
         </div>
     </div>
-    <div class="testimonials-listOfClients--wrap _anim-items _anim-no-hide">
-        <ul class="testimonials-listOfClients _anim-items">
+    <div class="testimonials-listOfClients--wrap _anim-items">
+        <ul class="testimonials-listOfClients">
           <!-- client 1 -->
-            <li class="cases-client-container _anim-items _anim-no-hide">
+            <li id="anchor_1" class="cases-client-container cases-client-container_1" data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-delay="300"
+            data-aos-easing="ease-in-sine">
                 <div class="cases-client-wrap">
                   <img class="cases-client-img" src="/src/images/clients/client_1.jpg" alt="client number 1" />
                   <div class="cases-client-data">
@@ -21,7 +24,7 @@
                     <div class="wrapper">
                       <div class="music-container" id="music-container1">
                         <audio src="/src/mp3/Voicy_Allahu Akbar BANG.mp3" id="audio_1" class="audio audio_player audio_player1" preload="metadata" loop="true"></audio>
-                        <div class="navigation">
+                        <div class="testimonials-navigation">
                           <button type="button" id="play1" class="action-btn action-btn-big">
                               <img src="./images/play.svg"
                                 class="fas fa-play" alt="play button"
@@ -67,7 +70,11 @@
                     </div>
             </li>
           <!-- client 2 -->
-            <li class="cases-client-container _anim-items _anim-no-hide">
+            <li id="anchor_2" class="cases-client-container cases-client-container_2" data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-anchor="#anchor_1"
+            data-aos-delay="500"
+            data-aos-duration="2000">
                 <div class="cases-client-wrap">
                   <img class="cases-client-img" src="/src/images/clients/client_2.jpg" alt="client number 2" />
                   <div class="cases-client-data">
@@ -79,7 +86,7 @@
                     <div class="wrapper">
                       <div class="music-container" id="music-container2">
                         <audio src="/src/mp3/Voicy_And we say bye bye.mp3" id="audio_2" class="audio audio_player audio_player2" preload="metadata" loop="true"></audio>
-                        <div class="navigation">
+                        <div class="testimonials-navigation">
                           <button type="button" id="play2" class="action-btn action-btn-big">
                               <img src="./images/play.svg"
                                 class="fas fa-play" alt="play button"
@@ -125,7 +132,9 @@
                     </div>
             </li>
           <!-- client 3 -->
-            <li class="cases-client-container _anim-items _anim-no-hide">
+            <li id="anchor_3" class="cases-client-container cases-client-container_3" data-aos="zoom-in"             data-aos-anchor="#anchor_2"
+            data-aos-delay="800"
+            data-aos-easing="ease-in-sine">
                 <div class="cases-client-wrap">
                   <img class="cases-client-img" src="/src/images/clients/client_3.jpg" alt="client number 3" />
                   <div class="cases-client-data">
@@ -138,7 +147,7 @@
                       <div class="music-container" id="music-container3">
                         <audio src="/src/mp3/Voicy_Do not walk away from your queen.mp3" id="audio_3" class="audio audio_player audio_player3" preload="metadata" loop="true"></audio>
                
-                        <div class="navigation">
+                        <div class="testimonials-navigation">
                           <button type="button" id="play3" class="action-btn action-btn-big">
                               <img src="./images/play.svg"
                                 class="fas fa-play" alt="play button"
@@ -184,7 +193,11 @@
                     </div>
             </li>
           <!-- client 4 -->
-            <li class="cases-client-container _anim-items _anim-no-hide">
+            <li id="anchor_4" class="cases-client-container cases-client-container_4" data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="300"
+            data-aos-anchor="#anchor_2"
+            data-aos-offset="0">
                 <div class="cases-client-wrap">
                   <img class="cases-client-img" src="/src/images/clients/client_1.jpg" alt="client number 4" />
                   <div class="cases-client-data">
@@ -197,7 +210,7 @@
                       <div class="music-container" id="music-container4">
                         <audio src="/src/mp3/Voicy_Kanye West Hated.mp3" id="audio_4" class="audio audio_player audio_player4" preload="metadata" loop="true"></audio>
                
-                        <div class="navigation">
+                        <div class="testimonials-navigation">
                           <button type="button" id="play4" class="action-btn action-btn-big">
                               <img src="./images/play.svg"
                                 class="fas fa-play" alt="play button"
@@ -243,7 +256,10 @@
                     </div>
             </li>
           <!-- client 5 -->
-            <li class="cases-client-container _anim-items _anim-no-hide">
+            <li id="anchor_5" class="cases-client-container cases-client-container_5" data-aos="fade-left"
+            data-aos-anchor="#anchor_3"
+            data-aos-offset="50"
+            data-aos-duration="500">
                 <div class="cases-client-wrap">
                   <img class="cases-client-img" src="/src/images/clients/client_2.jpg" alt="client number 5" />
                   <div class="cases-client-data">
@@ -256,7 +272,7 @@
                       <div class="music-container" id="music-container5">
                         <audio src="/src/mp3/Voicy_Nothing is impossible!.mp3" id="audio_5" class="audio audio_player audio_player5" preload="metadata" loop="true"></audio>
                
-                        <div class="navigation">
+                        <div class="testimonials-navigation">
                           <button type="button" id="play5" class="action-btn action-btn-big">
                               <img src="./images/play.svg"
                                 class="fas fa-play" alt="play button"
@@ -302,7 +318,7 @@
                     </div>
             </li>
           <!-- client 6 -->
-            <li class="cases-client-container _anim-items _anim-no-hide">
+            <li id="anchor_6" class="cases-client-container cases-client-container_6" data-aos="zoom-out-left"             data-aos-anchor="#anchor_3">
                 <div class="cases-client-wrap">
                   <img class="cases-client-img" src="/src/images/clients/client_3.jpg" alt="client number 6" />
                   <div class="cases-client-data">
@@ -315,7 +331,7 @@
                       <div class="music-container" id="music-container6">
                         <audio src="/src/mp3/Voicy_WHAT ARE YOU DOING IN MY SWAMP.mp3" id="audio_6" class="audio audio_player audio_player6" preload="metadata" loop="true"></audio>
                
-                        <div class="navigation">
+                        <div class="testimonials-navigation">
                           <button type="button" id="play6" class="action-btn action-btn-big">
                               <img src="./images/play.svg"
                                 class="fas fa-play" alt="play button"

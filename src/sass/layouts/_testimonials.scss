@@ -36,12 +36,13 @@
     height: 0;
   }
   .testimonials-listOfClients {
-    transform: translate(-120%, 40%);
-    opacity: 0;
+    // transform: translate(-120%, 0);
+    // opacity: 0;
     transition: all 1s ease 1s;
     overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    padding: 40px 0;
   }
   .testimonials-listOfClients::-webkit-scrollbar {
     width: 0;
@@ -144,6 +145,9 @@
   border-radius: 50%;
   border: 2px solid white;
 }
+
+
+
 // AUDIO STYLES
 
 .music-container {
@@ -154,7 +158,7 @@
   height: 40px;
 }
 
-.navigation {
+.testimonials-navigation {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -314,20 +318,20 @@ input[type='range']::-moz-range-thumb {
   width: 20px;
   height: 20px;
 }
-.cases-client-container:nth-child(2n+1) {
-  transform: translate(-100%, 0);
-  opacity: 0;
-  transition: all 1.8s ease 0s;
-}
-.cases-client-container:nth-child(2n) {
-  transform: translate(100%, 0);
-  opacity: 0;
-  transition: all 2.5s ease 0s;
-}
-.cases-client-container._active {
-  transform: translate(0, 0);
-  opacity: 1;
-}
+// .cases-client-container:nth-child(2n+1) {
+//   transform: translate(-100%, 0);
+//   opacity: 0;
+//   transition: all 1.8s ease 0s;
+// }
+// .cases-client-container:nth-child(2n) {
+//   transform: translate(100%, 0);
+//   opacity: 0;
+//   transition: all 2.5s ease 0s;
+// }
+// .cases-client-container._active {
+//   transform: translate(0, 0);
+//   opacity: 1;
+// }
 
 // subtitres
 .subtitle-container{
@@ -370,3 +374,52 @@ input[type='range']::-moz-range-thumb {
 }
 .is-opacity {
   opacity: 1;}
+
+/*! locomotive-scroll v3.1.7 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+html.has-scroll-dragging,
+html.has-scroll-dragging * {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.has-scroll-smooth body {
+  overflow: hidden;
+}
+.c-scrollbar {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 11px;
+  height: 100vh;
+  transform-origin: center right;
+  transition: transform 0.3s, opacity 0.3s;
+  opacity: 0;
+}
+.c-scrollbar:hover {
+  transform: scaleX(1.45);
+}
+.c-scrollbar:hover,
+.has-scroll-dragging .c-scrollbar,
+.has-scroll-scrolling .c-scrollbar {
+  opacity: 1;
+}
+.c-scrollbar_thumb {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #fdc65d;
+
+  width: 7px;
+
+  margin: 2px;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+.has-scroll-dragging .c-scrollbar_thumb {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
