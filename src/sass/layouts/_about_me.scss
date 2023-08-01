@@ -166,12 +166,15 @@
 }
 
 .team {
-    @include mq(desktop) {}
 
     & .about__title-group {
         gap: 14px;
         width: 296px;
-        margin-top: 200px;
+
+        @include mq(desktop) {
+            margin-top: 200px;
+        }
+
     }
 
     &__list {
