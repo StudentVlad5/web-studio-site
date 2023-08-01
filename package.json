@@ -19,18 +19,14 @@
     "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
   "dependencies": {
-    "@firebase/app": "^0.8.4",
     "animejs": "^3.2.1",
-    "axios": "^1.2.0",
+    "aos": "^2.3.4",
     "darkmode-js": "^1.5.7",
     "debounce": "^1.2.1",
-    "firebase": "^9.14.0",
-    "firebaseui": "^6.0.2",
-    "jquery": "^3.6.1",
+   "jquery": "^3.6.1",
     "letterizejs": "^2.0.1",
     "modern-normalize": "^1.1.0",
-    "scroll-smooth": "^1.1.1",
-    "tui-pagination": "^3.4.1"
+    "scroll-smooth": "^1.1.1"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
