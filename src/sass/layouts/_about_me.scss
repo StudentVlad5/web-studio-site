@@ -7,6 +7,7 @@
         flex-shrink: 0;
         overflow-x: visible;
         overflow-y: hidden;
+        scroll-behavior: smooth;
     }
 
     &__container {
@@ -415,9 +416,10 @@
 .lifestyle {
     gap: 10px;
     align-items: center;
-    margin-bottom: 0;
+    margin-bottom: 100px;
 
     @include mq(desktop) {
+        margin-bottom: 0;
         padding-right: 45px;
         padding-left: 45px;
     }

@@ -1,6 +1,6 @@
 import './js/refs/refs';
 import './js/localStorage/lsService';
-import './js/components/header-on-scroll';
+// import './js/components/header-on-scroll';
 import './js/components/mobile-menu';
 import './js/components/list-on-scroll';
 import './js/components/to-top-button';
