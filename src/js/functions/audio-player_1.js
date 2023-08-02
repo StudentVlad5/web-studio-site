@@ -6,10 +6,10 @@ const currentTime = document.querySelector(".time-elapsed_1");
 const audio = document.getElementById("audio_1");
 const playBtn = document.getElementById("play1");
 const pauseBtn = document.getElementById("pause1");
-const controlSoundBtn = document.getElementById("speaker_icon1");
-const controlSoundMute = document.querySelector(".range-container_1");
-const muteOnBtn = document.querySelector(".soundUp_1");
-const muteOffBtn = document.querySelector(".volumeMute_1");
+// const controlSoundBtn = document.getElementById("speaker_icon1");
+// const controlSoundMute = document.querySelector(".range-container_1");
+// const muteOnBtn = document.querySelector(".soundUp_1");
+// const muteOffBtn = document.querySelector(".volumeMute_1");
 const ranges = musicContainer.querySelectorAll(".player_slider_1");
 const range = document.querySelector(".player_slider_1");
 const volInput = musicContainer.querySelector('input[name="volume"]');
@@ -36,14 +36,14 @@ function pauseSong() {
   clearInterval(timerId);
 }
 
-function viewSoundControl(e) {
-  e.stopPropagation();
-  e.preventDefault();
-  const isViewMuteControl = controlSoundMute.classList.contains("is-hide");
-  isViewMuteControl
-    ? controlSoundMute.classList.remove("is-hide")
-    : controlSoundMute.classList.add("is-hide");
-}
+// function viewSoundControl(e) {
+//   e.stopPropagation();
+//   e.preventDefault();
+//   const isViewMuteControl = controlSoundMute.classList.contains("is-hide");
+//   isViewMuteControl
+//     ? controlSoundMute.classList.remove("is-hide")
+//     : controlSoundMute.classList.add("is-hide");
+// }
 
 function changeHeightOfSoundtrack() {
   progress1.style.height = `${Math.random() * 12}px`;
@@ -118,7 +118,7 @@ pauseBtn.addEventListener("click", () => {
   }
 });
 
-controlSoundBtn.addEventListener("click", (e) => viewSoundControl(e));
+// controlSoundBtn.addEventListener("click", (e) => viewSoundControl(e));
 audio.addEventListener("timeupdate", updateProgress);
 progressRange.addEventListener("click", setProgress);
 
@@ -127,8 +127,8 @@ ranges.forEach((range) =>
   range.addEventListener("mousemove", handleRangeUpdate)
 );
 
-muteOnBtn.addEventListener("click", soundOn);
-muteOffBtn.addEventListener("click", mute);
+// muteOnBtn.addEventListener("click", soundOn);
+// muteOffBtn.addEventListener("click", mute);
 
 // progress bar controls
 let mouseDown = false;

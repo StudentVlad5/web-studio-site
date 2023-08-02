@@ -19,7 +19,7 @@
   .testimonials-section{
     position: relative;
     overflow: hidden;
-    width: 375px;
+    width: 100%;
   }
   .testimonials-listOfClients--wrap{
   position: absolute;
@@ -151,63 +151,67 @@
 // AUDIO STYLES
 
 .music-container {
-  display: flex;
+  // display: flex;
   position: relative;
-  z-index: 10;
-  width: 315px;
-  height: 40px;
+  // z-index: 10;
+  // width: 315px;
+  // height: 40px;
 }
 
-.testimonials-navigation {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-  background-color: #ffffff;
-  border-radius: 0.5em;
-  width: 100%;
-}
+// .testimonials-navigation {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   z-index: 1;
+//   background-color: #ffffff;
+//   border-radius: 0.5em;
+//   width: 100%;
+// }
 
-.action-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0);
-  border: 0;
-  color: #fff;
-  font-size: 0.875rem;
-  width: 2em;
-  cursor: pointer;
-  margin: 0;
-  padding: 0.5em 0.25em;
-}
+// .action-btn {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background-color: rgba(0, 0, 0, 0);
+//   border: 0;
+//   color: #fff;
+//   font-size: 0.875rem;
+//   width: 2em;
+//   cursor: pointer;
+//   margin: 0;
+//   padding: 0.5em 0.25em;
+// }
 
-.action-btn.action-btn-big {
-  color: #fff;
-  font-size: 0.95rem;
-}
+// .action-btn.action-btn-big {
+//   color: #fff;
+//   font-size: 0.95rem;
+// }
 
 .action-btn:hover {
   outline: 0;
   color: goldenrod;
 }
 
-.speaker {
-  margin-right: 0 20px;
-  color: #fff;
-}
+// .speaker {
+//   margin-right: 0 20px;
+//   color: #fff;
+// }
 
 .music-info {
-  padding: .2px;
+  // padding: .2px;
+  display: block;
   text-align: center;
-  margin-left: 5px;
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  // margin-left: 5px;
 }
 
-.music-container .music-info {
-  opacity: 1;
-  border: 0.125em solid blue;
-  width: 100%;
-}
+// .music-container .music-info {
+//   opacity: 1;
+  // border: 0.125em solid blue;
+//   width: 100%;
+// }
 .range-container__wraper{
   width: 120px;
 }
@@ -230,11 +234,10 @@
 
 .progress {
   display: inline;
-  background-color: blue;
   border-radius: 0.25em;
   height: 12px;
   width: 1.5px;
-  border-left: 2px solid blue;
+  border-left: 1.5px solid #ffffff;
   transition: height 0.1s linear;
 }
 #progress1_1,#progress1_2,#progress1_3,#progress1_4,#progress1_5, #progress1_6,
@@ -252,9 +255,9 @@
   width: 0.75rem;
   height: 3rem;
 }
-.short-title{
-  color: #1E2EB8;
-}
+// .short-title{
+//   color: #1E2EB8;
+// }
 input[type='range'] {
   -webkit-appearance: none;
   appearance: none;
@@ -303,14 +306,14 @@ input[type='range']::-moz-range-thumb {
   cursor: pointer;
 }
 
-.time {
-  color: blue;
-  font-size: 12px;
-  padding-right: 5px;
-  width: 40px;
+// .time {
+  // color: blue;
+  // font-size: 12px;
+  // padding-right: 5px;
+  // width: 40px;
   /* had to add that to stop the width shifting from NaN */
   /* width: 6em; */
-}
+// }
 .is-hide{
   display: none;
 }
@@ -357,11 +360,14 @@ input[type='range']::-moz-range-thumb {
   color: blue;
 }
 .switchSubtitleBtn{
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  background-color: #ffffff;
-  border-color: #ffffff;
+  // width: 100%;
+  // height: 100%;
+  // border-radius: 10px;
+  // background-color: #ffffff;
+  // border-color: #ffffff;
+  cursor: pointer;
+}
+.player__btn{
   cursor: pointer;
 }
 .testimonials-subtitles {
