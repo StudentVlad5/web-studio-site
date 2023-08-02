@@ -24,6 +24,11 @@ function playSong() {
   musicContainer.classList.add("play");
   playBtn.classList.add("is-hide");
   pauseBtn.classList.remove("is-hide");
+  progress1.style.opacity = `1`;
+  progress2.style.opacity = `1`;
+  progress3.style.opacity = `1`;
+  progress4.style.opacity = `1`;
+  progress5.style.opacity = `1`;
   audio.play();
   timerId = setInterval(() => changeHeightOfSoundtrack(), 150);
 }
@@ -32,6 +37,11 @@ function pauseSong() {
   musicContainer.classList.remove("play");
   playBtn.classList.remove("is-hide");
   pauseBtn.classList.add("is-hide");
+  progress1.style.opacity = `0.5`;
+  progress2.style.opacity = `0.5`;
+  progress3.style.opacity = `0.5`;
+  progress4.style.opacity = `0.5`;
+  progress5.style.opacity = `0.5`;
   audio.pause();
   clearInterval(timerId);
 }

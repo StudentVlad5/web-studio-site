@@ -22,9 +22,10 @@
                 </div>
                 <!-- (B) AUDIO PLAYERS -->
                     <div class="wrapper">
-                      <div class="music-container home__player player" id="music-container1">
+                      <div class="music-container home__player player player" id="music-container1">
                         <audio src="/src/mp3/Voicy_Allahu Akbar BANG.mp3" id="audio_1" class="audio audio_player audio_player1" preload="metadata" loop="true"></audio>
                         <div class="testimonials-navigation player__road">
+                          <div style="display: flex; flex-wrap: nowrap;">
                           <button type="button" id="play1" class="action-btn action-btn-big player__btn">
                             <svg class="player__icon fa-play" width="12" height="12">
                               <use href="./images/sprite.svg#play"></use>
@@ -45,7 +46,9 @@
                             </div>
                           </div> -->
                           <!-- <button type="button" class="action-btn speaker player__btn" id="speaker_icon1"> -->
-                          <div class="music-info">
+                          </div>
+                          <div style="display: flex; flex-wrap: nowrap; gap: 4px; width:50px">
+                              <div class="music-info">
                               <div class="progress-container progress-range1" id="progress-container_1">
                                   <div class="progress progress-bar_1" id="progress1_1"></div>
                                   <div class="progress progress-bar_1" id="progress2_1"></div>
@@ -53,22 +56,23 @@
                                   <div class="progress progress-bar_1" id="progress4_1"></div>
                                   <div class="progress progress-bar_1" id="progress5_1"></div>
                               </div>
-                            </div>
+                              </div>
                           <!-- </button>           -->
                           <div class="time">
-                            <span class="time-elapsed_1 player__time">00:10</span>
+                            <span class="time-elapsed_1 player__time">0:10</span>
                           </div>
+                        </div>  
+                        </div>
+                        <div class="testimonials-subtitlesBtn">
+                          <button type="button" title="swithSubtitle" class="switchSubtitleBtn switchSubtitleBtn_1 player__text">
+                            <svg class="player__icon" width="10" height="10">
+                            <use href="./images/sprite.svg#arrow-right2"></use>
+                            </svg>A
+                          </button>
                         </div>
                       </div>
                     </div>
                     <div class="subtitle-container">
-                      <div class="testimonials-subtitlesBtn">
-                        <button type="button" title="swithSubtitle" class="switchSubtitleBtn switchSubtitleBtn_1 player__text" data-count="switchSubtitleBtn_1">
-                          <svg class="player__icon" width="10" height="10">
-                          <use href="./images/sprite.svg#arrow-right2"></use>
-                          </svg>A
-                        </button>
-                      </div>
                       <div class="testimonials-subtitles testimonials-subtitles_1">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos eaque ut autem ad unde. Repellat delectus, sed quo, accusantium ad recusandae inventore illum fuga est, provident obcaecati molestiae fugit et.</p>
                       </div>
@@ -128,7 +132,7 @@
                     </div>
                     <div class="subtitle-container">
                       <div class="testimonials-subtitlesBtn">
-                        <button type="button" title="swithSubtitle" class="switchSubtitleBtn switchSubtitleBtn_2" data-count="switchSubtitleBtn_2">A</button>
+                        <button type="button" title="swithSubtitle" class="switchSubtitleBtn switchSubtitleBtn_2">A</button>
                       </div>
                       <div class="testimonials-subtitles testimonials-subtitles_2">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos eaque ut autem ad unde. Repellat delectus, sed quo, accusantium ad recusandae inventore illum fuga est, provident obcaecati molestiae fugit et.</p>
@@ -189,7 +193,7 @@
                     </div>
                     <div class="subtitle-container">
                       <div class="testimonials-subtitlesBtn">
-                        <button type="button" title="swithSubtitle" class="switchSubtitleBtn switchSubtitleBtn_3" data-count="switchSubtitleBtn_3">A</button>
+                        <button type="button" title="swithSubtitle" class="switchSubtitleBtn switchSubtitleBtn_3">A</button>
                       </div>
                       <div class="testimonials-subtitles testimonials-subtitles_3">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos eaque ut autem ad unde. Repellat delectus, sed quo, accusantium ad recusandae inventore illum fuga est, provident obcaecati molestiae fugit et.</p>
@@ -252,7 +256,7 @@
                     </div>
                     <div class="subtitle-container">
                       <div class="testimonials-subtitlesBtn">
-                        <button type="button" title="swithSubtitle" class="switchSubtitleBtn switchSubtitleBtn_4" data-count="switchSubtitleBtn_4">A</button>
+                        <button type="button" title="swithSubtitle" class="switchSubtitleBtn switchSubtitleBtn_4">A</button>
                       </div>
                       <div class="testimonials-subtitles testimonials-subtitles_4">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos eaque ut autem ad unde. Repellat delectus, sed quo, accusantium ad recusandae inventore illum fuga est, provident obcaecati molestiae fugit et.</p>
@@ -314,7 +318,7 @@
                     </div>
                     <div class="subtitle-container">
                       <div class="testimonials-subtitlesBtn">
-                        <button type="button" title="swithSubtitle" class="switchSubtitleBtn switchSubtitleBtn_5" data-count="switchSubtitleBtn_5">A</button>
+                        <button type="button" title="swithSubtitle" class="switchSubtitleBtn switchSubtitleBtn_5">A</button>
                       </div>
                       <div class="testimonials-subtitles testimonials-subtitles_5">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos eaque ut autem ad unde. Repellat delectus, sed quo, accusantium ad recusandae inventore illum fuga est, provident obcaecati molestiae fugit et.</p>
@@ -378,7 +382,7 @@
                     </div>
                     <div class="subtitle-container">
                       <div class="testimonials-subtitlesBtn">
-                        <button type="button" title="swithSubtitle" class="switchSubtitleBtn switchSubtitleBtn_6" data-count="switchSubtitleBtn_6">A</button>
+                        <button type="button" title="swithSubtitle" class="switchSubtitleBtn switchSubtitleBtn_6">A</button>
                       </div>
                       <div class="testimonials-subtitles testimonials-subtitles_6">
                         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos eaque ut autem ad unde. Repellat delectus, sed quo, accusantium ad recusandae inventore illum fuga est, provident obcaecati molestiae fugit et.</p>
