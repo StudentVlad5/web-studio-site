@@ -171,11 +171,6 @@
     & .about__title-group {
         gap: 14px;
         width: 296px;
-
-        @include mq(desktop) {
-            margin-top: 200px;
-        }
-
     }
 
     &__list {
@@ -211,53 +206,41 @@
         &:nth-child(3) {
             color: var(--cl-txt-grey);
             border-top: 1px solid var(--cl-txt-grey);
-            transition: animation var(--slow-anim);
-
-            &:hover,
-            &:focus {
-                margin-left: 0;
-                color: var(--cl-txt-accent);
-                border-top: 1px solid var(--cl-txt-accent);
-                animation: fadeInRightAnim 0.75s ease-in both;
-            }
         }
 
         &:nth-child(2) {
-            margin-left: 157px;
+            transform: translateX(157px);
         }
 
         &:nth-child(3) {
-            margin-left: 290px;
+            transform: translateX(290px);
+        }
+
+        &.fixed {
+            color: var(--cl-txt-accent);
+            border-top: 1px solid var(--cl-txt-accent);
+            transform: translateX(0);
+            transition: all 5s;
         }
 
         @include mq(desktop) {
             &:nth-child(2) {
-                margin-top: 80px;
-                margin-left: 0;
+                transform: translateY(80px);
+                transform: translateX(0);
             }
 
             &:nth-child(3) {
-                margin-top: 160px;
-                margin-left: 0;
+                transform: translateY(160px);
+                transform: translateX(0);
+            }
+
+            &.fixed {
+                color: var(--cl-txt-accent);
+                border-top: 1px solid var(--cl-txt-accent);
+                transform: translateY(0);
+                transition: all 5.5s;
             }
         }
-    }
-}
-
-.action {
-    transition: all var(--slow-anim);
-
-    &-hide {
-        display: none;
-        transform: translateX(-157px);
-        color: var(--cl-txt-grey)
-    }
-
-    &-show {
-        display: flex;
-        transform: translateX(0);
-        animation: fadeInRightAnim 0.75s ease-in both;
-        color: var(--cl-txt-accent)
     }
 }
 
@@ -382,32 +365,25 @@
 
         @include mq(not-desktop) {
 
-            &:nth-child(2),
-            &:nth-child(3),
-            &:nth-child(4) {
-                transition: animation var(--slow-anim);
-
-                &:hover,
-                &:focus {
-                    margin-left: 0;
-                    opacity: 1;
-                    animation: fadeInRightAnim 0.75s ease-in both;
-                }
-            }
-
             &:nth-child(2) {
-                margin-left: 50px;
+                transform: translateX(50px);
                 opacity: 0.6;
             }
 
             &:nth-child(3) {
-                margin-left: 150px;
+                transform: translateX(150px);
                 opacity: 0.3;
             }
 
             &:nth-child(4) {
-                margin-left: 250px;
+                transform: translateX(250px);
                 opacity: 0.1;
+            }
+
+            &.fixed {
+                opacity: 1;
+                transform: translateX(0);
+                transition: all 5s;
             }
         }
     }
