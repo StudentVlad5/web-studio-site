@@ -19,3 +19,27 @@
         transform: rotate(360deg);
     }
 }
+
+@keyframes fadeInRightAnim {
+    0% {
+        transform: translateX(50px);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInTopAnim {
+    0% {
+        transform: translateY(70%);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

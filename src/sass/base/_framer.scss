@@ -6,6 +6,10 @@
 
     margin: 0 auto;
     padding: 0px;
+
+    @include mq(desktop) {
+        overflow-x: scroll;
+    }
 }
 
 .content {
@@ -17,6 +21,6 @@
 
     @include mq(desktop) {
         margin-top: 0;
-        margin-left: 290px;
+        margin-left: 300px;
     }
 }
