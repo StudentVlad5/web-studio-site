@@ -11,7 +11,7 @@ if (animItems.length > 0) {
 
       let animStart = 4;
 
-      //   let animItemPoint = "";
+        let animItemPoint = "";
       //   if (animItem.classList.contains("cases-client-container_1")) {
       //     animItemPoint = 300;
       //   } else if (animItem.classList.contains("cases-client-container_2")) {

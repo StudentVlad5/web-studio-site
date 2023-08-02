@@ -8,19 +8,11 @@ import img_4 from "../../images/clients/client_1.jpg";
 import img_5 from "../../images/clients/client_2.jpg";
 import img_6 from "../../images/clients/client_3.jpg";
 
-// import mp
-import { mp_rewie_1 } from "../../mp3/Voicy_Allahu Akbar BANG.mp3";
-import { mp_rewie_2 } from "../../mp3/Voicy_Allahu Akbar BANG.mp3";
-import { mp_rewie_3 } from "../../mp3/Voicy_Allahu Akbar BANG.mp3";
-import { mp_rewie_4 } from "../../mp3/Voicy_Allahu Akbar BANG.mp3";
-import { mp_rewie_5 } from "../../mp3/Voicy_Allahu Akbar BANG.mp3";
-import { mp_rewie_6 } from "../../mp3/Voicy_Allahu Akbar BANG.mp3";
-
 const data = [
   {
     clientId: 1,
     clientImg: img_1,
-    clientRewie: { ...mp_rewie_1 },
+    clientRewie: "Voicy_Allahu_Akbar_BANG.mp3",
     clientName: "Tatyana",
     clientCompany: "ARMOR LLC",
     clientTitle: "Tatiana's review",
@@ -35,7 +27,7 @@ const data = [
   {
     clientId: 2,
     clientImg: img_2,
-    clientRewie: { ...mp_rewie_2 },
+    clientRewie: "/src/mp3/Voicy_And we say bye bye.mp3",
     clientName: "Ivan",
     clientCompany: "Ukraine LTD",
     clientTitle: "Ivan's review",
@@ -50,7 +42,7 @@ const data = [
   {
     clientId: 3,
     clientImg: img_3,
-    clientRewie: { ...mp_rewie_3 },
+    clientRewie: "/src/mp3/Voicy_Do not walk away from your queen.mp3",
     clientName: "Sonya",
     clientCompany: "Bayractar System LLC",
     clientTitle: "Sonya's review",
@@ -65,7 +57,7 @@ const data = [
   {
     clientId: 4,
     clientImg: img_4,
-    clientRewie: { ...mp_rewie_4 },
+    clientRewie: "/src/mp3/Voicy_Kanye West Hated.mp3",
     clientName: "Sara",
     clientCompany: "Homekeeper",
     clientTitle: "Sara's review",
@@ -80,7 +72,7 @@ const data = [
   {
     clientId: 5,
     clientImg: img_5,
-    clientRewie: { ...mp_rewie_5 },
+    clientRewie: "/src/mp3/Voicy_Nothing is impossible!.mp3",
     clientName: "Jon",
     clientCompany: "Green Yard LCC",
     clientTitle: "Jon's review",
@@ -95,7 +87,7 @@ const data = [
   {
     clientId: 6,
     clientImg: img_6,
-    clientRewie: { ...mp_rewie_6 },
+    clientRewie: "/src/mp3/Voicy_WHAT ARE YOU DOING IN MY SWAMP.mp3",
     clientName: "Inga",
     clientCompany: "Rozetka LTD",
     clientTitle: "Inga's review",
@@ -141,13 +133,11 @@ function addClientsRewiers() {
               id="music-container${item.clientId}"
             >
               <audio
-              src="src/mp3/Voicy_Allahu Akbar BANG.mp3"
               id="audio_${item.clientId}"
               class="audio audio_player audio_player${item.clientId}"
               preload="metadata"
               loop="true"
               ></audio>
-              <source src=${item.clientRewie} type="audio/mpeg">
               <div class="testimonials-navigation player__road">
                 <div style="display: flex; flex-wrap: nowrap;">
                   <button

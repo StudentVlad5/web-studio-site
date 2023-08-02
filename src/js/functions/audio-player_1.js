@@ -1,4 +1,3 @@
-import mp3 from "../../mp3/Voicy_Allahu Akbar BANG.mp3";
 const musicContainer = document.getElementById("music-container1");
 const audioPlayer = musicContainer.querySelector(".audio_player1");
 const progressRange = document.querySelector(".progress-range1");
@@ -30,6 +29,7 @@ function playSong() {
   progress3.style.opacity = `1`;
   progress4.style.opacity = `1`;
   progress5.style.opacity = `1`;
+  audio.src = "Voicy_Allahu_Akbar_BANG.mp3";
   audio.play();
   timerId = setInterval(() => changeHeightOfSoundtrack(), 150);
 }
