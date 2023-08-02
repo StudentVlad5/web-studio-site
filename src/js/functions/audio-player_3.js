@@ -64,7 +64,7 @@ function updateProgress() {
   progressBar.style.width = `${
     (audioPlayer.currentTime / audioPlayer.duration) * 100
   }%`;
-  currentTime.textContent = `${displayTime(audioPlayer.currentTime)}`;
+  currentTime.textContent = `${displayTime(audio.currentTime)}`;
 }
 
 // function scrub(event) {
@@ -74,8 +74,8 @@ function updateProgress() {
 // }
 
 function setProgress(e) {
-  const newTime = e.offsetX / progressRange.offsetWidth;
-  progressBar.style.width = `${newTime * 100}%`;
+  // const newTime = e.offsetX / progressRange.offsetWidth;
+  // progressBar.style.width = `${newTime * 100}%`;
   audioPlayer.currentTime = newTime * audioPlayer.duration;
 }
 

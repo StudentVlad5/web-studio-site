@@ -29,7 +29,7 @@ function playSong() {
   progress3.style.opacity = `1`;
   progress4.style.opacity = `1`;
   progress5.style.opacity = `1`;
-  audio.src = "Voicy_Allahu_Akbar_BANG.mp3";
+
   audio.play();
   timerId = setInterval(() => changeHeightOfSoundtrack(), 150);
 }
@@ -65,6 +65,7 @@ function changeHeightOfSoundtrack() {
 }
 
 function displayTime(time) {
+  console.log("time", time);
   const minutes = Math.floor(time / 60);
   let seconds = Math.floor(time % 60);
   seconds = seconds > 9 ? seconds : `0${seconds}`;
@@ -72,10 +73,10 @@ function displayTime(time) {
 }
 
 function updateProgress() {
-  progressBar.style.width = `${
-    (audioPlayer.currentTime / audioPlayer.duration) * 100
-  }%`;
-  currentTime.textContent = `${displayTime(audioPlayer.currentTime)}`;
+  // progressBar.style.width = `${
+  //   (audioPlayer.currentTime / audioPlayer.duration) * 100
+  // }%`;
+  currentTime.textContent = `${displayTime(audio.currentTime)}`;
 }
 
 // function scrub(event) {

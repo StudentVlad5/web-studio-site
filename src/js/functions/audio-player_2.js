@@ -61,10 +61,10 @@ function displayTime(time) {
 }
 
 function updateProgress() {
-  progressBar.style.width = `${
-    (audioPlayer.currentTime / audioPlayer.duration) * 100
-  }%`;
-  currentTime.textContent = `${displayTime(audioPlayer.currentTime)}`;
+  // progressBar.style.width = `${
+  //   (audioPlayer.currentTime / audioPlayer.duration) * 100
+  // }%`;
+  currentTime.textContent = `${displayTime(audio.currentTime)}`;
 }
 
 // function scrub(event) {

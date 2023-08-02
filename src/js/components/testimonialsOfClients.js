@@ -12,7 +12,7 @@ const data = [
   {
     clientId: 1,
     clientImg: img_1,
-    clientRewie: "Voicy_Allahu_Akbar_BANG.mp3",
+    clientRewie: "/src/mp3/Voicy_Allahu_Akbar_BANG.mp3",
     clientName: "Tatyana",
     clientCompany: "ARMOR LLC",
     clientTitle: "Tatiana's review",
@@ -27,7 +27,7 @@ const data = [
   {
     clientId: 2,
     clientImg: img_2,
-    clientRewie: "/src/mp3/Voicy_And we say bye bye.mp3",
+    clientRewie: "Voicy_And we say bye bye.mp3",
     clientName: "Ivan",
     clientCompany: "Ukraine LTD",
     clientTitle: "Ivan's review",
@@ -103,6 +103,7 @@ const data = [
 
 function addClientsRewiers() {
   const wrap = document.querySelector(".testimonials-listOfClients");
+
   let listOfRewiers = "";
   data.map((item) => {
     listOfRewiers += `
@@ -132,11 +133,13 @@ function addClientsRewiers() {
               class="music-container home__player player"
               id="music-container${item.clientId}"
             >
-              <audio
+              <audio 
+              src=${item.clientRewie}
               id="audio_${item.clientId}"
               class="audio audio_player audio_player${item.clientId}"
               preload="metadata"
               loop="true"
+              type="audio/mpeg"
               ></audio>
               <div class="testimonials-navigation player__road">
                 <div style="display: flex; flex-wrap: nowrap;">
@@ -196,7 +199,7 @@ function addClientsRewiers() {
                     </div>
                   </div>
                   <div class="time">
-                    <span class="player__time time-elapsed_${item.clientId}">
+                    <span class="time-elapsed_${item.clientId}">
                       ${item.time}
                     </span>
                   </div>
