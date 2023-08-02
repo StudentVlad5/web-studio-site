@@ -1,3 +1,4 @@
+import mp3 from "../../mp3/Voicy_Allahu Akbar BANG.mp3";
 const musicContainer = document.getElementById("music-container1");
 const audioPlayer = musicContainer.querySelector(".audio_player1");
 const progressRange = document.querySelector(".progress-range1");
@@ -77,11 +78,11 @@ function updateProgress() {
   currentTime.textContent = `${displayTime(audioPlayer.currentTime)}`;
 }
 
-function scrub(event) {
-  const scrubTime =
-    (event.offsetX / progressRange.offsetWidth) * audioPlayer.duration;
-  audioPlayer.currentTime = scrubTime;
-}
+// function scrub(event) {
+//   const scrubTime =
+//     (event.offsetX / progressRange.offsetWidth) * audioPlayer.duration;
+//   audioPlayer.currentTime = scrubTime;
+// }
 
 function setProgress(e) {
   const newTime = e.offsetX / progressRange.offsetWidth;
@@ -141,11 +142,11 @@ ranges.forEach((range) =>
 // muteOffBtn.addEventListener("click", mute);
 
 // progress bar controls
-let mouseDown = false;
-progressRange.addEventListener("click", scrub);
-progressRange.addEventListener(
-  "mousemove",
-  (event) => mouseDown && scrub(event)
-);
-progressRange.addEventListener("mousedown", () => (mouseDown = true));
-progressRange.addEventListener("mouseup", () => (mouseDown = false));
+// let mouseDown = false;
+// progressRange.addEventListener("click", scrub);
+// progressRange.addEventListener(
+//   "mousemove",
+//   (event) => mouseDown && scrub(event)
+// );
+// progressRange.addEventListener("mousedown", () => (mouseDown = true));
+// progressRange.addEventListener("mouseup", () => (mouseDown = false));
