@@ -6,10 +6,10 @@ const currentTime = document.querySelector(".time-elapsed_3");
 const audio = document.getElementById("audio_3");
 const playBtn = document.getElementById("play3");
 const pauseBtn = document.getElementById("pause3");
-const controlSoundBtn = document.getElementById("speaker_icon3");
-const controlSoundMute = document.querySelector(".range-container_3");
-const muteOnBtn = document.querySelector(".soundUp_3");
-const muteOffBtn = document.querySelector(".volumeMute_3");
+// const controlSoundBtn = document.getElementById("speaker_icon3");
+// const controlSoundMute = document.querySelector(".range-container_3");
+// const muteOnBtn = document.querySelector(".soundUp_3");
+// const muteOffBtn = document.querySelector(".volumeMute_3");
 const ranges = musicContainer.querySelectorAll(".player_slider_3");
 const range = document.querySelector(".player_slider_3");
 const volInput = musicContainer.querySelector('input[name="volume"]');
@@ -36,14 +36,14 @@ function pauseSong() {
   clearInterval(timerId);
 }
 
-function viewSoundControl(e) {
-  e.stopPropagation();
-  e.preventDefault();
-  const isViewMuteControl = controlSoundMute.classList.contains("is-hide");
-  isViewMuteControl
-    ? controlSoundMute.classList.remove("is-hide")
-    : controlSoundMute.classList.add("is-hide");
-}
+// function viewSoundControl(e) {
+//   e.stopPropagation();
+//   e.preventDefault();
+//   const isViewMuteControl = controlSoundMute.classList.contains("is-hide");
+//   isViewMuteControl
+//     ? controlSoundMute.classList.remove("is-hide")
+//     : controlSoundMute.classList.add("is-hide");
+// }
 
 function changeHeightOfSoundtrack() {
   progress1.style.height = `${Math.random() * 12}px`;
@@ -64,18 +64,18 @@ function updateProgress() {
   progressBar.style.width = `${
     (audioPlayer.currentTime / audioPlayer.duration) * 100
   }%`;
-  currentTime.textContent = `${displayTime(audioPlayer.currentTime)}`;
+  currentTime.textContent = `${displayTime(audio.currentTime)}`;
 }
 
-function scrub(event) {
-  const scrubTime =
-    (event.offsetX / progressRange.offsetWidth) * audioPlayer.duration;
-  audioPlayer.currentTime = scrubTime;
-}
+// function scrub(event) {
+//   const scrubTime =
+//     (event.offsetX / progressRange.offsetWidth) * audioPlayer.duration;
+//   audioPlayer.currentTime = scrubTime;
+// }
 
 function setProgress(e) {
-  const newTime = e.offsetX / progressRange.offsetWidth;
-  progressBar.style.width = `${newTime * 100}%`;
+  // const newTime = e.offsetX / progressRange.offsetWidth;
+  // progressBar.style.width = `${newTime * 100}%`;
   audioPlayer.currentTime = newTime * audioPlayer.duration;
 }
 
@@ -118,7 +118,7 @@ pauseBtn.addEventListener("click", () => {
   }
 });
 
-controlSoundBtn.addEventListener("click", (e) => viewSoundControl(e));
+// controlSoundBtn.addEventListener("click", (e) => viewSoundControl(e));
 audio.addEventListener("timeupdate", updateProgress);
 progressRange.addEventListener("click", setProgress);
 
@@ -127,15 +127,15 @@ ranges.forEach((range) =>
   range.addEventListener("mousemove", handleRangeUpdate)
 );
 
-muteOnBtn.addEventListener("click", soundOn);
-muteOffBtn.addEventListener("click", mute);
+// muteOnBtn.addEventListener("click", soundOn);
+// muteOffBtn.addEventListener("click", mute);
 
 // progress bar controls
-let mouseDown = false;
-progressRange.addEventListener("click", scrub);
-progressRange.addEventListener(
-  "mousemove",
-  (event) => mouseDown && scrub(event)
-);
-progressRange.addEventListener("mousedown", () => (mouseDown = true));
-progressRange.addEventListener("mouseup", () => (mouseDown = false));
+// let mouseDown = false;
+// progressRange.addEventListener("click", scrub);
+// progressRange.addEventListener(
+//   "mousemove",
+//   (event) => mouseDown && scrub(event)
+// );
+// progressRange.addEventListener("mousedown", () => (mouseDown = true));
+// progressRange.addEventListener("mouseup", () => (mouseDown = false));

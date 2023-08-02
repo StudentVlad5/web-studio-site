@@ -6,10 +6,10 @@ const currentTime = document.querySelector(".time-elapsed_1");
 const audio = document.getElementById("audio_1");
 const playBtn = document.getElementById("play1");
 const pauseBtn = document.getElementById("pause1");
-const controlSoundBtn = document.getElementById("speaker_icon1");
-const controlSoundMute = document.querySelector(".range-container_1");
-const muteOnBtn = document.querySelector(".soundUp_1");
-const muteOffBtn = document.querySelector(".volumeMute_1");
+// const controlSoundBtn = document.getElementById("speaker_icon1");
+// const controlSoundMute = document.querySelector(".range-container_1");
+// const muteOnBtn = document.querySelector(".soundUp_1");
+// const muteOffBtn = document.querySelector(".volumeMute_1");
 const ranges = musicContainer.querySelectorAll(".player_slider_1");
 const range = document.querySelector(".player_slider_1");
 const volInput = musicContainer.querySelector('input[name="volume"]');
@@ -24,6 +24,12 @@ function playSong() {
   musicContainer.classList.add("play");
   playBtn.classList.add("is-hide");
   pauseBtn.classList.remove("is-hide");
+  progress1.style.opacity = `1`;
+  progress2.style.opacity = `1`;
+  progress3.style.opacity = `1`;
+  progress4.style.opacity = `1`;
+  progress5.style.opacity = `1`;
+
   audio.play();
   timerId = setInterval(() => changeHeightOfSoundtrack(), 150);
 }
@@ -32,18 +38,23 @@ function pauseSong() {
   musicContainer.classList.remove("play");
   playBtn.classList.remove("is-hide");
   pauseBtn.classList.add("is-hide");
+  progress1.style.opacity = `0.5`;
+  progress2.style.opacity = `0.5`;
+  progress3.style.opacity = `0.5`;
+  progress4.style.opacity = `0.5`;
+  progress5.style.opacity = `0.5`;
   audio.pause();
   clearInterval(timerId);
 }
 
-function viewSoundControl(e) {
-  e.stopPropagation();
-  e.preventDefault();
-  const isViewMuteControl = controlSoundMute.classList.contains("is-hide");
-  isViewMuteControl
-    ? controlSoundMute.classList.remove("is-hide")
-    : controlSoundMute.classList.add("is-hide");
-}
+// function viewSoundControl(e) {
+//   e.stopPropagation();
+//   e.preventDefault();
+//   const isViewMuteControl = controlSoundMute.classList.contains("is-hide");
+//   isViewMuteControl
+//     ? controlSoundMute.classList.remove("is-hide")
+//     : controlSoundMute.classList.add("is-hide");
+// }
 
 function changeHeightOfSoundtrack() {
   progress1.style.height = `${Math.random() * 12}px`;
@@ -54,6 +65,7 @@ function changeHeightOfSoundtrack() {
 }
 
 function displayTime(time) {
+  console.log("time", time);
   const minutes = Math.floor(time / 60);
   let seconds = Math.floor(time % 60);
   seconds = seconds > 9 ? seconds : `0${seconds}`;
@@ -61,17 +73,17 @@ function displayTime(time) {
 }
 
 function updateProgress() {
-  progressBar.style.width = `${
-    (audioPlayer.currentTime / audioPlayer.duration) * 100
-  }%`;
-  currentTime.textContent = `${displayTime(audioPlayer.currentTime)}`;
+  // progressBar.style.width = `${
+  //   (audioPlayer.currentTime / audioPlayer.duration) * 100
+  // }%`;
+  currentTime.textContent = `${displayTime(audio.currentTime)}`;
 }
 
-function scrub(event) {
-  const scrubTime =
-    (event.offsetX / progressRange.offsetWidth) * audioPlayer.duration;
-  audioPlayer.currentTime = scrubTime;
-}
+// function scrub(event) {
+//   const scrubTime =
+//     (event.offsetX / progressRange.offsetWidth) * audioPlayer.duration;
+//   audioPlayer.currentTime = scrubTime;
+// }
 
 function setProgress(e) {
   const newTime = e.offsetX / progressRange.offsetWidth;
@@ -118,7 +130,7 @@ pauseBtn.addEventListener("click", () => {
   }
 });
 
-controlSoundBtn.addEventListener("click", (e) => viewSoundControl(e));
+// controlSoundBtn.addEventListener("click", (e) => viewSoundControl(e));
 audio.addEventListener("timeupdate", updateProgress);
 progressRange.addEventListener("click", setProgress);
 
@@ -127,15 +139,15 @@ ranges.forEach((range) =>
   range.addEventListener("mousemove", handleRangeUpdate)
 );
 
-muteOnBtn.addEventListener("click", soundOn);
-muteOffBtn.addEventListener("click", mute);
+// muteOnBtn.addEventListener("click", soundOn);
+// muteOffBtn.addEventListener("click", mute);
 
 // progress bar controls
-let mouseDown = false;
-progressRange.addEventListener("click", scrub);
-progressRange.addEventListener(
-  "mousemove",
-  (event) => mouseDown && scrub(event)
-);
-progressRange.addEventListener("mousedown", () => (mouseDown = true));
-progressRange.addEventListener("mouseup", () => (mouseDown = false));
+// let mouseDown = false;
+// progressRange.addEventListener("click", scrub);
+// progressRange.addEventListener(
+//   "mousemove",
+//   (event) => mouseDown && scrub(event)
+// );
+// progressRange.addEventListener("mousedown", () => (mouseDown = true));
+// progressRange.addEventListener("mouseup", () => (mouseDown = false));
