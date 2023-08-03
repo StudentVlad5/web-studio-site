@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 11;
 
     display: flex;
     align-items: flex-start;
@@ -17,15 +17,15 @@
 
     transition: transform var(--anim);
 
-    &-hide {
-        display: none;
-        transform: translateY(-73px);
-    }
+    // &-hide {
+    //     display: none;
+    //     transform: translateY(-73px);
+    // }
 
-    &-show {
-        display: flex;
-        transform: translateY(0);
-    }
+    // &-show {
+    //     display: flex;
+    //     transform: translateY(0);
+    // }
 
     @include mq(desktop) {
         display: none;
@@ -34,7 +34,7 @@
 
 // ========== logo ==========
 .logo {
-    z-index: 12;
+    z-index: 13;
     font-family: 'Libre Caslon Display';
     font-size: 20px;
     font-style: normal;
@@ -52,7 +52,7 @@
 
 // ========== mobile button ==========
 .mobile-btn {
-    z-index: 11;
+    z-index: 14;
 
     display: flex;
     justify-content: center;
@@ -76,7 +76,7 @@
         position: fixed;
         top: 36px;
         right: 16px;
-        z-index: 12;
+        z-index: 14;
         color: var(--cl-txt-grey);
     }
 

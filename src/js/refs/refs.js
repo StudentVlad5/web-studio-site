@@ -1,5 +1,9 @@
 export default function getRefs() {
   return {
+    //========== navigation ==========
+    navLinks: document.querySelectorAll('.navigation__link'),
+    sections: document.querySelectorAll('section[id]'),
+
     //========== mobile menu ==========
     menuBtnRef: document.querySelector('.js-mobile-menu-button'),
     mobileMenuRef: document.querySelector('.js-mobile-menu'),
@@ -14,5 +18,8 @@ export default function getRefs() {
 
     //==========  testimonials section ==========
     testimonialsWrap: document.querySelector('.testimonials-clients-wrap'),
+
+    //==========  about me section ==========
+    elements: document.querySelectorAll('#sentinel'),
   };
 }

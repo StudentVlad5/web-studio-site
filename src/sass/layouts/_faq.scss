@@ -7,16 +7,53 @@
   line-height: 50px; /* 96.154% */
   letter-spacing: -2.6px;
   text-transform: uppercase;
+  display: block;
+  @media screen and(min-width:1280px) {
+    display: none;
+  }
+}
+
+.faq-title-desk {
+  color: var(--cl-txt-main);
+  font-family: Manrope;
+  font-size: 78px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 70px; /* 89.744% */
+  letter-spacing: -4.29px;
+  text-transform: uppercase;
+width: 563px;
+  display: none;
+
+  @media screen and(min-width:1280px) {
+    display: block;
+  }
 }
 
 .faq__list {
   margin-top: 32px;
 
+  @media screen and (min-width: 1280px) {
+    padding: 71px 40px;
+    border-radius: 20px;
+    background: var(--bgc-second);
+    // display: flex;
+    // flex-direction: column;
+  }
+
   &-item {
     position: relative;
     padding: 20px 0;
+
+    @media screen and (min-width: 1280px) {
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+    }
+
     &:not(:last-child) {
       border-bottom: 1px solid var(--bgc-stroke);
+      margin-bottom: 15px;
     }
 
     &:first-child {
@@ -27,6 +64,22 @@
     &:last-child {
       padding-top: 20px;
       padding-bottom: 0;
+    }
+  }
+
+  &-item-number {
+    color: var(--bgc-black);
+    font-family: Suisse 'Intl';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px; /* 128.571% */
+    letter-spacing: -0.28px;
+    padding-right: 123px;
+    display: none;
+
+    @media screen and(min-width:1280px) {
+      display: block;
     }
   }
 
@@ -44,6 +97,7 @@
       font-size: 18px;
       line-height: 23px; /* 127.778% */
       letter-spacing: -0.9px;
+      display: flex;
     }
   }
 
@@ -55,17 +109,25 @@
     font-weight: 600;
     line-height: 19px; /* 135.714% */
     letter-spacing: -0.42px;
+
+    @media screen and (min-width: 1280px) {
+      width: 587px;
+      padding-left: 137px;
+    }
   }
 }
 
 .arrow__box-mobile {
   display: block;
   position: absolute;
-  top: 0;
+  top: 10px;
   right: 0;
+  cursor: pointer;
 
   &-icon {
-    margin-right: 16px;
+    transition: transform 0.3s ease-in-out;
+    background-color: var(--bgc-second);
+    border-radius: 6px;
 
     &:nth-child(1) {
       transform: rotateZ(90deg);
@@ -86,9 +148,13 @@
   position: absolute;
   top: 0;
   right: 0;
+  cursor: pointer;
 
-  &-icon1 {
-    margin-right: 40px;
+  &-icon {
+    transition: transform 0.3s ease-in-out;
+    background-color: #D4DEF0;
+    border-radius: 100px;
+    padding: 2px;
   }
 
   @media screen and(min-width:1280px) {
@@ -96,6 +162,21 @@
   }
 }
 
-.is-hidden{
-    display: none;
+.is-hidden {
+  display: none;
+}
+
+.faq__list-item-discr {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease-in-out;
+}
+
+.show {
+  max-height: 500px;
+}
+
+.active {
+  background-color: var(--bgc-accent);
+  fill: var(--bgc-main);
 }
