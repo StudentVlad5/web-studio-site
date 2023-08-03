@@ -9,7 +9,6 @@ const refs = getRefs();
     refs.menuBtnRef.setAttribute('aria-expanded', !expanded);
     refs.mobileMenuRef.classList.toggle('is-open');
     !expanded ? fixedModalOverflow() : closeModalOverflow();
-    // !expanded && setActiveLink(document.querySelectorAll('.navigation-link'));
   };
 
   refs.menuBtnRef.addEventListener('click', toggleMenu);
@@ -19,8 +18,10 @@ const refs = getRefs();
 // Fixed window when modal opened
 function fixedModalOverflow() {
   document.querySelector('body').style.overflow = 'hidden';
+  document.querySelector('body').style.height = '100vh';
 }
 
 function closeModalOverflow() {
-  document.querySelector('body').style.overflow = 'unset';
+  document.querySelector('body').style.overflow = 'visible';
+  document.querySelector('body').style.height = 'auto';
 }

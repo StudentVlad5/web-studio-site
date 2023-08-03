@@ -1,7 +1,7 @@
 import './js/refs/refs';
 import './js/localStorage/lsService';
 import './js/components/animations';
-// import './js/components/header-on-scroll';
+import './js/components/header-on-scroll';
 import './js/components/navigation';
 import './js/components/mobile-menu';
 import './js/components/list-on-scroll';
