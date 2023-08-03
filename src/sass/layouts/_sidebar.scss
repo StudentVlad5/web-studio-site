@@ -30,7 +30,8 @@
         position: relative;
 
         &:hover,
-        &:focus {
+        &:focus,
+        &:active {
             color: var(--cl-txt-accent);
 
             &::before {
@@ -58,5 +59,24 @@
         font-weight: 600;
         line-height: 18px;
         letter-spacing: -0.7px;
+
+        &.active {
+            &::before {
+                position: absolute;
+                top: 50%;
+                left: -14px;
+                transform: translateY(-50%);
+
+                content: '';
+                display: block;
+                width: 10px;
+                height: 12px;
+
+                background-image: url(/src/images/flower.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                fill: currentColor;
+            }
+        }
     }
 }

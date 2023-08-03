@@ -12,15 +12,10 @@ body {
     font-size: 14px;
     letter-spacing: 0.04em;
 
-    width: 100%;
     min-height: 100vh;
-    overflow-x: hidden;
 
     color: var(--cl-txt-main);
     background-color: var(--bgc-main);
 
     position: relative;
-}
-head {
-    scroll-behavior: smooth;
 }
