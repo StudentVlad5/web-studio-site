@@ -18,7 +18,7 @@ const data = [
     clientTitle: "Tatiana's review",
     dataAos: "zoom-out",
     offset: "0",
-    delay: "300",
+    delay: "1000",
     easing: "ease-in-sine",
     time: "0:10",
     anchor: "anchor_1",
@@ -33,7 +33,7 @@ const data = [
     clientTitle: "Ivan's review",
     dataAos: "zoom-out",
     offset: "0",
-    delay: "500",
+    delay: "1500",
     easing: "ease-out-cubic",
     time: "0:07",
     anchor: "anchor_2",
@@ -46,12 +46,12 @@ const data = [
     clientName: "Sonya",
     clientCompany: "Bayractar System LLC",
     clientTitle: "Sonya's review",
-    dataAos: "zoom-in",
+    dataAos: "zoom-out",
     offset: "0",
-    delay: "1500",
+    delay: "2000",
     easing: "ease-in-sine",
     time: "0:06",
-    anchor: ".cases-client-container_2",
+    anchor: ".testimonials__client-container_2",
     duration: "2000",
   },
   {
@@ -66,7 +66,7 @@ const data = [
     delay: "2500",
     easing: "ease-in-back",
     time: "0:05",
-    anchor: ".cases-client-container_2",
+    anchor: ".testimonials__client-container_3",
     duration: "2000",
   },
   {
@@ -81,7 +81,7 @@ const data = [
     delay: "5000",
     easing: "ease-in-back",
     time: "0:05",
-    anchor: ".cases-client-container_3",
+    anchor: ".testimonials__client-container_3",
     duration: "2000",
   },
   {
@@ -96,19 +96,19 @@ const data = [
     delay: "6000",
     easing: "ease-in-back",
     time: "0:07",
-    anchor: ".cases-client-container_3",
+    anchor: ".testimonials__client-container_4",
     duration: "2000",
   },
 ];
 
 function addClientsRewiers() {
-  const wrap = document.querySelector(".testimonials-listOfClients");
+  const wrap = document.querySelector(".testimonials__listOfClients");
 
   let listOfRewiers = "";
   data.map((item) => {
     listOfRewiers += `
       <li id="anchor_${item.clientId}"
-        class="cases-client-container cases-client-container_${item.clientId}"
+        class="testimonials__client-container testimonials__client-container_${item.clientId}"
         data-aos=${item.dataAos}
         data-aos-offset=${item.offset}
         data-aos-delay=${item.delay}
@@ -116,14 +116,14 @@ function addClientsRewiers() {
         data-aos-anchor=${item.anchor}
         data-aos-duration=${item.duration}
       >
-        <div class="cases-client--box">
-          <div class="cases-client-wrap">
+        <div class="testimonials__client-box">
+          <div class="testimonials__client-wrap">
             <img
-              class="cases-client-img"
+              class="testimonials__client-img"
               src=${item.clientImg}
               alt="client number ${item.clientId}"
             />
-            <div class="cases-client-data">
+            <div class="testimonials__client-data">
               <p>${item.clientName}</p>
               <p>${item.clientCompany}</p>
             </div>
@@ -133,20 +133,13 @@ function addClientsRewiers() {
               class="music-container home__player player"
               id="music-container${item.clientId}"
             >
-              <audio 
-              src=${item.clientRewie}
-              id="audio_${item.clientId}"
-              class="audio audio_player audio_player${item.clientId}"
-              preload="metadata"
-              loop="true"
-              type="audio/mpeg"
-              ></audio>
               <div class="testimonials-navigation player__road">
                 <div style="display: flex; flex-wrap: nowrap;">
                   <button
                     type="button"
                     id="play${item.clientId}"
-                    class="action-btn action-btn-big player__btn"
+                    data-play=${item.clientId}
+                    class="action-btn action-btn-big player__btn play--btn"
                   >
                   <svg
                   class="player__icon fa-pause"
@@ -158,7 +151,8 @@ function addClientsRewiers() {
                   <button
                     type="button"
                     id="pause${item.clientId}"
-                    class="action-btn action-btn-big is-hide player__btn"
+                    data-pause=${item.clientId}
+                    class="action-btn action-btn-big is-hide player__btn pause--btn"
                   >
                     <svg
                       class="player__icon fa-pause"
@@ -205,11 +199,11 @@ function addClientsRewiers() {
                   </div>
                 </div>
               </div>
-              <div class="testimonials-subtitlesBtn">
+              <div class="testimonials__subtitlesBtn">
                 <button
                   type="button"
                   title="swithSubtitle"
-                  class="switchSubtitleBtn switchSubtitleBtn_${item.clientId} player__text"
+                  class="testimonials__switchSubtitleBtn switchSubtitleBtn_${item.clientId} player__text"
                   data-count="switchSubtitleBtn_${item.clientId}"
                 >
                   <svg class="player__icon" width="10" height="10">
@@ -221,7 +215,7 @@ function addClientsRewiers() {
             </div>
           </div>
         </div>
-        <div class="subtitle-container">
+        <div class="testimonials__subtitle-container">
           <div
             class="testimonials-subtitles testimonials-subtitles_${item.clientId}"
           >

@@ -1,5 +1,5 @@
 const animItems = document.querySelectorAll("._anim-items");
-const animClients = document.querySelector(".testimonials-listOfClients");
+const animClients = document.querySelector(".testimonials__listOfClients");
 
 if (animItems.length > 0) {
   window.addEventListener("scroll", animOnScroll);
@@ -11,22 +11,7 @@ if (animItems.length > 0) {
 
       let animStart = 4;
 
-        let animItemPoint = "";
-      //   if (animItem.classList.contains("cases-client-container_1")) {
-      //     animItemPoint = 300;
-      //   } else if (animItem.classList.contains("cases-client-container_2")) {
-      //     animItemPoint = 300;
-      //   } else if (animItem.classList.contains("cases-client-container_3")) {
-      //     animItemPoint = 300;
-      //   } else if (animItem.classList.contains("cases-client-container_4")) {
-      //     animItemPoint = 300;
-      //   } else if (animItem.classList.contains("cases-client-container_5")) {
-      //     animItemPoint = 300;
-      //   } else if (animItem.classList.contains("cases-client-container_6")) {
-      //     animItemPoint = 300;
-      //   } else {
-      //     animItemPoint = window.innerHeight - animItemHeight / animStart;
-      //   }
+      let animItemPoint = "";
 
       if (animItemHeight > window.innerHeight) {
         animItemPoint = window.innerHeight - window.innerHeight / animStart;
