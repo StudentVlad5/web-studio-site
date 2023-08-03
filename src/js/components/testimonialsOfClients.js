@@ -133,20 +133,13 @@ function addClientsRewiers() {
               class="music-container home__player player"
               id="music-container${item.clientId}"
             >
-              <audio 
-              src=${item.clientRewie}
-              id="audio_${item.clientId}"
-              class="audio audio_player audio_player${item.clientId}"
-              preload="metadata"
-              loop="true"
-              type="audio/mpeg"
-              ></audio>
               <div class="testimonials-navigation player__road">
                 <div style="display: flex; flex-wrap: nowrap;">
                   <button
                     type="button"
                     id="play${item.clientId}"
-                    class="action-btn action-btn-big player__btn"
+                    data-play=${item.clientId}
+                    class="action-btn action-btn-big player__btn play--btn"
                   >
                   <svg
                   class="player__icon fa-pause"
@@ -158,7 +151,8 @@ function addClientsRewiers() {
                   <button
                     type="button"
                     id="pause${item.clientId}"
-                    class="action-btn action-btn-big is-hide player__btn"
+                    data-pause=${item.clientId}
+                    class="action-btn action-btn-big is-hide player__btn pause--btn"
                   >
                     <svg
                       class="player__icon fa-pause"
