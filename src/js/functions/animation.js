@@ -1,5 +1,5 @@
 const animItems = document.querySelectorAll("._anim-items");
-const animClients = document.querySelector(".testimonials-listOfClients");
+const animClients = document.querySelector(".testimonials__listOfClients");
 
 if (animItems.length > 0) {
   window.addEventListener("scroll", animOnScroll);

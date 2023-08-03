@@ -1,10 +1,10 @@
-  .testimonials-section {
+  .testimonials__section {
     position: relative;
     overflow: hidden;
     width: 100%;
   }
 
-  .testimonials-listOfClients--wrap {
+  .testimonials__listOfClients-wrap {
     position: absolute;
     top: 0;
     left: 0;
@@ -15,13 +15,13 @@
     scrollbar-width: none;
   }
 
-  .testimonials-listOfClients--wrap::-webkit-scrollbar {
+  .testimonials__listOfClients-wrap::-webkit-scrollbar {
     width: 0;
     height: 0;
   }
 
-  .testimonials-listOfClients {
-    transform: translate(-120%, 0);
+  .testimonials__listOfClients {
+    transform: translate(0, 0);
     opacity: 0;
     transition: all 1s ease 1s;
     overflow: auto;
@@ -30,18 +30,18 @@
     padding: 40px 0;
   }
 
-  .testimonials-listOfClients::-webkit-scrollbar {
+  .testimonials__listOfClients::-webkit-scrollbar {
     width: 0;
     height: 0;
   }
 
-  .testimonials-listOfClients._active {
+  .testimonials__listOfClients._active {
     transform: translate(0, 0);
     opacity: 0.9;
     background-color: var(--bgc-accent);
   }
 
-  .testimonials-wrap {
+  .testimonials__wrap {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -61,11 +61,11 @@
     background-color: var(--bgc-accent);
   }
 
-  .testimonials-title {
+  .testimonials__title {
     color: var(--bgc-main);
   }
 
-  .testimonials-scroll {
+  .testimonials__scroll {
     display: flex;
     position: absolute;
     bottom: 20px;
@@ -98,11 +98,11 @@
     flex-direction: column;
   }
 
-  .testimonials-text__toScroll {
+  .testimonials__text-toScroll{
     color: var(--bgc-stroke);
   }
 
-  .testimonials-scroll-flower {
+  .testimonials__flower-scroll {
     margin: 4px;
     animation: flowerAnim 2s 1s infinite normal linear;
   }
@@ -114,21 +114,32 @@
     width: 100%;
   }
 
-  .cases-client-container {
+  .testimonials__client-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transform: translate(-120%, 0);
   }
-  .testimonials-listOfClients > .cases-client-container:nth-child(2n+1) {
+  .testimonials__client-container:nth-child(2n+1){
+    transform: translate(-120%, 0);
+  }
+  .testimonials__client-container:nth-child(2n){
+    transform: translate(+120%, 0);
+  }
+  .testimonials__client-container.aos-animate{
+    transform: translate(0%, 0);
+    transition:var(--anims);
+  }
+  .testimonials__listOfClients > .testimonials__client-container:nth-child(2n+1) {
     align-items: start;
     padding: 0 20px;
   }
-  .testimonials-listOfClients > .cases-client-container:nth-child(2n) {
+  .testimonials__listOfClients > .testimonials__client-container:nth-child(2n) {
     align-items: end;
     padding: 0 20px;
   }
-  .cases-client--box{
+  .testimonials__client-box{
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -136,7 +147,7 @@
     width: 250px;
     height: 100%;
 }
-  .cases-client-wrap {
+  .testimonials__client-wrap {
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -145,25 +156,25 @@
     height: 70px;
   }
 
-  .cases-client-data {
+  .testimonials__client-data {
     padding: 5px;
     display: flex;
     flex-direction: column;
   }
 
-  .cases-client-data p {
+  .testimonials__client-data p {
     color: var(--bgc-main);
     font-weight: 400;
     line-height: 1.2;
     font-size: 16px;
   }
-  .cases-client-data p:nth-child(2) {
+  .testimonials__client-data p:nth-child(2) {
     color: var(--bgc-main);
     font-weight: 200;
     font-size: 12px;
   }
 
-  .cases-client-img {
+  .testimonials__client-img {
     border-radius: 50%;
     border: 1px solid var(--bgc-main);
     width: 50px;
@@ -186,7 +197,7 @@
 .action-btn.action-btn-big.player__btn{
   background-color: var(--bgc-main);
 }
-.switchSubtitleBtn > .player__icon{
+.testimonials__switchSubtitleBtn > .player__icon{
   fill:var(--cl-txt-accent);
 }
 .music-container {
@@ -258,7 +269,7 @@
   height: 20px;
 }
   // subtitres
-  .subtitle-container {
+  .testimonials__subtitle-container {
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -269,7 +280,7 @@
     margin: 20px 0;
   }
 
-  .testimonials-subtitlesBtn {
+  .testimonials__subtitlesBtn {
     width: 35px;
     min-height: 100%;
     display: flex;
@@ -279,7 +290,7 @@
     background-color: var(--bgc-main);
     color: var(--bgc-accent);
 }
-.switchSubtitleBtn{
+.testimonials__switchSubtitleBtn{
   cursor: pointer;
   background-color: var(--bgc-main);
   color:var(--cl-txt-accent)
