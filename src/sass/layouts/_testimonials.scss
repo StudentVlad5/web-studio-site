@@ -13,12 +13,17 @@
     overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    @include mq(desktop){
+      overflow: auto;
+      -ms-overflow-style:initial;
+      scrollbar-width:thin;
+    }
   }
 
-  .testimonials__listOfClients-wrap::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-  }
+  // .testimonials__listOfClients-wrap::-webkit-scrollbar {
+  //   width: 0;
+  //   height: 0;
+  // }
 
   .testimonials__listOfClients {
     transform: translate(0, 0);
@@ -28,6 +33,13 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
     padding: 40px 0;
+    width: 100%;
+    height: 100%;
+    @include mq(desktop){
+      display: flex;
+      flex-direction: row;
+      width: 2500px;
+    }
   }
 
   .testimonials__listOfClients::-webkit-scrollbar {
@@ -47,7 +59,7 @@
     align-items: center;
     position: relative;
     width: 100%;
-    height: 667px;
+    height: 100vh;
     background-color: var(--bgc-accent);
   }
 
@@ -57,7 +69,7 @@
 
   .scroll-cases {
     width: 100%;
-    height: 667px;
+    height: 199vh;
     background-color: var(--bgc-accent);
   }
 
@@ -120,14 +132,27 @@
     justify-content: center;
     align-items: center;
     transform: translate(-120%, 0);
+    @include mq(desktop){
+    margin: 0;
+    align-items: start;
+    }
+
   }
 
   .testimonials__client-container:nth-child(2n+1) {
     transform: translate(-120%, 0);
+    @include mq(desktop){
+      margin: 0;
+      align-items: start;
+      }
   }
 
   .testimonials__client-container:nth-child(2n) {
     transform: translate(+120%, 0);
+    @include mq(desktop){
+      margin: 0;
+      align-items: start;
+      }
   }
 
   .testimonials__client-container.aos-animate {
@@ -138,11 +163,19 @@
   .testimonials__listOfClients>.testimonials__client-container:nth-child(2n+1) {
     align-items: start;
     padding: 0 20px;
+    @include mq(desktop){
+      margin: 0;
+      align-items: start;
+      }
   }
 
   .testimonials__listOfClients>.testimonials__client-container:nth-child(2n) {
     align-items: end;
     padding: 0 20px;
+    @include mq(desktop){
+      margin: 0;
+      align-items: start;
+      }
   }
 
   .testimonials__client-box {
