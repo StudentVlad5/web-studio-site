@@ -1,8 +1,9 @@
 .about {
     background-color: var(--bgc-second);
+    border-radius: 10px;
 
     @include mq(desktop) {
-        width: 6220px;
+        width: 5000px;
         height: 740px;
         flex-shrink: 0;
         overflow-x: visible;
@@ -33,7 +34,7 @@
 
         @include mq(desktop) {
             margin-bottom: 0px;
-            margin-right: 400px;
+            margin-right: 200px;
         }
     }
 
@@ -137,6 +138,13 @@
         align-items: flex-start;
         gap: 40px;
 
+        @include mq(tablet-only) {
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+            width: 500px;
+        }
+
         @include mq(desktop) {
             gap: 80px;
         }
@@ -171,12 +179,20 @@
     & .about__title-group {
         gap: 14px;
         width: 296px;
+
+        @include mq(tablet-only) {
+            width: 400px;
+        }
     }
 
     &__list {
         display: flex;
         flex-direction: column;
         gap: 20px;
+
+        @include mq(tablet-only) {
+            align-items: center;
+        }
 
         @include mq(desktop) {
             flex-direction: row;
@@ -353,6 +369,10 @@
         gap: 10px;
 
         width: 271px;
+
+        @include mq(tablet-only) {
+            width: 400px;
+        }
 
         &-title {
             font-size: 18px;

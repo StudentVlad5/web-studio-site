@@ -37,4 +37,8 @@ function hide() {
 export default window.onload = function () {
   eleHeader = document.getElementById(idOfHeader);
   document.addEventListener('scroll', onScroll, false);
+
+  if (window.innerWidth > '1440') {
+    document.removeEventListener('scroll', onScroll, false);
+  }
 };
