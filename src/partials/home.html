@@ -12,50 +12,75 @@
             </svg>
         </article>
         <h1 class="home__title title">I create websites for businesses that help to become market leaders.</h1>
+        <audio src="/src/mp3/Voicy_Anastasia.mp3" id="audio" data-audio="owner" class="audio" preload="metadata"
+            loop="true"></audio>
         <div class="home__player player" id="player">
             <div class="player__wrapper">
                 <div class="player__road">
-                    <div>
-                        <button type="button" id="play0" data-play=0 class="player__btn play--btn">
+                    <div class="player__row">
+                        <button class="player__btn play--btn" type="button" data-play='play' data-audio="owner">
                             <svg class="player__icon" width="12" height="12">
                                 <use href="./images/sprite.svg#play"></use>
                             </svg>
                         </button>
-                        <button type="button" id="pause0" data-pause=0 class="is-hide player__btn pause--btn">
+                        <button class="player__btn pause--btn is-hide" type="button" data-play='pause'
+                            data-audio="owner">
                             <svg class="player__icon" width="12" height="12">
                                 <use href="./images/sprite.svg#pause"></use>
                             </svg>
                         </button>
                         <span class="player__name">Listen to Anastasia’s vision</span>
                     </div>
-                    <div style="display: flex; flex-wrap: nowrap; gap: 4px">
-                        <!-- <svg class="player__icon" width="12" height="12">
-                            <use href="./images/sprite.svg#sound_off"></use>
-                        </svg> -->
-                        <div class="sound-info">
-                            <div class="progress-container progress-range0
-                                          id=" progress-container_0>
-                                <div class="progress progress-bar_0" id="progress1_0"></div>
-                                <div class="progress progress-bar_0" id="progress2_0"></div>
-                                <div class="progress progress-bar_0" id="progress3_0"></div>
-                                <div class="progress progress-bar_0" id="progress4_0"></div>
-                                <div class="progress progress-bar_0" id="progress5_0"></div>
-                            </div>
+                    <div class="player__row">
+                        <div class="sound-set">
+                            <svg class="player__icon" width="15" height="15">
+                                <use href="./images/sprite.svg#sound_off"></use>
+                            </svg>
+                            <!-- 
+                            <svg class="player__icon" width="15" height="15">
+                                <use href="./images/sprite.svg#sound_1"></use>
+                            </svg>
+                            <svg class="player__icon" width="15" height="15">
+                                <use href="./images/sprite.svg#sound_2"></use>
+                            </svg>
+                            <svg class="player__icon" width="15" height="15">
+                                <use href="./images/sprite.svg#sound_3"></use>
+                            </svg>
+                            <svg class="player__icon" width="15" height="15">
+                                <use href="./images/sprite.svg#sound_4"></use>
+                            </svg>
+                            <svg class="player__icon" width="15" height="15">
+                                <use href="./images/sprite.svg#sound_5"></use>
+                            </svg>
+                            <svg class="player__icon" width="15" height="15">
+                                <use href="./images/sprite.svg#sound_6"></use>
+                            </svg>
+                            <svg class="player__icon" width="15" height="15">
+                                <use href="./images/sprite.svg#sound_7"></use>
+                            </svg>
+                            <svg class="player__icon" width="15" height="15">
+                                <use href="./images/sprite.svg#sound_8"></use>
+                            </svg>
+                            <svg class="player__icon" width="15" height="15">
+                                <use href="./images/sprite.svg#sound_9"></use>
+                            </svg> -->
                         </div>
-                        <span class="player__time">00:35</span>
+                        <span class="player__time">00:20</span>
                     </div>
                 </div>
-                <button class="player__text" type="button" data-count="switchSubtitleBtn_0">
+                <button class="player__switch-subtitle" type="button" data-audio="owner">
                     <svg class="player__icon" width="10" height="10">
                         <use href="./images/sprite.svg#arrow-right2"></use>
                     </svg>A</button>
             </div>
-            <div class="player__subtitle hidden">
+            <div class="player__subtitle hidden" data-audio="owner">
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Dignissimos eaque ut autem ad unde. Repellat delectus, sed quo,
-                    accusantium ad recusandae inventore illum fuga est, provident
-                    obcaecati molestiae fugit et.
+                    Hi, my name is Anastasia. I'm a human being UX/UI designer and Art Director. I create websites for
+                    businesses that help
+                    to become market leaders.
+                    We communicate with our clients through email, phone calls, and virtual meetings to ensure their
+                    needs and expectations
+                    are met throughout the design process.
                 </p>
                 <svg class="player__icon" width="30" height="15">
                     <use href="./images/sprite.svg#triangle-left"></use>
