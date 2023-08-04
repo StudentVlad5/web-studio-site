@@ -31,7 +31,7 @@ window.addEventListener('scroll', navHighlighter);
 // }
 
 function navHighlighter() {
-  let scrollY = window.pageYOffset;
+  let scrollY = window.scrollY;
 
   refs.navLinks.forEach(link => {
     let section = document.querySelector(link.hash);

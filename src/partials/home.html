@@ -13,26 +13,54 @@
         </article>
         <h1 class="home__title title">I create websites for businesses that help to become market leaders.</h1>
         <div class="home__player player" id="player">
-            <div class="player__road">
-                <div>
-                    <button class="player__btn">
-                        <svg class="player__icon" width="12" height="12">
-                            <use href="./images/sprite.svg#play"></use>
-                        </svg>
-                    </button>
-                    <span class="player__name">Listen to Anastasia’s vision</span>
+            <div class="player__wrapper">
+                <div class="player__road">
+                    <div>
+                        <button type="button" id="play0" data-play=0 class="player__btn play--btn">
+                            <svg class="player__icon" width="12" height="12">
+                                <use href="./images/sprite.svg#play"></use>
+                            </svg>
+                        </button>
+                        <button type="button" id="pause0" data-pause=0 class="is-hide player__btn pause--btn">
+                            <svg class="player__icon" width="12" height="12">
+                                <use href="./images/sprite.svg#pause"></use>
+                            </svg>
+                        </button>
+                        <span class="player__name">Listen to Anastasia’s vision</span>
+                    </div>
+                    <div style="display: flex; flex-wrap: nowrap; gap: 4px">
+                        <!-- <svg class="player__icon" width="12" height="12">
+                            <use href="./images/sprite.svg#sound_off"></use>
+                        </svg> -->
+                        <div class="sound-info">
+                            <div class="progress-container progress-range0
+                                          id=" progress-container_0>
+                                <div class="progress progress-bar_0" id="progress1_0"></div>
+                                <div class="progress progress-bar_0" id="progress2_0"></div>
+                                <div class="progress progress-bar_0" id="progress3_0"></div>
+                                <div class="progress progress-bar_0" id="progress4_0"></div>
+                                <div class="progress progress-bar_0" id="progress5_0"></div>
+                            </div>
+                        </div>
+                        <span class="player__time">00:35</span>
+                    </div>
                 </div>
-                <div>
-                    <svg class="player__icon" width="12" height="12">
-                        <use href="./images/sprite.svg#sound_off"></use>
-                    </svg>
-                    <span class="player__time">00:35</span>
-                </div>
+                <button class="player__text" type="button" data-count="switchSubtitleBtn_0">
+                    <svg class="player__icon" width="10" height="10">
+                        <use href="./images/sprite.svg#arrow-right2"></use>
+                    </svg>A</button>
             </div>
-            <button class="player__text" type="button">
-                <svg class="player__icon" width="10" height="10">
-                    <use href="./images/sprite.svg#arrow-right2"></use>
-                </svg>A</button>
+            <div class="player__subtitle hidden">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Dignissimos eaque ut autem ad unde. Repellat delectus, sed quo,
+                    accusantium ad recusandae inventore illum fuga est, provident
+                    obcaecati molestiae fugit et.
+                </p>
+                <svg class="player__icon" width="30" height="15">
+                    <use href="./images/sprite.svg#triangle-left"></use>
+                </svg>
+            </div>
         </div>
     </div>
 </section>
