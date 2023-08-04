@@ -138,7 +138,8 @@ function addClientsRewiers() {
                   <button
                     type="button"
                     id="play${item.clientId}"
-                    data-play=${item.clientId}
+                    data-play="play"
+                    data-audio="${item.clientId}"
                     class="action-btn action-btn-big player__btn play--btn"
                   >
                   <svg
@@ -151,8 +152,9 @@ function addClientsRewiers() {
                   <button
                     type="button"
                     id="pause${item.clientId}"
-                    data-pause=${item.clientId}
-                    class="action-btn action-btn-big is-hide player__btn pause--btn"
+                    data-play="pause"
+                    data-audio="${item.clientId}"
+                    class="action-btn action-btn-big player__btn hidden pause--btn"
                   >
                     <svg
                       class="player__icon fa-pause"
@@ -193,7 +195,9 @@ function addClientsRewiers() {
                     </div>
                   </div>
                   <div class="time">
-                    <span class="time-elapsed_${item.clientId}">
+                    <span class="time-elapsed_${item.clientId}" 
+                    data-play="time" 
+                    data-audio="${item.clientId}">
                       ${item.time}
                     </span>
                   </div>

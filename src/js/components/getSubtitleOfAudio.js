@@ -4,7 +4,7 @@ const refs = getRefs();
 function switchSubtitles(e) {
   e.preventDefault();
 
-  const subtitleId = e.target.dataset.audio;
+  const subtitleId = e.currentTarget.dataset.audio;
 
   refs.subtitles.forEach(subtitle => {
     if (subtitle.dataset.audio === subtitleId) {

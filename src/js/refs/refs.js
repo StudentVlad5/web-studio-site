@@ -10,7 +10,13 @@ export default function getRefs() {
     menuLinks: document.querySelector('.js-mobile-menu-links'),
 
     //==========  player ==========
+    audio: document.querySelectorAll('.audio'),
     switchPlay: document.querySelectorAll('.player__btn'),
+    playBtn: document.querySelectorAll('[data-play="play"]'),
+    pauseBtn: document.querySelectorAll('[data-play="pause"]'),
+    time: document.querySelectorAll('[data-play="time"]'),
+    soundOff: document.querySelectorAll('[data-sound="off"]'),
+    soundOn: document.querySelectorAll('[data-sound="on"]'),
     switchSubtitle: document.querySelectorAll('.player__switch-subtitle'),
     subtitles: document.querySelectorAll('.player__subtitle'),
 

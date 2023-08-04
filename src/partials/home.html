@@ -18,13 +18,12 @@
             <div class="player__wrapper">
                 <div class="player__road">
                     <div class="player__row">
-                        <button class="player__btn play--btn" type="button" data-play='play' data-audio="owner">
+                        <button class="player__btn" type="button" data-play='play' data-audio="owner">
                             <svg class="player__icon" width="12" height="12">
                                 <use href="./images/sprite.svg#play"></use>
                             </svg>
                         </button>
-                        <button class="player__btn pause--btn is-hide" type="button" data-play='pause'
-                            data-audio="owner">
+                        <button class="player__btn hidden" type="button" data-play='pause' data-audio="owner">
                             <svg class="player__icon" width="12" height="12">
                                 <use href="./images/sprite.svg#pause"></use>
                             </svg>
@@ -33,39 +32,39 @@
                     </div>
                     <div class="player__row">
                         <div class="sound-set">
-                            <svg class="player__icon" width="15" height="15">
+                            <svg class="player__icon" width="15" height="15" data-sound="off" data-audio="owner">
                                 <use href="./images/sprite.svg#sound_off"></use>
                             </svg>
-                            <!-- 
-                            <svg class="player__icon" width="15" height="15">
+
+                            <svg class="player__icon hidden" width="15" height="15" data-sound="on" data-audio="owner">
                                 <use href="./images/sprite.svg#sound_1"></use>
                             </svg>
-                            <svg class="player__icon" width="15" height="15">
+                            <svg class="player__icon hidden" width="15" height="15" data-sound="on" data-audio="owner">
                                 <use href="./images/sprite.svg#sound_2"></use>
                             </svg>
-                            <svg class="player__icon" width="15" height="15">
+                            <svg class="player__icon hidden" width="15" height="15" data-sound="on" data-audio="owner">
                                 <use href="./images/sprite.svg#sound_3"></use>
                             </svg>
-                            <svg class="player__icon" width="15" height="15">
+                            <svg class="player__icon hidden" width="15" height="15" data-sound="on" data-audio="owner">
                                 <use href="./images/sprite.svg#sound_4"></use>
                             </svg>
-                            <svg class="player__icon" width="15" height="15">
+                            <svg class="player__icon hidden" width="15" height="15" data-sound="on" data-audio="owner">
                                 <use href="./images/sprite.svg#sound_5"></use>
                             </svg>
-                            <svg class="player__icon" width="15" height="15">
+                            <svg class="player__icon hidden" width="15" height="15" data-sound="on" data-audio="owner">
                                 <use href="./images/sprite.svg#sound_6"></use>
                             </svg>
-                            <svg class="player__icon" width="15" height="15">
+                            <svg class="player__icon hidden" width="15" height="15" data-sound="on" data-audio="owner">
                                 <use href="./images/sprite.svg#sound_7"></use>
                             </svg>
-                            <svg class="player__icon" width="15" height="15">
+                            <svg class="player__icon hidden" width="15" height="15" data-sound="on" data-audio="owner">
                                 <use href="./images/sprite.svg#sound_8"></use>
                             </svg>
-                            <svg class="player__icon" width="15" height="15">
+                            <svg class="player__icon hidden" width="15" height="15" data-sound="on" data-audio="owner">
                                 <use href="./images/sprite.svg#sound_9"></use>
-                            </svg> -->
+                            </svg>
                         </div>
-                        <span class="player__time">00:20</span>
+                        <span class="player__time" data-play='time' data-audio="owner">00:20</span>
                     </div>
                 </div>
                 <button class="player__switch-subtitle" type="button" data-audio="owner">
