@@ -42,6 +42,40 @@
             letter-spacing: -4.29px;
         }
     }
+
+    &__player {
+        position: relative;
+        flex-direction: column;
+
+        & .player__subtitle {
+            position: absolute;
+            top: 45px;
+            left: 5px;
+            z-index: 20;
+
+            background-color: var(--bgc-accent);
+            color: var(--cl-txt-white);
+
+            @include mq(tablet) {
+                top: 0;
+                left: 350px;
+            }
+
+            & svg {
+                position: absolute;
+                top: -11px;
+                right: 10px;
+                fill: var(--bgc-accent);
+                transform: rotate(90deg);
+
+                @include mq(tablet) {
+                    top: 15px;
+                    left: -18px;
+                    transform: rotate(0deg);
+                }
+            }
+        }
+    }
 }
 
 .hero {
@@ -88,4 +122,5 @@
 
         animation: flowerAnim 3s 2s infinite normal linear;
     }
+
 }

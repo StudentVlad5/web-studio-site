@@ -9,6 +9,11 @@ export default function getRefs() {
     mobileMenuRef: document.querySelector('.js-mobile-menu'),
     menuLinks: document.querySelector('.js-mobile-menu-links'),
 
+    //==========  player ==========
+    switchPlay: document.querySelectorAll('.player__btn'),
+    switchSubtitle: document.querySelectorAll('.player__switch-subtitle'),
+    subtitles: document.querySelectorAll('.player__subtitle'),
+
     //==========  cases section ==========
     slider: document.querySelector('.slider'),
     slides: document.querySelector('.slides'),
