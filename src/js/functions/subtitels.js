@@ -1,4 +1,6 @@
-const subtitleBtn = document.querySelectorAll(".switchSubtitleBtn");
+const subtitleBtn = document.querySelectorAll(
+  ".testimonials__switchSubtitleBtn"
+);
 
 function swichSubtitles(e) {
   e.preventDefault();
