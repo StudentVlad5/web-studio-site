@@ -1,57 +1,39 @@
-const playBtn = document.querySelectorAll('.play--btn');
-const pauseBtn = document.querySelectorAll('.pause--btn');
-let timerId = '';
+const playBtn = document.querySelectorAll(".player__btn");
+let timerId = "";
 
 function changeHeightOfSoundtrack(number) {
-  document.getElementById(`progress1_${number}`).style.height = `${
-    Math.random() * 12
-  }px`;
-  document.getElementById(`progress2_${number}`).style.height = `${
-    Math.random() * 12
-  }px`;
-  document.getElementById(`progress3_${number}`).style.height = `${
-    Math.random() * 12
-  }px`;
-  document.getElementById(`progress4_${number}`).style.height = `${
-    Math.random() * 12
-  }px`;
-  document.getElementById(`progress5_${number}`).style.height = `${
-    Math.random() * 12
-  }px`;
+  document
+    .querySelectorAll(`.progress-bar_${number}`)
+    .forEach((item) => (item.style.height = `${Math.random() * 12}px`));
 }
 
 function playSong(e) {
-  const countOfPlayer = e.currentTarget.dataset.play;
-
-  document.querySelector(`.audio_player${countOfPlayer}`).classList.add('play');
-  document.getElementById(`play${countOfPlayer}`).classList.add('is-hide');
-  document.getElementById(`pause${countOfPlayer}`).classList.remove('is-hide');
-  document.getElementById(`progress1_${countOfPlayer}`).style.opacity = `1`;
-  document.getElementById(`progress2_${countOfPlayer}`).style.opacity = `1`;
-  document.getElementById(`progress3_${countOfPlayer}`).style.opacity = `1`;
-  document.getElementById(`progress4_${countOfPlayer}`).style.opacity = `1`;
-  document.getElementById(`progress5_${countOfPlayer}`).style.opacity = `1`;
-
+  const countOfPlayer = e.currentTarget.dataset.audio;
+  document
+    .getElementById(`music-container${countOfPlayer}`)
+    .classList.add("play");
+  document
+    .querySelectorAll(`.progress-bar_${countOfPlayer}`)
+    .forEach((item) => (item.style.opacity = `1`));
+  document.getElementById(`play${countOfPlayer}`).classList.add("hidden");
+  document.getElementById(`pause${countOfPlayer}`).classList.remove("hidden");
   document.getElementById(`audio_${countOfPlayer}`).play();
   document
     .getElementById(`audio_${countOfPlayer}`)
-    .addEventListener('timeupdate', updateProgress);
+    .addEventListener("timeupdate", updateProgress);
   timerId = setInterval(() => changeHeightOfSoundtrack(countOfPlayer), 150);
 }
 
 function pauseSong(e) {
-  const countOfPlayer = e.currentTarget.dataset.pause;
-
+  const countOfPlayer = e.currentTarget.dataset.audio;
   document
-    .querySelector(`.audio_player${countOfPlayer}`)
-    .classList.remove('play');
-  document.getElementById(`play${countOfPlayer}`).classList.remove('is-hide');
-  document.getElementById(`pause${countOfPlayer}`).classList.add('is-hide');
-  document.getElementById(`progress1_${countOfPlayer}`).style.opacity = `0.5`;
-  document.getElementById(`progress2_${countOfPlayer}`).style.opacity = `0.5`;
-  document.getElementById(`progress3_${countOfPlayer}`).style.opacity = `0.5`;
-  document.getElementById(`progress4_${countOfPlayer}`).style.opacity = `0.5`;
-  document.getElementById(`progress5_${countOfPlayer}`).style.opacity = `0.5`;
+    .getElementById(`music-container${countOfPlayer}`)
+    .classList.remove("play");
+  document.getElementById(`play${countOfPlayer}`).classList.remove("hidden");
+  document.getElementById(`pause${countOfPlayer}`).classList.add("hidden");
+  document
+    .querySelectorAll(`.progress-bar_${countOfPlayer}`)
+    .forEach((item) => (item.style.opacity = `.5`));
   document.getElementById(`audio_${countOfPlayer}`).pause();
   clearInterval(timerId);
 }
@@ -65,27 +47,19 @@ function displayTime(time) {
 
 function updateProgress(e) {
   document.querySelector(
-    `.time-elapsed_${e.currentTarget.id.slice(-1)}`
+    `.time-elapsed_${e.currentTarget.dataset.audio}`
   ).textContent = `${displayTime(
-    document.getElementById(`audio_${e.currentTarget.id.slice(-1)}`).currentTime
+    document.getElementById(`audio_${e.currentTarget.dataset.audio}`)
+      .currentTime
   )}`;
 }
 
-playBtn.forEach(item =>
-  item.addEventListener('click', e => {
+playBtn.forEach((item) =>
+  item.addEventListener("click", (e) => {
+    console.log();
     document
-      .querySelector(`.audio_player${e.currentTarget.dataset.play}`)
-      .classList.contains('play')
-      ? pauseSong(e)
-      : playSong(e);
-  })
-);
-
-pauseBtn.forEach(item =>
-  item.addEventListener('click', e => {
-    document
-      .querySelector(`.audio_player${e.currentTarget.dataset.pause}`)
-      .classList.contains('play')
+      .getElementById(`music-container${e.currentTarget.dataset.audio}`)
+      .classList.contains("play")
       ? pauseSong(e)
       : playSong(e);
   })

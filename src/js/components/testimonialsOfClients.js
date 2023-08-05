@@ -12,7 +12,6 @@ const data = [
   {
     clientId: 1,
     clientImg: img_1,
-    clientRewie: '/src/mp3/Voicy_Allahu_Akbar_BANG.mp3',
     clientName: 'Tatyana',
     clientCompany: 'ARMOR LLC',
     clientTitle: "Tatiana's review",
@@ -27,7 +26,6 @@ const data = [
   {
     clientId: 2,
     clientImg: img_2,
-    clientRewie: 'Voicy_And we say bye bye.mp3',
     clientName: 'Ivan',
     clientCompany: 'Ukraine LTD',
     clientTitle: "Ivan's review",
@@ -42,7 +40,6 @@ const data = [
   {
     clientId: 3,
     clientImg: img_3,
-    clientRewie: '/src/mp3/Voicy_Do not walk away from your queen.mp3',
     clientName: 'Sonya',
     clientCompany: 'Bayractar System LLC',
     clientTitle: "Sonya's review",
@@ -57,7 +54,6 @@ const data = [
   {
     clientId: 4,
     clientImg: img_4,
-    clientRewie: '/src/mp3/Voicy_Kanye West Hated.mp3',
     clientName: 'Sara',
     clientCompany: 'Homekeeper',
     clientTitle: "Sara's review",
@@ -72,7 +68,6 @@ const data = [
   {
     clientId: 5,
     clientImg: img_5,
-    clientRewie: '/src/mp3/Voicy_Nothing is impossible!.mp3',
     clientName: 'Jon',
     clientCompany: 'Green Yard LCC',
     clientTitle: "Jon's review",
@@ -87,7 +82,6 @@ const data = [
   {
     clientId: 6,
     clientImg: img_6,
-    clientRewie: '/src/mp3/Voicy_WHAT ARE YOU DOING IN MY SWAMP.mp3',
     clientName: 'Inga',
     clientCompany: 'Rozetka LTD',
     clientTitle: "Inga's review",
@@ -169,28 +163,22 @@ function addClientsRewiers() {
                 <div class="player__row">
                   <div class="music-info">
                     <div
-                      class="progress-container progress-range${item.clientId}
-                      id="progress-container_${item.clientId}
+                      class="progress-container progress-range${item.clientId}"
                     >
                       <div
                         class="progress progress-bar_${item.clientId}"
-                        id="progress1_${item.clientId}"
                       ></div>
                       <div
                         class="progress progress-bar_${item.clientId}"
-                        id="progress2_${item.clientId}"
                       ></div>
                       <div
                         class="progress progress-bar_${item.clientId}"
-                        id="progress3_${item.clientId}"
                       ></div>
                       <div
                         class="progress progress-bar_${item.clientId}"
-                        id="progress4_${item.clientId}"
                       ></div>
                       <div
                         class="progress progress-bar_${item.clientId}"
-                        id="progress5_${item.clientId}"
                       ></div>
                     </div>
                   </div>
@@ -222,7 +210,7 @@ function addClientsRewiers() {
         </div>
         <div class="testimonials__subtitle-container">
           <div
-            class=" player__subtitle hidden testimonials-subtitles testimonials-subtitles_${item.clientId}"
+            class="player__subtitle hidden testimonials-subtitles testimonials-subtitles_${item.clientId}"
             data-audio=${item.clientId}
             >
             <p>

@@ -294,42 +294,17 @@
     opacity: 0.5;
   }
 
-  #progress1_1,
-  #progress1_2,
-  #progress1_3,
-  #progress1_4,
-  #progress1_5,
-  #progress1_6,
-  #progress5_1,
-  #progress5_2,
-  #progress5_3,
-  #progress5_4,
-  #progress5_5,
-  #progress5_6 {
+.progress:first-child,
+.progress:last-child{
     height: 5px;
   }
 
-  #progress2_1,
-  #progress2_2,
-  #progress2_3,
-  #progress2_4,
-  #progress2_5,
-  #progress2_6,
-  #progress4_1,
-  #progress4_2,
-  #progress4_3,
-  #progress4_4,
-  #progress4_5,
-  #progress4_6 {
+  .progress:nth-child(2),
+  .progress:nth-child(4){
     height: 7.5px;
   }
 
-  #progress3_1,
-  #progress3_2,
-  #progress3_3,
-  #progress3_4,
-  #progress3_5,
-  #progress3_6 {
+  .progress:nth-child(3) {
     height: 10px;
   }
 
@@ -386,7 +361,7 @@
     background-color: var(--bgc-main);
     color: var(--cl-txt-accent);
     border-radius: 10px;
-    // opacity: 0;
+    opacity: 0;
   }
 
   .is-opacity {
