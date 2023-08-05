@@ -1,6 +1,6 @@
-const playBtn = document.querySelectorAll(".play--btn");
-const pauseBtn = document.querySelectorAll(".pause--btn");
-let timerId = "";
+const playBtn = document.querySelectorAll('.play--btn');
+const pauseBtn = document.querySelectorAll('.pause--btn');
+let timerId = '';
 
 function changeHeightOfSoundtrack(number) {
   document.getElementById(`progress1_${number}`).style.height = `${
@@ -23,9 +23,9 @@ function changeHeightOfSoundtrack(number) {
 function playSong(e) {
   const countOfPlayer = e.currentTarget.dataset.play;
 
-  document.querySelector(`.audio_player${countOfPlayer}`).classList.add("play");
-  document.getElementById(`play${countOfPlayer}`).classList.add("is-hide");
-  document.getElementById(`pause${countOfPlayer}`).classList.remove("is-hide");
+  document.querySelector(`.audio_player${countOfPlayer}`).classList.add('play');
+  document.getElementById(`play${countOfPlayer}`).classList.add('is-hide');
+  document.getElementById(`pause${countOfPlayer}`).classList.remove('is-hide');
   document.getElementById(`progress1_${countOfPlayer}`).style.opacity = `1`;
   document.getElementById(`progress2_${countOfPlayer}`).style.opacity = `1`;
   document.getElementById(`progress3_${countOfPlayer}`).style.opacity = `1`;
@@ -35,7 +35,7 @@ function playSong(e) {
   document.getElementById(`audio_${countOfPlayer}`).play();
   document
     .getElementById(`audio_${countOfPlayer}`)
-    .addEventListener("timeupdate", updateProgress);
+    .addEventListener('timeupdate', updateProgress);
   timerId = setInterval(() => changeHeightOfSoundtrack(countOfPlayer), 150);
 }
 
@@ -44,9 +44,9 @@ function pauseSong(e) {
 
   document
     .querySelector(`.audio_player${countOfPlayer}`)
-    .classList.remove("play");
-  document.getElementById(`play${countOfPlayer}`).classList.remove("is-hide");
-  document.getElementById(`pause${countOfPlayer}`).classList.add("is-hide");
+    .classList.remove('play');
+  document.getElementById(`play${countOfPlayer}`).classList.remove('is-hide');
+  document.getElementById(`pause${countOfPlayer}`).classList.add('is-hide');
   document.getElementById(`progress1_${countOfPlayer}`).style.opacity = `0.5`;
   document.getElementById(`progress2_${countOfPlayer}`).style.opacity = `0.5`;
   document.getElementById(`progress3_${countOfPlayer}`).style.opacity = `0.5`;
@@ -71,21 +71,21 @@ function updateProgress(e) {
   )}`;
 }
 
-playBtn.forEach((item) =>
-  item.addEventListener("click", (e) => {
+playBtn.forEach(item =>
+  item.addEventListener('click', e => {
     document
       .querySelector(`.audio_player${e.currentTarget.dataset.play}`)
-      .classList.contains("play")
+      .classList.contains('play')
       ? pauseSong(e)
       : playSong(e);
   })
 );
 
-pauseBtn.forEach((item) =>
-  item.addEventListener("click", (e) => {
+pauseBtn.forEach(item =>
+  item.addEventListener('click', e => {
     document
       .querySelector(`.audio_player${e.currentTarget.dataset.pause}`)
-      .classList.contains("play")
+      .classList.contains('play')
       ? pauseSong(e)
       : playSong(e);
   })
