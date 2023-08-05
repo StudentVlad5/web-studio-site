@@ -12,18 +12,18 @@
             </svg>
         </article>
         <h1 class="home__title title">I create websites for businesses that help to become market leaders.</h1>
-        <audio src="/src/mp3/Voicy_Anastasia.mp3" id="audio_owner" data-audio="owner" class="audio" preload="metadata"
+        <audio src="/src/mp3/Voicy_Anastasia.mp3" id="audio" data-audio="owner" class="audio" preload="metadata"
             loop="true"></audio>
-        <div class="home__player player" id="music-containerowner">
+        <div class="home__player player" id="player">
             <div class="player__wrapper">
                 <div class="player__road">
                     <div class="player__row">
-                        <button class="player__btn" type="button" data-play='play' data-audio="owner" id="playowner">
+                        <button class="player__btn" type="button" data-play='play' data-audio="owner">
                             <svg class="player__icon" width="12" height="12">
                                 <use href="./images/sprite.svg#play"></use>
                             </svg>
                         </button>
-                        <button class="player__btn hidden" type="button" data-play='pause' data-audio="owner" id="pauseowner">
+                        <button class="player__btn hidden" type="button" data-play='pause' data-audio="owner">
                             <svg class="player__icon" width="12" height="12">
                                 <use href="./images/sprite.svg#pause"></use>
                             </svg>
@@ -31,27 +31,7 @@
                         <span class="player__name">Listen to Anastasia’s vision</span>
                     </div>
                     <div class="player__row">
-                        <div class="music-info sound-set">
-                            <div
-                              class="progress-container progress-range_owner"
-                            >
-                              <div
-                                class="progress progress-bar_owner"
-                              ></div>
-                              <div
-                                class="progress progress-bar_owner"
-                              ></div>
-                              <div
-                                class="progress progress-bar_owner"
-                              ></div>
-                              <div
-                                class="progress progress-bar_owner"
-                              ></div>
-                              <div
-                                class="progress progress-bar_owner"
-                              ></div>
-                            </div>
-                        <!-- <div class="sound-set">
+                        <div class="sound-set">
                             <svg class="player__icon" width="15" height="15" data-sound="off" data-audio="owner">
                                 <use href="./images/sprite.svg#sound_off"></use>
                             </svg>
@@ -83,9 +63,9 @@
                             <svg class="player__icon hidden" width="15" height="15" data-sound="on" data-audio="owner">
                                 <use href="./images/sprite.svg#sound_9"></use>
                             </svg>
-                        </div> -->
+                        </div>
+                        <span class="player__time" data-play='time' data-audio="owner">00:20</span>
                     </div>
-                        <span class="player__time time-elapsed_owner" data-play='time' data-audio="owner">00:20</span>
                 </div>
                 <button class="player__switch-subtitle" type="button" data-audio="owner">
                     <svg class="player__icon" width="10" height="10">
