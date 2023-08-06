@@ -1,6 +1,5 @@
 .faq-title {
   color: var(--cl-txt-main);
-  font-family: Manrope;
   font-size: 52px;
   font-style: normal;
   font-weight: 525;
@@ -15,14 +14,13 @@
 
 .faq-title-desk {
   color: var(--cl-txt-main);
-  font-family: Manrope;
   font-size: 78px;
   font-style: normal;
   font-weight: 600;
   line-height: 70px; /* 89.744% */
   letter-spacing: -4.29px;
   text-transform: uppercase;
-width: 563px;
+  width: 563px;
   display: none;
 
   @media screen and(min-width:1280px) {
@@ -37,19 +35,11 @@ width: 563px;
     padding: 71px 40px;
     border-radius: 20px;
     background: var(--bgc-second);
-    // display: flex;
-    // flex-direction: column;
   }
 
   &-item {
     position: relative;
     padding: 20px 0;
-
-    @media screen and (min-width: 1280px) {
-      // display: flex;
-      // justify-content: center;
-      // align-items: center;
-    }
 
     &:not(:last-child) {
       border-bottom: 1px solid var(--bgc-stroke);
@@ -69,7 +59,6 @@ width: 563px;
 
   &-item-number {
     color: var(--bgc-black);
-    font-family: Suisse 'Intl';
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -85,7 +74,6 @@ width: 563px;
 
   &-item-title {
     color: var(--bgc-black);
-    font-family: Manrope;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -103,7 +91,6 @@ width: 563px;
 
   &-item-discr {
     color: var(--cl-txt-grey);
-    font-family: Manrope;
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
@@ -129,6 +116,11 @@ width: 563px;
     background-color: var(--bgc-second);
     border-radius: 6px;
 
+    &.active {
+      background-color: var(--bgc-accent);
+      fill: var(--bgc-main);
+    }
+
     &:nth-child(1) {
       transform: rotateZ(90deg);
     }
@@ -152,9 +144,14 @@ width: 563px;
 
   &-icon {
     transition: transform 0.3s ease-in-out;
-    background-color: #D4DEF0;
+    background-color: #d4def0;
     border-radius: 100px;
     padding: 2px;
+
+    &.active {
+      background-color: var(--bgc-accent);
+      fill: var(--bgc-main);
+    }
   }
 
   @media screen and(min-width:1280px) {
@@ -176,7 +173,7 @@ width: 563px;
   max-height: 500px;
 }
 
-.active {
-  background-color: var(--bgc-accent);
-  fill: var(--bgc-main);
-}
+// .active {
+//   background-color: var(--bgc-accent);
+//   fill: var(--bgc-main);
+// }
