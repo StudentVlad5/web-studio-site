@@ -1,7 +1,7 @@
 import getRefs from '../refs/refs';
 const refs = getRefs();
 
-let timerId = '';
+let timerId = null;
 
 refs.switchPlay.forEach(btn =>
   btn.addEventListener('click', e => switchPlay(e))
@@ -27,22 +27,17 @@ function switchPlay(e) {
         ).textContent = `${displayTime(track.currentTime)}`;
       });
       // run sound-set-on
-      timerId = setInterval(() => {
-        refs.soundOn.forEach(progress => {
-          progress.classList.remove('hidden');
-          //   document
-          //     .querySelector(`[data-sound="off"][data-audio="${audioId}"]`)
-          //     .classList.add('hidden');
-        });
-      }, 150);
+      timerId = setInterval(onSoundSet(audioId), 200);
+      // onSoundSet(audioId);
 
       //switch player btn
-      e.currentTarget.classList.add('hidden');
       e.currentTarget.classList.add('hidden');
       document
         .querySelector(`[data-play="pause"][data-audio="${audioId}"]`)
         .classList.remove('hidden');
-    } else {
+    }
+
+    if (track.dataset.audio === audioId && action === 'pause') {
       // stop audio
       track.pause();
       track.classList.remove('play');
@@ -51,12 +46,7 @@ function switchPlay(e) {
       clearInterval(timerId);
 
       // stop sound-set-on and return to visual sound-off
-      //   document
-      //     .querySelector(`[data-sound="off"][data-audio="${audioId}"]`)
-      //     .classList.remove('hidden');
-      //   document
-      //     .querySelector(`[data-sound="on"][data-audio="${audioId}"]`)
-      //     .classList.add('hidden');
+      offSoundSet(audioId);
 
       //switch player btn
       document
@@ -74,11 +64,29 @@ function displayTime(time) {
   return `${minutes}:${seconds}`;
 }
 
-function onSoundSet() {
+function onSoundSet(id) {
+  document
+    .querySelector(`[data-sound="off"][data-audio="${id}"]`)
+    .classList.add('hidden');
+
   refs.soundOn.forEach(progress => {
     progress.classList.remove('hidden');
-    document
-      .querySelector(`[data-sound="off"][data-audio="${audioId}"]`)
-      .classList.add('hidden');
+  });
+
+  // for (let i = 0; i < refs.soundOn.length; i++) {
+  //   refs.soundOn[i].classList.remove('hidden');
+  //   refs.soundOn[i--].classList.add('hidden');
+  // }
+}
+
+function offSoundSet(id) {
+  document
+    .querySelector(`[data-sound="off"][data-audio="${id}"]`)
+    .classList.remove('hidden');
+
+  refs.soundOn.forEach(progress => {
+    // if (progress.dataset.audio === id) {
+    progress.classList.add('hidden');
+    // }
   });
 }
