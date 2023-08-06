@@ -1,7 +1,6 @@
 .cases {
   &-title {
     color: var(--cl-txt-main);
-    font-family: Manrope;
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
@@ -49,7 +48,6 @@
 
   &__item-title {
     color: var(--cl-txt-main);
-    font-family: Manrope;
     font-size: 25px;
     font-style: normal;
     font-weight: 600;
@@ -69,7 +67,6 @@
 
   &__item-discr {
     color: var(--cl-txt-main);
-    font-family: Manrope;
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
@@ -109,7 +106,6 @@
   background: var(--bgc-main);
 
   color: var(--cl-txt-main);
-  font-family: Manrope;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -140,7 +136,6 @@
 // SLIDER
 
 .slider {
-  //   width: 380px;
   position: relative;
   overflow: hidden;
 }
@@ -195,7 +190,7 @@
   align-items: center;
   width: 100%;
   padding: 0;
-  z-index: 999;
+  z-index: 10;
 
   @media screen and (min-width: 1280px) {
     padding: 0 20px;
