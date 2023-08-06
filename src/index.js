@@ -14,3 +14,4 @@ import "./js/components/getSubtitleOfAudio";
 import "./js/functions/audio-player";
 import "./js/functions/subtitels";
 import "./js/functions/animation";
+import "./js/functions/scroll-left-and-right";
