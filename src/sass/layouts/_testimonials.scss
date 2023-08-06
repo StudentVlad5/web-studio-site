@@ -6,7 +6,9 @@
     align-items: center;
     width: 100vw;
     height: 100vh;
-
+    @include mq(desktop){
+    height: 1800px;
+    }
   }
 
   .testimonials__listOfClients-wrap {
@@ -55,7 +57,7 @@
 
   .testimonials__listOfClients._active {
     transform: translate(0, 0);
-    opacity: 0.9;
+    opacity: 0.8;
     background-color: var(--bgc-accent);
   }
 

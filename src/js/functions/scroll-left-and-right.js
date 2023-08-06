@@ -1,5 +1,5 @@
 let content = document.querySelector(".testimonials__listOfClients");
-let content_2 = document.querySelector(".testimonials__listOfClients-wrap");
+let content_2 = document.querySelector(".testimonials__wrap");
 let content_3 = document.querySelector(".testimonials__section");
 let content_4 = document.querySelector(".about");
 let content_5 = document.querySelector(".faq");
@@ -22,15 +22,17 @@ window.addEventListener("scroll", function () {
     if (scrolledY > 1875 && scrolledY < 2500) {
       title.style.opacity = "0.8";
       content.style.opacity = "1";
-      content.style.top = "0";
       content_3.style.position = "fixed";
       content_2.style.position = "fixed";
-      content_2.style.height = "100vh";
+      content_2.style.height = "100%";
+      content_2.style.width = "100vw";
+      content_2.style.top = "0";
       content.style.position = "fixed";
+      content.style.top = "0";
       content_3.style.left = "300px";
 
       content.style.left = -(scrolledY - 1875 - 240) * 2.55 + "px";
-      content_2.style.left = -(scrolledY - 1875) * 0.55 + "px";
+
       listOfLi.forEach(
         (item) =>
           (item.style.left = (scrolledY - 1875 - 240) * Math.random + "px")
@@ -41,6 +43,7 @@ window.addEventListener("scroll", function () {
     }
     if (scrolledY <= 1875) {
       content_3.style.position = "inherit";
+      content_2.style.position = "inherit";
       content_3.style.left = "0px";
       title.style.opacity = "1";
       content.style.opacity = "0";
@@ -48,6 +51,7 @@ window.addEventListener("scroll", function () {
     if (scrolledY >= 2500) {
       title.style.opacity = "1";
       content_3.style.position = "inherit";
+      content_2.style.position = "inherit";
       content_3.style.left = "0px";
       content.style.opacity = "0";
       content_3.scrollIntoView({ block: "start", behavior: "smooth" });
