@@ -22,14 +22,14 @@ window.addEventListener("scroll", function () {
     if (scrolledY > 1875 && scrolledY < 2500) {
       title.style.opacity = "0.8";
       content.style.opacity = "1";
-      content_3.style.position = "fixed";
+      // content_3.style.position = "fixed";
       content_2.style.position = "fixed";
       content_2.style.height = "100%";
       content_2.style.width = "100vw";
       content_2.style.top = "0";
       content.style.position = "fixed";
       content.style.top = "0";
-      content_3.style.left = "300px";
+      // content_3.style.left = "300px";
       content.style.display = "flex";
       content.style.justifyContent = "space-between";
 

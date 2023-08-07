@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: calc(100vw - 300px);
     height: 100vh;
     @include mq(desktop){
     height: 1800px;
