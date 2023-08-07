@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100vw;
+    width: calc(100vw - 300px);
     height: 100vh;
     margin: 0;
 
@@ -31,10 +31,10 @@
     }
   }
 
-  // .testimonials__listOfClients-wrap::-webkit-scrollbar {
-  //   width: 0;
-  //   height: 0;
-  // }
+  .testimonials__listOfClients-wrap::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
 
   .testimonials__listOfClients {
     transform: translate(0, 0);
@@ -69,6 +69,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     position: relative;
     width: 100%;
     height: 100%;
@@ -87,6 +88,9 @@
 
   .testimonials__title {
     color: var(--bgc-main);
+    @include mq(desktop){
+    font-size: 40px;
+    }
   }
 
   .testimonials__scroll {
@@ -95,15 +99,6 @@
     bottom: 20px;
     left: 50%;
     transform: translate(-50%, 0%);
-  }
-
-  .text-cases__toScroll {
-    color: var(--bgc-stroke);
-  }
-
-  .scroll-flower-cases {
-    margin: 4px;
-    animation: flowerAnim 3s 2s infinite normal linear;
   }
 
   // client wrap
