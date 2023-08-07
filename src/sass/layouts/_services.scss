@@ -1,0 +1,45 @@
+.services {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100vw - 300px);
+    height: 100vh;
+    @include mq(desktop){
+    // height: 1800px;
+    }
+   &__wrap {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bgc-accent);
+  }
+
+  &__title {
+    color: var(--bgc-main);
+    align-items: center;
+    @include mq(desktop){
+        font-size: 40px;
+        }
+  }
+  &__scroll {
+    display: flex;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+  }
+  &__text-toScroll {
+    color: var(--bgc-stroke);
+  }
+
+  &__flower-scroll {
+    margin: 4px;
+    animation: flowerAnim 2s 1s infinite normal linear;
+  }
+}
