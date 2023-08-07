@@ -4,7 +4,7 @@ let content_3 = document.querySelector(".testimonials__section");
 let content_4 = document.querySelector(".about");
 let content_5 = document.querySelector(".faq");
 let title = document.querySelector(".testimonials__title");
-let listOfLi = document.querySelectorAll(".testimonials__client-container");
+let listOfLi = document.querySelectorAll(".testimonials__client-box");
 let scrolledY = "";
 
 let scroled = content_3.style.height;
@@ -14,7 +14,7 @@ window.addEventListener("scroll", function () {
 
   console.log(scrolledY);
   if (window.innerWidth > 1400) {
-    // listOfLi.forEach((item) => (item.style.transform = "scale(1.3)"));
+    listOfLi.forEach((item) => (item.style.height = "300px"));
     content.style.width = "2500px";
     content.classList.remove("_anim-items");
     content.style.opacity = "1";
@@ -30,6 +30,8 @@ window.addEventListener("scroll", function () {
       content.style.position = "fixed";
       content.style.top = "0";
       content_3.style.left = "300px";
+      content.style.display = "flex";
+      content.style.justifyContent = "space-between";
 
       content.style.left = -(scrolledY - 1875 - 240) * 2.55 + "px";
 
