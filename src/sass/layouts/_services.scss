@@ -42,4 +42,62 @@
     margin: 4px;
     animation: flowerAnim 2s 1s infinite normal linear;
   }
+  &__list{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    display: flex;
+    gap: 20px;
+    @include mq(desktop){
+      overflow: auto;
+      -ms-overflow-style:initial;
+      scrollbar-width:thin;
+      width: 2500px;
+    }
+  }
+  &__item-container{
+    height: 381px;
+    width: 90%;
+    max-width: 343px;
+    color: var(--cl-txt-white);
+    background-color: var(--bgc-accent);
+    border-radius: 10px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    padding: 20px;
+  }
+  &__terms{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 104px;
+  }
+  &__name{
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 2px #170A06;
+  }
+  &__description{
+    margin-bottom: 40px;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  &__price{
+    display: flex;
+    gap: 20px;
+    justify-content: start;
+    flex-direction: row;
+  }
+  &__item{
+    color: var(--bgc-stroke);
+    margin-bottom: 4px;
+  }
 }

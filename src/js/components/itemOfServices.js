@@ -55,21 +55,29 @@ function addServices() {
   data.map((item) => {
     listOfServices += `
       <li id="anchor_${item.itemsId}"
-        class="services__client-container services__client-container_${
+        class="services__item-container services__item-container_${
           item.itemsId
         }"
       >
       <div>
-          <p>Terms ${item.terms} days+</p>
-          <p>${item.itemsId} / ${
+        <div class="services__terms">
+          <spin>Terms ${item.terms} days+</spin>
+          <spin>${item.itemsId} / ${
       data.length > 9 ? data.length : "0" + data.length
-    }</p>
-          <p>${item.name}</p>
-          <p>${item.description}</p>
-          <p>${item.item_1}</p>
-          <p>${item.cost_1}</p>
-          <p>${item.item_2}</p>
-          <p>${item.cost_2}</p>
+    }</spin>
+        </div>
+          <p class="services__name">${item.name}</p>
+          <p class="services__description">${item.description}</p>
+        <div class="services__price">
+            <div>
+              <p class="services__item">${item.item_1}</p>
+              <p>from ${item.cost_1}$</p>
+            </div>
+            <div>
+              <p class="services__item">${item.item_2}</p>
+              <p>from ${item.cost_2}$</p>
+            </div>
+          </div>
       </div>
       </li>
   `;
