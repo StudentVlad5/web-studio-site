@@ -1,11 +1,13 @@
 .about {
     background-color: var(--bgc-second);
-    border-radius: 10px;
 
     @include mq(desktop) {
         width: 5000px;
         height: 740px;
         flex-shrink: 0;
+
+        border-radius: 10px;
+
         overflow-x: visible;
         overflow-y: hidden;
         scroll-behavior: smooth;
@@ -77,23 +79,6 @@
     &__image {
         border-radius: 10px;
         background: url("../images/default.jpg"), lightgray 50% / cover no-repeat, url("../images/default.jpg"), lightgray 50% / cover no-repeat, #D9D9D9;
-    }
-}
-
-.text {
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 18px;
-    letter-spacing: -0.7px;
-    color: var(--cl-txt-accent);
-
-    &--light {
-        color: var(--cl-txt-grey);
-    }
-
-    &--dark {
-        color: var(--cl-txt-main);
     }
 }
 
@@ -178,7 +163,7 @@
 
     & .about__title-group {
         gap: 14px;
-        width: 296px;
+        max-width: 296px;
 
         @include mq(tablet-only) {
             width: 400px;
@@ -206,7 +191,7 @@
         gap: 39px;
         flex-shrink: 0;
 
-        width: 345px;
+        max-width: 345px;
         padding: 19px 21px 5px 0px;
 
         font-size: 14px;
@@ -368,7 +353,7 @@
         align-items: flex-start;
         gap: 10px;
 
-        width: 271px;
+        max-width: 271px;
 
         @include mq(tablet-only) {
             width: 400px;

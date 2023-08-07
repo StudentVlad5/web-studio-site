@@ -1,0 +1,134 @@
+.services {
+    margin: 0;
+    position: relative;
+    background-color: var(--bgc-lavender);
+
+    @include mq(desktop) {
+        border-radius: 10px;
+    }
+
+    // &__subsection.titles {
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     transform: translateY(-50%);
+    //     text-align: center;
+    // }
+
+    &__subsection.cards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 143px;
+
+        margin: 143px auto;
+    }
+
+    &__subsection.image {
+        padding-top: 200px;
+        padding-bottom: 200px;
+        text-align: center;
+        background-color: var(--bgc-main);
+
+        &>.contacts-btn {
+            margin-top: 40px;
+        }
+    }
+
+    &__title {
+        max-width: 305px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        color: var(--cl-txt-main);
+
+        @include mq(desktop) {
+            max-width: 638px;
+        }
+    }
+
+    &__image {
+        margin-top: 100px;
+    }
+}
+
+.card {
+    width: 343px;
+    padding: 20;
+
+    background-color: var(--bgc-accent);
+    border-radius: 10px;
+
+    @include mq(desktop) {
+        width: 340px;
+        padding: 30;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        margin-bottom: 100px;
+    }
+
+    &__terms {
+        display: inline-flex;
+        padding: 4px 10px;
+        align-items: flex-start;
+        gap: 10px;
+
+        border-radius: 50px;
+        background-color: var(--bgc-main);
+    }
+
+    &__count {
+        &-total {
+            opacity: 0.5;
+        }
+    }
+
+    &__titles {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+
+        max-width: 280px;
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 525;
+        line-height: 33px;
+        letter-spacing: -2.1px;
+        text-transform: uppercase;
+    }
+
+    &__price-list {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    &__price-item {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    &__price-detail {
+        opacity: 0.5;
+    }
+
+    &__price-amount {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 23px;
+        letter-spacing: -0.72px;
+    }
+}
