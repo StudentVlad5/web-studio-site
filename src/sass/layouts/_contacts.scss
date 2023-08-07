@@ -136,6 +136,8 @@
 }
 
 .contacts-btn {
+  display: flex;
+  align-items: center;
   margin-top: 30px;
   border-radius: 10px;
   background: var(--cl-txt-main);
@@ -149,9 +151,33 @@
   border-color: transparent;
   cursor: pointer;
 
+  transition: 250ms ease-in-out;
+
   &:hover,
   &:focus {
-    background: var(--bgc-stroke);
+    background: var(--cl-txt-red);
+  }
+
+  & &-icon {
+    display: none;
+    transition: 350ms ease-in-out;
+  }
+
+  &:hover &-text {
+    display: none;
+  }
+
+  &:hover &-icon {
+    display: inline-block;
+    margin-right: 5px;
+    width: 10px;
+    height: 12px;
+    fill: white;
+  }
+
+  &:hover::after {
+    content: 'Knock knock';
+    visibility: visible;
   }
 }
 
@@ -307,6 +333,8 @@
     }
 
     &-item {
+      transition: 250ms ease-in-out;
+
       display: inline-block;
       padding: 6px 12px;
       border-radius: 100px;
