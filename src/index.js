@@ -9,7 +9,6 @@ import './js/components/to-top-button';
 import './js/components/slider';
 import './js/components/hidden-text';
 import './js/components/testimonialsOfClients';
-import './js/components/itemOfServices';
 import './js/components/getSubtitleOfAudio';
 import './js/components/player';
 import './js/functions/audio-player';

@@ -144,6 +144,7 @@
     @include mq(desktop) {
       margin: 0;
       align-items: start;
+      height: 100%;
     }
 
   }
@@ -152,12 +153,31 @@
     margin-bottom: 100px;
   }
 
+  .testimonials__client-coordinate2,
+  .testimonials__client-coordinate6
+   {
+    @include mq(desktop) {
+      margin-top: 400px;
+    }
+  }
+  .testimonials__client-coordinate3
+   {
+    @include mq(desktop) {
+      margin-top: -100px;
+    }
+  }
+  .testimonials__client-coordinate4
+  {
+   @include mq(desktop) {
+     margin-top: 500px;
+   }
+ }
   .testimonials__client-container:nth-child(2n+1) {
     transform: translate(-120%, 0);
 
     @include mq(desktop) {
       transform: translate(0, 0);
-      margin: 0;
+      margin-top: 0;
       align-items: start;
       // margin-top: 800px;
     }
