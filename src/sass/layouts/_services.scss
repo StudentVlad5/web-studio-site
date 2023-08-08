@@ -8,8 +8,8 @@
     flex-direction: row;
     align-items: center;
 
-    width: 5040px;
-    height: 740px;
+    width: calc(100vw - 300px);
+    height: 2800px;
     flex-shrink: 0;
 
     border-radius: 10px;
@@ -71,16 +71,16 @@
   }
 
   &__title {
-    max-width: 305px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 100%;
+    // margin-left: auto;
+    // margin-right: auto;
     text-align: center;
     color: var(--cl-txt-main);
 
     @include mq(desktop) {
-      max-width: 638px;
-      margin-left: 241px;
-      margin-right: 241px;
+      max-width: 100%;
+      // margin-left: 241px;
+      // margin-right: 241px;
     }
   }
 
@@ -169,3 +169,9 @@
   }
 }
 
+.services__subsection--titles{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
