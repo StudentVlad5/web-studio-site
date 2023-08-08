@@ -55,7 +55,7 @@ window.addEventListener("scroll", function () {
     let services = document.querySelector(".services__subsection--cards");
     let servicesWrap = document.querySelector(".services__wrap");
     let serviceTitle = document.querySelector(".services__subsection--titles");
-    let serviceImage= document.querySelector(".services__subsection--image");
+    let serviceImage = document.querySelector(".services__subsection--image");
 
     services.style.transform = "translate(110%, 0)";
     serviceImage.style.transform = "translate(250%, 0)";
@@ -78,9 +78,9 @@ window.addEventListener("scroll", function () {
       services.style.left = -(scrolledY - 3680 - 240) * 3.15 + "px";
 
       serviceImage.style.position = "fixed";
+      serviceImage.style.height = "100%";
       serviceImage.style.top = "0";
       serviceImage.style.left = -(scrolledY - 3680 - 240) * 3.15 + "px";
-
 
       // service_titles.style.left = "300px";
     }
@@ -103,7 +103,6 @@ window.addEventListener("scroll", function () {
 
       serviceImage.style.position = "inherit";
       serviceImage.style.top = "0";
-
     }
   }
 });
