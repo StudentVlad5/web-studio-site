@@ -1,13 +1,13 @@
-let content = document.querySelector(".testimonials__listOfClients");
-let content_2 = document.querySelector(".testimonials__wrap");
-let content_3 = document.querySelector(".testimonials__section");
-let content_4 = document.querySelector(".about");
-let content_5 = document.querySelector(".faq");
-let title = document.querySelector(".testimonials__title");
-let listOfLi = document.querySelectorAll(".testimonials__client-box");
-let scrolledY = "";
+let content = document.querySelector('.testimonials__listOfClients');
+let content_2 = document.querySelector('.testimonials__wrap');
+let content_3 = document.querySelector('.testimonials__section');
+let content_4 = document.querySelector('.about');
+let content_5 = document.querySelector('.faq');
+let title = document.querySelector('.testimonials__title');
+let listOfLi = document.querySelectorAll('.testimonials__client-box');
+let scrolledY = '';
 
-let scroled = content_3.style.height;
+let scrolled = content_3.style.height;
 
 window.addEventListener("scroll", function () {
   scrolledY = window.scrollY;
@@ -35,8 +35,8 @@ window.addEventListener("scroll", function () {
       content.style.left = -(scrolledY - 1875 - 240) * 2.55 + "px";
 
       listOfLi.forEach(
-        (item) =>
-          (item.style.left = (scrolledY - 1875 - 240) * Math.random + "px")
+        item =>
+          (item.style.left = (scrolledY - 1875 - 240) * Math.random + 'px')
       );
     }
     if (scrolledY <= 1875) {

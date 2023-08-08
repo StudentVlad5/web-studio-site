@@ -34,8 +34,29 @@
         line-height: 70px;
         letter-spacing: -4.29px;
     }
+
+    &.is-hidden {
+        display: none;
+    }
 }
 
-.title.is-hidden {
-    display: none;
+.text {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: -0.7px;
+    color: var(--cl-txt-accent);
+
+    &--light {
+        color: var(--cl-txt-grey);
+    }
+
+    &--dark {
+        color: var(--cl-txt-main);
+    }
+
+    &--white {
+        color: var(--cl-txt-white);
+    }
 }
