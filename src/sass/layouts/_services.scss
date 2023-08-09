@@ -58,9 +58,11 @@
     }
 
     & .services__title-group {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
     }
 
     & .contacts-btn {

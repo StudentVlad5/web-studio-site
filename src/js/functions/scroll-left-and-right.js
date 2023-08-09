@@ -45,10 +45,19 @@ window.addEventListener("scroll", function () {
     let servicesSection = document.querySelector(".services");
     let serviceTitle = document.querySelector(".services__subsection--titles");
     let serviceImage = document.querySelector(".services__subsection--image");
+    let serviceTitleGroup = document.querySelector(".services__title-group");
+// 4650
 
-    if (scrolledY > 4650 && scrolledY < 7500) {
+    if (scrolledY > 3545 && scrolledY < 6700) {
       services.style.transform = "translate(250%, 0)";
       serviceImage.style.transform = "translate(400%, 0)";
+
+      serviceTitleGroup.style.display = "flex";
+      serviceTitleGroup.style.height = "100vh";
+      serviceTitleGroup.style.flexDirection = "column";
+      serviceTitleGroup.style.justifyContent = "center";
+      serviceTitleGroup.style.alignItems = "center";
+      serviceTitleGroup.style.marginRight = "300px";
 
       servicesWrap.style.position = "fixed";
       // servicesWrap.style.height = "100vh";
@@ -74,7 +83,7 @@ window.addEventListener("scroll", function () {
 
       // service_titles.style.left = "300px";
     }
-    if (scrolledY <= 4650 || scrolledY >= 7000) {
+    if (scrolledY <= 3545 || scrolledY >= 6700) {
       // servicesSection.style.height = "100vh";
 
       servicesWrap.style.position = "inherit";
@@ -91,6 +100,12 @@ window.addEventListener("scroll", function () {
       serviceTitle.style.flexDirection = "row";
       serviceTitle.style.justifyContent = "center";
       serviceTitle.style.alignItems = "center";
+
+      serviceTitleGroup.style.display = "flex";
+      serviceTitleGroup.style.height = "100vh";
+      serviceTitleGroup.style.flexDirection = "column";
+      serviceTitleGroup.style.justifyContent = "center";
+      serviceTitleGroup.style.alignItems = "center";
 
       // service_titles.style.left = "-300px";
 

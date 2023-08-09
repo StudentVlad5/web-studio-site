@@ -8,6 +8,7 @@
     height: 100vh;
     margin: 0;
     scroll-behavior: smooth;
+    z-index: 5;
 
     @include mq(desktop) {
       height: 2800px;
