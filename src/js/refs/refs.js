@@ -11,6 +11,9 @@ export default function getRefs() {
 
     //==========  player ==========
     audio: document.querySelectorAll('.audio'),
+    switchVolume: document.querySelectorAll('.sound__vol'),
+    volumeOn: document.querySelectorAll('[data-vol="on"]'),
+    volumeOff: document.querySelectorAll('[data-vol="off"]'),
     switchPlay: document.querySelectorAll('.player__btn'),
     playBtn: document.querySelectorAll('[data-play="play"]'),
     pauseBtn: document.querySelectorAll('[data-play="pause"]'),
@@ -19,6 +22,9 @@ export default function getRefs() {
     soundOn: document.querySelectorAll('[data-sound="on"]'),
     switchSubtitle: document.querySelectorAll('.player__switch-subtitle'),
     subtitles: document.querySelectorAll('.player__subtitle'),
+
+    //==========  items with scroll ==========
+    elements: document.querySelectorAll('#sentinel'),
 
     //==========  cases section ==========
     slider: document.querySelector('.slider'),
@@ -30,7 +36,9 @@ export default function getRefs() {
     //==========  testimonials section ==========
     testimonialsWrap: document.querySelector('.testimonials-clients-wrap'),
 
-    //==========  about me section ==========
-    elements: document.querySelectorAll('#sentinel'),
+    //==========  services section ==========
+    services: document.querySelector('.services'),
+    subsectionTitles: document.querySelector('.services__subsection.titles'),
+    titleFixed: document.querySelector('.services__title.fixed'),
   };
 }

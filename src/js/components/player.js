@@ -1,6 +1,7 @@
 import getRefs from '../refs/refs';
 const refs = getRefs();
 
+// ===== to switch audio playback =====
 let timerId = null;
 
 refs.switchPlay.forEach(btn =>
@@ -89,4 +90,40 @@ function offSoundSet(id) {
     progress.classList.add('hidden');
     // }
   });
+}
+
+// ===== to switch the volume =====
+
+refs.switchVolume.forEach(btn =>
+  btn.addEventListener('click', e => SwitchVolume(e))
+);
+
+function SwitchVolume(e) {
+  e.preventDefault();
+
+  const action = e.currentTarget.dataset.vol;
+
+  if (action === 'off') {
+    refs.volumeOn.forEach(btn => {
+      btn.classList.remove('hidden');
+    });
+    refs.volumeOff.forEach(btn => {
+      btn.classList.add('hidden');
+    });
+
+    refs.audio.forEach(track => {
+      track.volume = 1;
+    });
+  } else {
+    refs.volumeOn.forEach(btn => {
+      btn.classList.add('hidden');
+    });
+    refs.volumeOff.forEach(btn => {
+      btn.classList.remove('hidden');
+    });
+
+    refs.audio.forEach(track => {
+      track.volume = 0;
+    });
+  }
 }

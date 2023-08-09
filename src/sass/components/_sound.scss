@@ -17,15 +17,17 @@
         fill: currentColor;
     }
 
-    &__on,
-    &__off {
+    &__vol {
         display: flex;
         align-items: center;
         gap: 5px;
-    }
 
-    &__off {
-        display: none;
-        color: var(--cl-txt-grey);
+        &[data-vol='off'] {
+            color: var(--cl-txt-grey);
+        }
+
+        &.hidden {
+            display: none;
+        }
     }
 }
