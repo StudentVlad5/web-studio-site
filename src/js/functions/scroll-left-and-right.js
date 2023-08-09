@@ -25,7 +25,7 @@ window.addEventListener("scroll", function () {
       content.style.display = "flex";
       content.style.justifyContent = "space-around";
       content.style.left = -(scrolledY - 1875 - 240) * 3.15 + "px";
-      content.style.width = "2700px";
+      content.style.width = "3000px";
       content.style.top = "calc(100vh)/2)";
       content.classList.remove("_anim-items");
       content.style.opacity = "1";
@@ -46,7 +46,7 @@ window.addEventListener("scroll", function () {
     let serviceTitle = document.querySelector(".services__subsection--titles");
     let serviceImage = document.querySelector(".services__subsection--image");
     let serviceTitleGroup = document.querySelector(".services__title-group");
-// 4650
+    // 4650
 
     if (scrolledY > 3545 && scrolledY < 6700) {
       services.style.transform = "translate(250%, 0)";
@@ -106,12 +106,35 @@ window.addEventListener("scroll", function () {
       serviceTitleGroup.style.flexDirection = "column";
       serviceTitleGroup.style.justifyContent = "center";
       serviceTitleGroup.style.alignItems = "center";
-
-      // service_titles.style.left = "-300px";
-
       services.style.position = "inherit";
 
       serviceImage.style.position = "inherit";
+    }
+
+    let aboutContainer = document.querySelector(".about__container");
+    let scrollContainer = document.querySelector(".about__container--wrap");
+
+    if (scrolledY > 6300 && scrolledY < 10372) {
+      aboutContainer.style.position = "fixed";
+      aboutContainer.style.height = "100%";
+      aboutContainer.style.width = "100vw";
+      aboutContainer.style.top = "0";
+   
+
+      scrollContainer.style.position = "fixed";
+      scrollContainer.style.top = "0";
+      scrollContainer.style.left = "0";
+    }
+
+    if (scrolledY <= 6300 || scrolledY >= 10372) {
+      aboutContainer.style.position = "inherit";
+      aboutContainer.style.height = "100%";
+      aboutContainer.style.width = "100vw";
+
+      scrollContainer.style.position = "inherit";
+    }
+    if (scrolledY > 7552 && scrolledY < 10372) {
+      scrollContainer.style.left = -(scrolledY - 7552) * 3.15 + "px";
     }
   }
 });

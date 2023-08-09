@@ -136,13 +136,13 @@
     width: 100%;
   }
 
-  .testimonials__client-container.testimonials{
+  .testimonials__client-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transform: translate(-120%, 0);
-    margin: 70px 60px;
+    margin: 180px 70px;
 
     @include mq(desktop) {
       margin: 0;
