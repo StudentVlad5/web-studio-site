@@ -43,3 +43,18 @@
         opacity: 1;
     }
 }
+
+@keyframes changeBgcAnim {
+    0% {
+        background-color: var(--bgc-accent);
+    }
+
+    50% {
+        background-color: var(--bgc-lavender);
+    }
+
+    100% {
+        background-color: var(--bgc-second);
+        opacity: 1;
+    }
+}

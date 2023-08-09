@@ -11,7 +11,7 @@ import './js/components/hidden-text';
 import './js/components/testimonialsOfClients';
 import './js/components/getSubtitleOfAudio';
 import './js/components/player';
-import './js/components/services-title-fixed';
+import './js/components/getBgcServices';
 // import './js/functions/audio-player';
 import './js/functions/subtitels';
 import './js/functions/animation';

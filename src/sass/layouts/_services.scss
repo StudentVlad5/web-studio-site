@@ -1,7 +1,9 @@
 .services {
   margin: 0;
   position: relative;
-  background-color: var(--bgc-lavender);
+  background-color: var(--bgc-second);
+
+  transition: all var(--slow-anim);
 
   @include mq(desktop) {
     display: flex;
@@ -27,38 +29,40 @@
     align-items: center;
 
     height: 100vh;
+    // padding: 100px 0;
 
     @include mq(desktop) {
-      width: calc(100vw - 295px);
+      width: calc(100vw - 300px);
+      max-width: 1150px;
       height: 100%;
-
-      //     position: absolute;
-      //     top: 50%;
-      //     left: 50%;
-      //     transform: translateX(-50%);
-      //     transform: translateY(-50%);
+      padding: 0;
     }
 
-    &>.services__title-group {
-      opacity: 0.6;
+    &.accent {
+      background-color: var(--bgc-accent);
+    }
+
+    &.lavender {
+      background-color: var(--bgc-lavender);
+    }
+
+    &.second {
+      background-color: var(--bgc-second);
     }
   }
 
   &__subsection.cards {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 70px;
+    position: relative;
 
     margin: 143px auto;
 
     @include mq(desktop) {
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: stretch;
-
       margin: 0;
       padding: 150px;
+    }
+
+    &>.services__title {
+      opacity: 0.1;
     }
   }
 
@@ -104,12 +108,27 @@
   }
 }
 
+.services__cards-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+
+  @include mq(desktop) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+}
+
 .card {
   width: 343px;
   padding: 20;
 
   background-color: var(--bgc-accent);
   border-radius: 10px;
+
+  z-index: 9;
 
   @include mq(tablet-only) {
     &:nth-child(2n+1) {

@@ -39,6 +39,7 @@ export default function getRefs() {
     //==========  services section ==========
     services: document.querySelector('.services'),
     subsectionTitles: document.querySelector('.services__subsection.titles'),
-    titleFixed: document.querySelector('.services__title.fixed'),
+    subsectionCards: document.querySelector('.services__subsection.cards'),
+    titleServices: document.querySelector('.services__title'),
   };
 }
