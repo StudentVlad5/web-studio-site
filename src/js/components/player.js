@@ -75,9 +75,6 @@ function onSoundSet(id) {
   timerId = setInterval(() => {
     renderSoundOnSet(i++, id);
   }, 150);
-  if (i > 8) {
-    clearInterval(timerId);
-  }
 }
 
 function offSoundSet(id) {
@@ -93,6 +90,9 @@ function offSoundSet(id) {
 }
 
 function renderSoundOnSet(i, id) {
+  if (i >= 9) {
+    return;
+  }
   refs.soundSetOn.forEach(set => {
     if (set.dataset.audio === id) {
       return (set.innerHTML = `
@@ -108,6 +108,10 @@ function renderSoundOnSet(i, id) {
   `);
     }
   });
+
+  setTimeout(() => {
+    renderSoundOnSet(i, id);
+  }, 1000);
 }
 
 // ===== to switch the volume =====
