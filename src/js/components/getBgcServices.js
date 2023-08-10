@@ -3,7 +3,6 @@ const refs = getRefs();
 
 window.addEventListener('scroll', function () {
   let scrollY = window.scrollY;
-  console.log('scrollY:', scrollY);
   let scrollX = window.scrollX;
 
   const sectionTop = refs.services.offsetTop;

@@ -18,6 +18,8 @@ export default function getRefs() {
     playBtn: document.querySelectorAll('[data-play="play"]'),
     pauseBtn: document.querySelectorAll('[data-play="pause"]'),
     time: document.querySelectorAll('[data-play="time"]'),
+    soundSet: document.querySelectorAll('.sound-set'),
+    soundSetOn: document.querySelectorAll('.sound-on'),
     soundOff: document.querySelectorAll('[data-sound="off"]'),
     soundOn: document.querySelectorAll('[data-sound="on"]'),
     switchSubtitle: document.querySelectorAll('.player__switch-subtitle'),

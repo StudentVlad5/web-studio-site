@@ -1,3 +1,4 @@
+import sprite from '../../images/sprite.svg';
 import getRefs from '../refs/refs';
 const refs = getRefs();
 
@@ -28,8 +29,8 @@ function switchPlay(e) {
         ).textContent = `${displayTime(track.currentTime)}`;
       });
       // run sound-set-on
-      timerId = setInterval(onSoundSet(audioId), 200);
-      // onSoundSet(audioId);
+      // timerId = setInterval(onSoundSet(audioId), 150);
+      onSoundSet(audioId);
 
       //switch player btn
       e.currentTarget.classList.add('hidden');
@@ -70,14 +71,13 @@ function onSoundSet(id) {
     .querySelector(`[data-sound="off"][data-audio="${id}"]`)
     .classList.add('hidden');
 
-  refs.soundOn.forEach(progress => {
-    progress.classList.remove('hidden');
-  });
-
-  // for (let i = 0; i < refs.soundOn.length; i++) {
-  //   refs.soundOn[i].classList.remove('hidden');
-  //   refs.soundOn[i--].classList.add('hidden');
-  // }
+  let i = 0;
+  timerId = setInterval(() => {
+    renderSoundOnSet(i++, id);
+  }, 150);
+  if (i > 8) {
+    clearInterval(timerId);
+  }
 }
 
 function offSoundSet(id) {
@@ -86,9 +86,27 @@ function offSoundSet(id) {
     .classList.remove('hidden');
 
   refs.soundOn.forEach(progress => {
-    // if (progress.dataset.audio === id) {
-    progress.classList.add('hidden');
-    // }
+    if (progress.dataset.audio === id) {
+      progress.classList.add('hidden');
+    }
+  });
+}
+
+function renderSoundOnSet(i, id) {
+  refs.soundSetOn.forEach(set => {
+    if (set.dataset.audio === id) {
+      return (set.innerHTML = `
+      <svg
+        class="player__icon"
+        width="15"
+        height="15"
+        data-sound="on"
+        data-audio=${id}
+      >
+        <use href="${sprite}#sound_${i}"></use>
+      </svg>
+  `);
+    }
   });
 }
 
