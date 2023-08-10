@@ -1,6 +1,8 @@
+import sprite from '../../images/sprite.svg';
 import getRefs from '../refs/refs';
 const refs = getRefs();
 
+// ===== to switch audio playback =====
 let timerId = null;
 
 refs.switchPlay.forEach(btn =>
@@ -27,8 +29,7 @@ function switchPlay(e) {
         ).textContent = `${displayTime(track.currentTime)}`;
       });
       // run sound-set-on
-      timerId = setInterval(onSoundSet(audioId), 200);
-      // onSoundSet(audioId);
+      onSoundSet(audioId);
 
       //switch player btn
       e.currentTarget.classList.add('hidden');
@@ -69,14 +70,11 @@ function onSoundSet(id) {
     .querySelector(`[data-sound="off"][data-audio="${id}"]`)
     .classList.add('hidden');
 
-  refs.soundOn.forEach(progress => {
-    progress.classList.remove('hidden');
-  });
+  document
+    .querySelector(`[data-sound="on"][data-audio="${id}"]`)
+    .classList.remove('hidden');
 
-  // for (let i = 0; i < refs.soundOn.length; i++) {
-  //   refs.soundOn[i].classList.remove('hidden');
-  //   refs.soundOn[i--].classList.add('hidden');
-  // }
+  timerId = setInterval(() => changeHeightOfSoundtrack(), 150);
 }
 
 function offSoundSet(id) {
@@ -85,8 +83,50 @@ function offSoundSet(id) {
     .classList.remove('hidden');
 
   refs.soundOn.forEach(progress => {
-    // if (progress.dataset.audio === id) {
-    progress.classList.add('hidden');
-    // }
+    if (progress.dataset.audio === id) {
+      progress.classList.add('hidden');
+    }
   });
+}
+
+function changeHeightOfSoundtrack() {
+  document
+    .querySelectorAll(`.progress__bar`)
+    .forEach(item => (item.style.height = `${Math.random() * 12}px`));
+}
+
+// ===== to switch the volume =====
+
+refs.switchVolume.forEach(btn =>
+  btn.addEventListener('click', e => SwitchVolume(e))
+);
+
+function SwitchVolume(e) {
+  e.preventDefault();
+
+  const action = e.currentTarget.dataset.vol;
+
+  if (action === 'off') {
+    refs.volumeOn.forEach(btn => {
+      btn.classList.remove('hidden');
+    });
+    refs.volumeOff.forEach(btn => {
+      btn.classList.add('hidden');
+    });
+
+    refs.audio.forEach(track => {
+      track.volume = 1;
+    });
+  } else {
+    refs.volumeOn.forEach(btn => {
+      btn.classList.add('hidden');
+    });
+    refs.volumeOff.forEach(btn => {
+      btn.classList.remove('hidden');
+    });
+
+    refs.audio.forEach(track => {
+      track.volume = 0;
+    });
+  }
 }

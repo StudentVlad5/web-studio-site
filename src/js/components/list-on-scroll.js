@@ -5,6 +5,8 @@ function onEntry(entry) {
   entry.forEach(change => {
     if (change.isIntersecting) {
       change.target.classList.add('fixed');
+    } else {
+      change.target.classList.remove('fixed');
     }
   });
 }

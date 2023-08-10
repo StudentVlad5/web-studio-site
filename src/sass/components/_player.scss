@@ -23,6 +23,7 @@
 
     &__row {
         display: flex;
+        align-items: center;
         gap: 4px;
 
         &:nth-of-type(2) {
