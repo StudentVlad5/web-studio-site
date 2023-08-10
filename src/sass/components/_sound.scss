@@ -34,4 +34,46 @@
 
 .sound-set {
     display: flex;
+
+
+    & .progress {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 1px;
+
+        width: 15px;
+        height: 15px;
+
+        &.hidden {
+            display: none;
+        }
+
+
+        &__bar {
+            display: inline;
+
+            height: 12px;
+            width: 1.5px;
+
+            border-radius: 0.25em;
+            border-left: 2px solid var(--bgc-main);
+
+            transition: height 0.1s linear;
+
+            &:nth-child(1),
+            &:nth-child(3) {
+                height: 5px;
+            }
+
+            &:nth-child(2) {
+                height: 7.5px;
+            }
+
+            &:nth-child(4) {
+                height: 10px;
+            }
+        }
+    }
 }

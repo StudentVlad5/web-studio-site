@@ -15,4 +15,4 @@ import './js/components/getBgcServices';
 // import './js/functions/audio-player';
 import './js/functions/subtitels';
 import './js/functions/animation';
-// import './js/functions/scroll-left-and-right';
+import './js/functions/scroll-left-and-right';

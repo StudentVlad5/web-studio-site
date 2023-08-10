@@ -29,7 +29,6 @@ function switchPlay(e) {
         ).textContent = `${displayTime(track.currentTime)}`;
       });
       // run sound-set-on
-      // timerId = setInterval(onSoundSet(audioId), 150);
       onSoundSet(audioId);
 
       //switch player btn
@@ -71,10 +70,11 @@ function onSoundSet(id) {
     .querySelector(`[data-sound="off"][data-audio="${id}"]`)
     .classList.add('hidden');
 
-  let i = 0;
-  timerId = setInterval(() => {
-    renderSoundOnSet(i++, id);
-  }, 150);
+  document
+    .querySelector(`[data-sound="on"][data-audio="${id}"]`)
+    .classList.remove('hidden');
+
+  timerId = setInterval(() => changeHeightOfSoundtrack(), 150);
 }
 
 function offSoundSet(id) {
@@ -89,29 +89,10 @@ function offSoundSet(id) {
   });
 }
 
-function renderSoundOnSet(i, id) {
-  if (i >= 9) {
-    return;
-  }
-  refs.soundSetOn.forEach(set => {
-    if (set.dataset.audio === id) {
-      return (set.innerHTML = `
-      <svg
-        class="player__icon"
-        width="15"
-        height="15"
-        data-sound="on"
-        data-audio=${id}
-      >
-        <use href="${sprite}#sound_${i}"></use>
-      </svg>
-  `);
-    }
-  });
-
-  setTimeout(() => {
-    renderSoundOnSet(i, id);
-  }, 1000);
+function changeHeightOfSoundtrack() {
+  document
+    .querySelectorAll(`.progress__bar`)
+    .forEach(item => (item.style.height = `${Math.random() * 12}px`));
 }
 
 // ===== to switch the volume =====
