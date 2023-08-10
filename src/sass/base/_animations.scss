@@ -44,23 +44,41 @@
     }
 }
 
+@keyframes changeBgcAnim {
+    0% {
+        background-color: var(--bgc-accent);
+    }
+
+    50% {
+        background-color: var(--bgc-lavender);
+    }
+
+    100% {
+        background-color: var(--bgc-second);
+    }
+}
+
 @keyframes scaleAnimation {
     0% {
         transform: scale(0.5);
         opacity: 0.5;
     }
+
     25% {
         transform: scale(0.6);
         opacity: 0.7;
     }
+
     50% {
         transform: scale(0.7);
         opacity: 0.6;
     }
+
     75% {
         transform: scale(0.8);
         opacity: 0.8;
     }
+
     100% {
         transform: scale(1);
         opacity: 1;
