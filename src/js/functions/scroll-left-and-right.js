@@ -56,15 +56,14 @@ window.addEventListener("scroll", function () {
 
     let services = document.querySelector(".services__subsection--cards");
     let servicesWrap = document.querySelector(".services__wrap");
-    let servicesSection = document.querySelector(".services");
     let serviceTitle = document.querySelector(".services__subsection--titles");
     let serviceImage = document.querySelector(".services__subsection--image");
     let serviceTitleGroup = document.querySelector(".services__title-group");
     // 4650
 
     if (scrolledY > 3545 && scrolledY < 6700) {
-      services.style.transform = "translate(250%, 0)";
-      serviceImage.style.transform = "translate(400%, 0)";
+      services.style.transform = "translate(200%, 0)";
+      serviceImage.style.transform = "translate(450%, 0)";
 
       serviceTitleGroup.style.display = "flex";
       serviceTitleGroup.style.height = "100vh";
