@@ -1,11 +1,11 @@
 let content = document.querySelector(".testimonials__listOfClients");
 let content_2 = document.querySelector(".testimonials__wrap");
 let content_3 = document.querySelector(".testimonials__section");
+let content_4 = document.querySelector(".testimonials__wrap--container");
+let content_5 = document.querySelectorAll(".testimonials__title");
 
 let listOfLi = document.querySelectorAll(".testimonials__client-box");
 let scrolledY = "";
-
-let scrolled = content_3.style.height;
 
 window.addEventListener("scroll", function () {
   scrolledY = window.scrollY;
@@ -13,13 +13,21 @@ window.addEventListener("scroll", function () {
   if (window.innerWidth > 1439) {
     listOfLi.forEach((item) => (item.style.height = "300px"));
     if (scrolledY > 1875 && scrolledY < 4000) {
+
+      content_5.forEach(item=>item.style.display = "flex");
+      
+      content_4.style.position = "fixed";
+      content_4.style.height = "100%";
+      content_4.style.width = "100vw";
+      content_4.style.top = "0";
+
       content_2.style.position = "fixed";
       content_2.style.height = "100%";
       content_2.style.width = "100vw";
       content_2.style.top = "0";
 
       content.style.position = "fixed";
-      content.style.transform = "translate(100%, 0)";
+      content.style.transform = "translate(90%, 0)";
       content.style.top = "0";
       content.style.height = "100%";
       content.style.display = "flex";
@@ -31,6 +39,12 @@ window.addEventListener("scroll", function () {
       content.style.opacity = "1";
     }
     if (scrolledY <= 1875 || scrolledY >= 4000) {
+      content_5.forEach(item=>item.style.display = "none");
+
+      content_4.style.position = "inherit";
+      content_4.style.height = "100%";
+      content_4.style.width = "100vw";
+
       content_3.style.position = "inherit";
       content_2.style.position = "inherit";
       content_3.style.left = "0px";
@@ -119,7 +133,6 @@ window.addEventListener("scroll", function () {
       aboutContainer.style.height = "100%";
       aboutContainer.style.width = "100vw";
       aboutContainer.style.top = "0";
-   
 
       scrollContainer.style.position = "fixed";
       scrollContainer.style.top = "0";
