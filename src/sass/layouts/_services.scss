@@ -2,7 +2,9 @@
   margin: 0;
   position: relative;
   background-color: var(--bgc-second);
+  border-radius: 10px;
 
+  z-index: 2;
   transition: all var(--slow-anim);
 
   @include mq(desktop) {
@@ -10,13 +12,12 @@
     flex-direction: row;
     align-items: center;
 
-    // width: calc(100vw - 300px);
-    // height: 2800px;
-    width: 5140px;
-    height: 740px;
+    width: calc(100vw - 300px);
+    height: 2800px;
     flex-shrink: 0;
 
-    border-radius: 10px;
+    // width: 5140px;
+    // height: 740px;
 
     overflow-x: visible;
     overflow-y: hidden;
@@ -83,7 +84,10 @@
       display: flex;
       align-items: center;
       flex-direction: column;
+      justify-content: center;
+
       margin-right: 155px;
+      height: 100vh;
     }
 
     & .contacts-btn {
@@ -267,4 +271,11 @@
     line-height: 23px;
     letter-spacing: -0.72px;
   }
+}
+
+.services__subsection--titles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
