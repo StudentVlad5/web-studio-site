@@ -20,8 +20,8 @@ function navHighlighter() {
 
     if (scrollY > sectionTop && scrollY < sectionTop + sectionHeight) {
       link.classList.add('active');
-    } else if (scrollY >= sectionWidth) {
-      link.classList.add('active');
+      // } else if (scrollY >= sectionWidth) {
+      //   link.classList.add('active');
     } else {
       link.classList.remove('active');
     }
