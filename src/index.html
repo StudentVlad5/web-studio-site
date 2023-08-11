@@ -30,11 +30,15 @@
     <main class="content">
       <include src="./partials/home.html"></include>
       <include src="./partials/cases.html"></include>
-      <!-- <div class="horizontal-scroll-section"> -->
-      <include src="./partials/testimonials.html"></include>
-      <include src="./partials/services.html"></include>
-      <include src="./partials/about_me.html"></include>
-      <!-- </div> -->
+      <div class="horizontal-scroll-section">
+        <div class="fixed-window">
+          <div class="windowForScrolling">
+            <include src="./partials/testimonials.html"></include>
+            <include src="./partials/services.html"></include>
+            <include src="./partials/about_me.html"></include>
+          </div>
+        </div>
+      </div>
       <include src="./partials/faq.html"></include>
       <include src="./partials/contacts.html"></include>
     </main>
