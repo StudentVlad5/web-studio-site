@@ -1,6 +1,6 @@
   .testimonials__section {
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,8 +11,8 @@
     z-index: 5;
 
     @include mq(desktop) {
-      height: 2800px;
-      width: calc(100vw - 300px);
+      // height: 2800px;
+      // width: calc(100vw - 300px);
     }
   }
 
@@ -27,21 +27,17 @@
     scrollbar-width: none;
 
     @include mq(desktop) {
-      overflow: auto;
+      position: inherit;
       -ms-overflow-style: initial;
-      scrollbar-width: thin;
       width: 2500px;
     }
   }
   .testimonials__wrap--container {
-    height: 100%;
+    height: 100vh;
     width: 100vw;
     @include mq(desktop) {
-      display: flex;
       position: relative;
-      flex-direction: column;
-      height: 100%;
-      width: 100vw;
+      flex-direction: row;
     }
   }
 
@@ -64,9 +60,11 @@
     @include mq(desktop) {
       display: flex;
       flex-direction: row;
+      justify-content: space-around;
       width: 2500px;
       padding: 0;
       overflow: hidden;
+      opacity: 1;
     }
   }
 
@@ -109,7 +107,7 @@
       font-size: 78px;
       font-weight: 600;
       line-height: 70px;
-      animation: scaleAnimation 1s ease-in;
+      animation: scaleAnimation .7s ease-in;
     }
   }
 
