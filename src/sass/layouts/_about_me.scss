@@ -413,42 +413,46 @@
     }
 }
 
-.about__container--wrap{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    gap:200px;
-    padding-left: 300px;
-}
-.about__subsection.team,
-.about__subsection.hobbies,
-.about__subsection.principles,
-.about__subsection.lifestyle {
-    @include mq(desktop) {
-        width: 100vw;
-        height: 101vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
-    .about__subsection.benefits {
-    @include mq(desktop) {
-        margin: 0 300px 0 -350px;
-    }
-}
-    .about__subsection.team,
-    .about__subsection.hobbies,
-    .about__subsection.principles,
-    .about__subsection.lifestyle {
-    @include mq(desktop) {
-        transform:scale(1.4);
-        width: 1400px;
-    }
-}
-.about__subsection.story {
-@include mq(desktop) {
-    margin-left: -100px;
-}
-}
+// .about__container--wrap {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 100vh;
+//     gap: 200px;
+//     padding-left: 300px;
+// }
+
+// .about__subsection.team,
+// .about__subsection.hobbies,
+// .about__subsection.principles,
+// .about__subsection.lifestyle {
+//     @include mq(desktop) {
+//         width: 100vw;
+//         height: 101vh;
+//         display: flex;
+//         justify-content: center;
+//         align-items: center;
+//     }
+// }
+
+// .about__subsection.benefits {
+//     @include mq(desktop) {
+//         margin: 0 300px 0 -350px;
+//     }
+// }
+
+// .about__subsection.team,
+// .about__subsection.hobbies,
+// .about__subsection.principles,
+// .about__subsection.lifestyle {
+//     @include mq(desktop) {
+//         transform: scale(1.4);
+//         width: 1400px;
+//     }
+// }
+
+// .about__subsection.story {
+//     @include mq(desktop) {
+//         margin-left: -100px;
+//     }
+// }
