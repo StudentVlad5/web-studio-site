@@ -1,7 +1,7 @@
 <section class="home section" id="home">
     <div class="home__container container">
         <p class="home__text">// Available for freelance work</p>
-        <article class="hero">
+        <div class="hero">
             <span class="hero__border">(</span>
             <img class="hero__avatar" src="./images/home/avatar.png" alt="avatar" width="79" height="79"
                 loading="lazy" />
@@ -10,7 +10,7 @@
             <svg class="hero__icon" width="13" height="14">
                 <use href="./images/sprite.svg#flower"></use>
             </svg>
-        </article>
+        </div>
         <h1 class="home__title title">I create websites for businesses that help to become market leaders.</h1>
         <audio src="/src/mp3/Voicy_Anastasia.mp3" id="audio" data-audio="owner" class="audio" preload="metadata"
             loop="true"></audio>
@@ -18,12 +18,13 @@
             <div class="player__wrapper">
                 <div class="player__road">
                     <div class="player__row">
-                        <button class="player__btn" type="button" data-play='play' data-audio="owner">
+                        <button class="player__btn" type="button" data-play='play' data-audio="owner" aria-label="play">
                             <svg class="player__icon" width="12" height="12">
                                 <use href="./images/sprite.svg#play"></use>
                             </svg>
                         </button>
-                        <button class="player__btn hidden" type="button" data-play='pause' data-audio="owner">
+                        <button class="player__btn hidden" type="button" data-play='pause' data-audio="owner"
+                            aria-label="pause">
                             <svg class="player__icon" width="12" height="12">
                                 <use href="./images/sprite.svg#pause"></use>
                             </svg>
@@ -45,7 +46,7 @@
                         <span class="player__time" data-play='time' data-audio="owner">00:20</span>
                     </div>
                 </div>
-                <button class="player__switch-subtitle" type="button" data-audio="owner">
+                <button class="player__switch-subtitle" type="button" data-audio="owner" aria-label="subtitle">
                     <svg class="player__icon" width="10" height="10">
                         <use href="./images/sprite.svg#arrow-right2"></use>
                     </svg>A</button>
