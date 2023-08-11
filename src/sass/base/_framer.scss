@@ -8,7 +8,7 @@
     padding: 0px;
 
     @include mq(desktop) {
-        overflow-x: scroll;
+        overflow: hidden;
     }
 }
 
