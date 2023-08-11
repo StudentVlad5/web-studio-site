@@ -404,3 +404,7 @@
   .is-opacity {
     opacity: 1;
   }
+
+  .sound-set .progress.testimonials > .progress__bar{
+    border-left: 2px solid var(--cl-txt-accent);
+  }

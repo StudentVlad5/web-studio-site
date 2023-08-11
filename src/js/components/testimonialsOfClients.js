@@ -166,7 +166,7 @@ function addClientsRewiers() {
                     <svg class="player__icon" width="15" height="15" data-sound="off" data-audio=${item.clientId}>
                         <use href="${sprite}#sound_off"></use>
                     </svg>
-                    <div class="progress hidden" data-sound="on" data-audio=${item.clientId}>
+                    <div class="progress hidden testimonials" data-sound="on" data-audio=${item.clientId}>
                         <div class="progress__bar"></div>
                         <div class="progress__bar"></div>
                         <div class="progress__bar"></div>
