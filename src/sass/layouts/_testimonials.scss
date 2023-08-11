@@ -1,6 +1,5 @@
   .testimonials__section {
     position: relative;
-    // overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,11 +8,6 @@
     margin: 0;
     scroll-behavior: smooth;
     z-index: 5;
-
-    @include mq(desktop) {
-      // height: 2800px;
-      // width: calc(100vw - 300px);
-    }
   }
 
   .testimonials__listOfClients-wrap {
@@ -146,6 +140,8 @@
 
   // client wrap
   .wrapper {
+    display: flex;
+    flex-direction: row;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -257,7 +253,7 @@
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    width: 250px;
+    width: 275px;
     height: 100%;
   }
 
@@ -266,7 +262,7 @@
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    width: 250px;
+    width: 275px;
     height: 70px;
   }
 
@@ -296,19 +292,17 @@
     height: 50px;
   }
 
-  .fa-play {
-    width: 12px;
-    height: 12px;
-    fill: var(--bgc-main);
-    color: var(--bgc-main);
+  .testimonials-navigation.player__road > .testimonials_row{
+    justify-content: end;
+    width: 100%;
   }
-
 
   // AUDIO STYLES
 
   .testimonials-navigation.player__road {
     background-color: var(--bgc-main);
     color: var(--bgc-accent);
+    width: 100%;
   }
 
   .action-btn.action-btn-big.player__btn {
@@ -321,6 +315,7 @@
 
   .music-container {
     position: relative;
+    width: 100%;
   }
 
   .action-btn:hover {
@@ -328,65 +323,12 @@
     color: var(--cl-txt-grey-light);
   }
 
-  .music-info {
-    display: block;
-    text-align: center;
-    width: 12px;
-    height: 12px;
-    opacity: 1;
+  .player__name {
+    white-space: nowrap
   }
-
-  .range-container__wraper {
-    width: 120px;
+  .time{
+     width: 40px
   }
-
-  .range-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .progress-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.85px;
-    position: relative;
-    cursor: pointer;
-    margin: 1.5px;
-    height: 15px;
-  }
-
-  .progress {
-    display: inline;
-    border-radius: 0.25em;
-    height: 12px;
-    width: 1.5px;
-    border-left: 1.5px solid var(--bgc-accent);
-    transition: height 0.1s linear;
-    opacity: 0.5;
-  }
-
-  .progress:first-child,
-  .progress:last-child {
-    height: 5px;
-  }
-
-  .progress:nth-child(2),
-  .progress:nth-child(4) {
-    height: 7.5px;
-  }
-
-  .progress:nth-child(3) {
-    height: 10px;
-  }
-
-  .player_slider {
-    width: 0.75rem;
-    height: 3rem;
-  }
-
   .is-hide {
     display: none;
   }

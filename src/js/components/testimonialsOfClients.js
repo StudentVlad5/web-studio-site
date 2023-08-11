@@ -161,28 +161,19 @@ function addClientsRewiers() {
                   </button>
                   <p class="player__name">${item.clientTitle}</p>
                 </div>
-                <div class="player__row">
-                  <div class="music-info">
-                    <div
-                      class="progress-container progress-range${item.clientId}"
-                    >
-                      <div
-                        class="progress progress-bar_${item.clientId}"
-                      ></div>
-                      <div
-                        class="progress progress-bar_${item.clientId}"
-                      ></div>
-                      <div
-                        class="progress progress-bar_${item.clientId}"
-                      ></div>
-                      <div
-                        class="progress progress-bar_${item.clientId}"
-                      ></div>
-                      <div
-                        class="progress progress-bar_${item.clientId}"
-                      ></div>
+                <div class="player__row testimonials_row">
+                <div class="sound-set" data-audio=${item.clientId}>
+                    <svg class="player__icon" width="15" height="15" data-sound="off" data-audio=${item.clientId}>
+                        <use href="${sprite}#sound_off"></use>
+                    </svg>
+                    <div class="progress hidden" data-sound="on" data-audio=${item.clientId}>
+                        <div class="progress__bar"></div>
+                        <div class="progress__bar"></div>
+                        <div class="progress__bar"></div>
+                        <div class="progress__bar"></div>
                     </div>
-                  </div>
+                </div>
+            </div>
                   <div class="time">
                     <span class="time-elapsed_${item.clientId}" 
                     data-play="time" 
