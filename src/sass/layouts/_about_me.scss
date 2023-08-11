@@ -2,7 +2,6 @@
     margin: 0;
     position: relative;
     background-color: var(--bgc-second);
-    overflow: scroll;
 
     @include mq(desktop) {
         display: flex;
