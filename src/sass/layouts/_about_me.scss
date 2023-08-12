@@ -4,13 +4,15 @@
     display: flex;
     flex-direction: column;
     background-color: var(--bgc-second);
-    width: 100%;
-    height: 100vh;
 
     @include mq(desktop) {
         display: flex;
         flex-direction: row;
         flex-shrink: 0;
+
+        width: 100%;
+        height: 100vh;
+
         border-radius: 10px;
         scroll-behavior: smooth;
     }
@@ -27,6 +29,7 @@
         @include mq(desktop) {
             flex-direction: row;
             padding: 0;
+            margin: 0;
         }
     }
 
@@ -38,7 +41,7 @@
 
         @include mq(desktop) {
             margin-bottom: 0px;
-
+            margin-right: 300px;
         }
     }
 
@@ -90,8 +93,8 @@
 
     @include mq(desktop) {
         position: relative;
-        margin-right: 280px;
         margin-bottom: 0;
+        margin-right: 280px;
 
         & .about__image {
             margin-left: 785px;
@@ -403,6 +406,7 @@
 
     @include mq(desktop) {
         margin-bottom: 0;
+        margin-right: 0;
         padding-right: 45px;
         padding-left: 45px;
     }
@@ -411,24 +415,3 @@
         cursor: pointer;
     }
 }
-
-.about__container--wrap{
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    height: 100vh;
-    width:100%;
-}
-.about__subsection.team,
-.about__subsection.hobbies,
-.about__subsection.principles,
-.about__subsection.lifestyle {
-    @include mq(desktop) {
-        width: 100vw;
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-}
-
