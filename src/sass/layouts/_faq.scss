@@ -1,3 +1,6 @@
+.faq{
+  z-index: 100;
+}
 .faq-title {
   color: var(--cl-txt-main);
   font-size: 52px;
@@ -172,8 +175,3 @@
 .show {
   max-height: 500px;
 }
-
-// .active {
-//   background-color: var(--bgc-accent);
-//   fill: var(--bgc-main);
-// }

@@ -110,7 +110,8 @@ function addClientsRewiers() {
         data-aos-anchor=${item.anchor}
         data-aos-duration=${item.duration}
       >
-        <div class="testimonials__client-coordinate${item.clientId}" style="position:relative">
+        <div class="testimonials__client-coordinate${item.clientId}" style="position:relative; display: flex; align-items: center;
+        justify-content: center;">
           <div class="testimonials__client-box">
             <div class="testimonials__client-wrap">
               <img

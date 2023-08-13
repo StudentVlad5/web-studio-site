@@ -4,10 +4,17 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     margin: 0;
     scroll-behavior: smooth;
     z-index: 5;
+    @include mq(desktop) {
+      height: 100vh;
+      padding:0;
+      border-radius: 0%;
+      border:0;
+      outline-style: none;
+    }
 
   &__listOfClients-wrap {
     position: absolute;
@@ -22,7 +29,7 @@
     @include mq(desktop) {
       position: inherit;
       -ms-overflow-style: initial;
-      width: 2500px;
+      width: 2600px;
     }
   }
   &__wrap {
@@ -50,11 +57,12 @@
     width: 100%;
     height: 100%;
 
+
     @include mq(desktop) {
       display: flex;
       flex-direction: row;
-      justify-content: space-around;
-      width: 2500px;
+      gap: 110px;
+      width: 2600px;
       padding: 0;
       overflow: hidden;
       opacity: 1;
@@ -68,8 +76,7 @@
 
   &__listOfClients._active {
     transform: translate(0, 0);
-    opacity: 0.8;
-    background-color: rgba(255,255,255, 0.001);
+    opacity: 1;
   }
 
   &__wrap.container {
@@ -130,36 +137,8 @@
     }
   }
 
-  &__client-container:nth-child(2n+1) {
-    transform: translate(-120%, 0);
-
-    @include mq(desktop) {
-      transform: translate(0, 0);
-      margin-top: 0;
-      align-items: start;
-      // margin-top: 800px;
-    }
-  }
-
-  &__client-container:nth-child(2n) {
-    transform: translate(+120%, 0);
-
-    @include mq(desktop) {
-      transform: translate(0, 0);
-      transform: scale(1.5);
-      margin: 0;
-      align-items: start;
-      // margin-top: 400px;
-    }
-  }
-
-  &__client-container.aos-animate {
-    transform: translate(0%, 0);
-    transition: var(--anims);
-  }
-
   &__listOfClients>&__client-container:nth-child(2n+1) {
-    transform: translate(+120%, 0);
+    transform: translate(-120%, 0);
     align-items: start;
     padding: 0 20px;
 
@@ -167,26 +146,24 @@
       transform: translate(0, 0);
       margin: 0;
       align-items: start;
-      // margin-top: 400px;
     }
   }
 
   &__listOfClients>&__client-container:nth-child(2n) {
     align-items: end;
+    transform: translate(+120%, 0);
     padding: 0 20px;
 
     @include mq(desktop) {
       margin: 0;
       align-items: start;
+      transform: translate(0, 0);
     }
   }
 
-  &.player__wrapper {
-    display: flex;
-    flex-direction: row;
-    padding: 0;
-    margin: 0;
-    width: 100%;
+  &__client-container.aos-animate {
+    transform: translate(0%, 0);
+    transition: var(--anims);
   }
 
   &__client-container{
@@ -209,10 +186,15 @@
     justify-content: start;
     align-items: center;
     width: 275px;
-    height: 100%;
+    // height: 100%;
   }
   &__client-box > .player__wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
     width: 100%;
+    position: relative;
   }
 
   &__client-wrap {
@@ -278,7 +260,7 @@
     flex-direction: row;
     justify-content: start;
     align-items: start;
-    top: 100px;
+    top: 30px;
     left: 40px;
   }
 
@@ -320,7 +302,6 @@
   &__client-coordinate5
    {
     @include mq(desktop) {
-      margin-top: 250px;
       transform: scale(1.15);
       height: 100%;
     }
@@ -329,7 +310,7 @@
   &__client-coordinate4
    {
     @include mq(desktop) {
-      margin-top: 50px;
+      margin-top: -350px;
       transform: scale(1.15);
       height: 100%;
     }
@@ -338,7 +319,7 @@
   &__client-coordinate6
   {
    @include mq(desktop) {
-     margin-top: 400px;
+     margin-top: 350px;
      transform: scale(1.15);
      height: 100%;
    }
