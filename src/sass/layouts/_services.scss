@@ -18,6 +18,9 @@
     height: 100vh;
     flex-shrink: 0;
 
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
     overflow: hidden;
     scroll-behavior: smooth;
   }
@@ -31,7 +34,7 @@
     // padding: 100px 0;
 
     @include mq(desktop) {
-      width: 100%;
+      width: 80%;
       height: 100vh;
       padding: 0;
     }
