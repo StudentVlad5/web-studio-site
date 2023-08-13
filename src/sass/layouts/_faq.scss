@@ -1,7 +1,60 @@
 .faq{
-  z-index: 100;
+  z-index: 100; 
+
+  &__arrow__box-mobile {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    cursor: pointer;
+
+  &-icon {
+    transition: transform 0.3s ease-in-out;
+    background-color: var(--bgc-second);
+    border-radius: 6px;
+
+    &.active {
+      background-color: var(--bgc-accent);
+      fill: var(--bgc-main);
+    }
+
+    &:nth-child(1) {
+      transform: rotateZ(90deg);
+    }
+
+    &:nth-child(2) {
+      transform: rotateZ(270deg);
+    }
+  }
+
+  @include mq(desktop) {
+    display: none;
+  }
 }
-.faq-title {
+&__arrow__box-desk {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+
+  &-icon {
+    transition: transform 0.3s ease-in-out;
+    background-color: #d4def0;
+    border-radius: 100px;
+    padding: 2px;
+
+    &.active {
+      background-color: var(--bgc-accent);
+      fill: var(--bgc-main);
+    }
+  }
+
+  @include mq(desktop) {
+    display: block;
+  }
+}
+&-title {
   color: var(--cl-txt-main);
   font-size: 52px;
   font-style: normal;
@@ -10,12 +63,12 @@
   letter-spacing: -2.6px;
   text-transform: uppercase;
   display: block;
-  @media screen and(min-width:1280px) {
+  @include mq(desktop) {
     display: none;
   }
 }
 
-.faq-title-desk {
+&-title-desk {
   color: var(--cl-txt-main);
   font-size: 78px;
   font-style: normal;
@@ -26,15 +79,15 @@
   width: 563px;
   display: none;
 
-  @media screen and(min-width:1280px) {
+  @include mq(desktop) {
     display: block;
   }
 }
 
-.faq__list {
+&__list {
   margin-top: 32px;
 
-  @media screen and (min-width: 1280px) {
+  @include mq(desktop) {
     padding: 71px 40px;
     border-radius: 20px;
     background: var(--bgc-second);
@@ -70,7 +123,7 @@
     padding-right: 123px;
     display: none;
 
-    @media screen and(min-width:1280px) {
+    @include mq(desktop) {
       display: block;
     }
   }
@@ -84,7 +137,7 @@
     letter-spacing: -0.32px;
     margin-bottom: 12px;
 
-    @media screen and(min-width:1280px) {
+    @include mq(desktop){
       font-size: 18px;
       line-height: 23px; /* 127.778% */
       letter-spacing: -0.9px;
@@ -100,78 +153,21 @@
     line-height: 19px; /* 135.714% */
     letter-spacing: -0.42px;
 
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
       width: 587px;
       padding-left: 137px;
     }
   }
 }
-
-.arrow__box-mobile {
-  display: block;
-  position: absolute;
-  top: 10px;
-  right: 0;
-  cursor: pointer;
-
-  &-icon {
-    transition: transform 0.3s ease-in-out;
-    background-color: var(--bgc-second);
-    border-radius: 6px;
-
-    &.active {
-      background-color: var(--bgc-accent);
-      fill: var(--bgc-main);
-    }
-
-    &:nth-child(1) {
-      transform: rotateZ(90deg);
-    }
-
-    &:nth-child(2) {
-      transform: rotateZ(270deg);
-    }
-  }
-
-  @media screen and(min-width:1280px) {
-    display: none;
-  }
-}
-
-.arrow__box-desk {
-  display: none;
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-
-  &-icon {
-    transition: transform 0.3s ease-in-out;
-    background-color: #d4def0;
-    border-radius: 100px;
-    padding: 2px;
-
-    &.active {
-      background-color: var(--bgc-accent);
-      fill: var(--bgc-main);
-    }
-  }
-
-  @media screen and(min-width:1280px) {
-    display: block;
-  }
-}
-
-.is-hidden {
-  display: none;
-}
-
-.faq__list-item-discr {
+&__list-item-discr {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.25s ease-in-out;
 }
-
+}
+.is-hidden {
+  display: none;
+}
 .show {
   max-height: 500px;
 }
