@@ -12,11 +12,11 @@ function navHighlighter() {
     const sectionHeight = section.offsetHeight;
     const sectionTop = section.offsetTop - 100;
 
-    console.log('section:', section);
+    // console.log('section:', section);
     const sectionWidth = section.offsetLeft;
-    console.log('sectionWidth:', sectionWidth);
+    // console.log('sectionWidth:', sectionWidth);
     const sectionFinish = section.offsetLeft + 1847;
-    console.log('sectionFinish:', sectionFinish);
+    // console.log('sectionFinish:', sectionFinish);
 
     if (scrollY > sectionTop && scrollY < sectionTop + sectionHeight) {
       link.classList.add('active');

@@ -1,3 +1,6 @@
+import getRefs from '../refs/refs';
+const refs = getRefs();
+
 let lastKnownScrollY = 0;
 let currentScrollY = 0;
 let idOfHeader = 'header';
@@ -36,9 +39,11 @@ function hide() {
 
 export default window.onload = function () {
   eleHeader = document.getElementById(idOfHeader);
-  document.addEventListener('scroll', onScroll, false);
+  if (refs.menuBtnRef.getAttribute('aria-expanded') === 'true') {
+    document.addEventListener('scroll', onScroll, false);
+  }
 
-  if (window.innerWidth > '1440') {
+  if (window.innerWidth >= '1440') {
     document.removeEventListener('scroll', onScroll, false);
   }
 };
