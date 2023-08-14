@@ -16,78 +16,46 @@
         <nav class="mobile-menu__navigation navigation">
             <ul class="navigation__list js-mobile-menu-links">
                 <li class="navigation__item">
-                    <a class="navigation__link translate" data-en="Cases" data-ua="Роботи" href="#cases"
-                        aria-label="Cases">Cases</a>
+                    <a class="navigation__link" href="#cases" aria-label="Cases">Cases</a>
                 </li>
                 <li class="navigation__item">
-                    <a class="navigation__link translate" data-en="Testimonials" data-ua="Відгуки" href="#testimonials"
-                        aria-label="Testimonials">Testimonials</a>
+                    <a class="navigation__link" href="#testimonials" aria-label="Testimonials">Testimonials</a>
                 </li>
                 <li class="navigation__item">
-                    <a class="navigation__link translate" data-en="Services" data-ua="Послуги" href="#services"
-                        aria-label="Services">Services</a>
+                    <a class="navigation__link" href="#services" aria-label="Services">Services</a>
                 </li>
                 <li class="navigation__item">
-                    <a class="navigation__link translate" data-en="About me" data-ua="Про мене" href="#about"
-                        aria-label="About me">About me</a>
+                    <a class="navigation__link" href="#about" aria-label="About me">About me</a>
                 </li>
                 <li class="navigation__item">
                     <a class="navigation__link" href="#faq" aria-label="FAQ">FAQ</a>
                 </li>
                 <li class="navigation__item">
-                    <a class="navigation__link translate" data-en="Contacts" data-ua="Контакти" href="#contacts"
-                        aria-label="Contacts">Contacts</a>
+                    <a class="navigation__link" href="#contacts" aria-label="Contacts">Contacts</a>
                 </li>
             </ul>
         </nav>
-
         <div class="mobile-menu__footer">
             <div class="sound">
-                <div class="sound__vol" data-vol="on"><span class="sound__text translate" data-en="Sound on" data-ua="Звук вкл">Sound on</span>
+                <div class="sound__vol" data-vol="on"><span class="sound__text">Sound on</span>
                     <svg class="sound__icon" width="18" height="18">
                         <use class="sound__icon-on" href="./images/sprite.svg#sound"></use>
                     </svg>
                 </div>
-
-                <div class="sound__vol hidden" data-vol="off"> <span class="sound__text translate" data-en="Sound off" data-ua="Звук викл">Sound off</span>
+                <div class="sound__vol hidden" data-vol="off"> <span class="sound__text">Sound off</span>
                     <svg class="sound__icon" width="18" height="18">
                         <use class="sound__icon-off" href="./images/sprite.svg#sound_off"></use>
                     </svg>
                 </div>
             </div>
-
             <div class="translate">
-
-                <label class="switch">
-                    <label class="label label--isActive translate-button" id="word1" data-lang="en">En</label>
-
-                    <!-- class="translate__inp" -->
-                    <input class="translate__inp" type="checkbox" id="switcher">
-                    <span id="switcher"></span>
-
-                    <label class="label translate-button" id="word2" data-lang="ua">Ua</label>
-                </label>
+                <span class="translate__text active">En</span>
+                <svg class="translate__icon" width="33" height="16">
+                    <use class="translate__icon-en" href="./images/sprite.svg#switch"></use>
+                </svg>
+                <span class="translate__text">Ua</span>
             </div>
         </div>
     </div>
+
 </header>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        const translateButtons = document.querySelectorAll(".translate-button");
-        const translateElements = document.querySelectorAll(".translate");
-
-        translateButtons.forEach((button) => {
-            button.addEventListener("click", function () {
-                const selectedLang = this.getAttribute("data-lang");
-
-                translateElements.forEach((element) => {
-                    const translation = element.getAttribute(`data-${selectedLang}`);
-                    if (translation) {
-                        element.textContent = translation;
-                    }
-                });
-            });
-        });
-    });
-</script>
