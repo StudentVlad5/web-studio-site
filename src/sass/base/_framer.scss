@@ -26,7 +26,7 @@
 }
 .horizontal-scroll-section{
     @include mq(desktop) {
-        height: 6600px;
+        height: 5500px;
         width:100vw;
         overflow: hidden;
     }
@@ -43,7 +43,7 @@
 .windowForScrolling{
     @include mq(desktop) {
         height: 100vh;
-        width: 6500px;
+        width: 6000px;
         display: flex;
         flex-direction: row;
         // overflow: hidden;
