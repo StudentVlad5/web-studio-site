@@ -9,6 +9,11 @@ export default function getRefs() {
     mobileMenuRef: document.querySelector('.js-mobile-menu'),
     menuLinks: document.querySelector('.js-mobile-menu-links'),
 
+    //==========  translate ==========
+    word1: document.getElementById('word1'),
+    word2: document.getElementById('word2'),
+    switcher: document.getElementById('switcher'),
+
     //==========  player ==========
     audio: document.querySelectorAll('.audio'),
     switchPlay: document.querySelectorAll('.player__btn'),

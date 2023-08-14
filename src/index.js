@@ -11,6 +11,8 @@ import './js/components/hidden-text';
 import './js/components/testimonialsOfClients';
 import './js/components/getSubtitleOfAudio';
 import './js/components/player';
+import './js/components/translate-switch';
+import './js/components/google-translate';
 import './js/functions/audio-player';
 import './js/functions/subtitels';
 import './js/functions/animation';
