@@ -17,7 +17,7 @@ const refs = getRefs();
 
 // Fixed window when modal opened
 function fixedModalOverflow() {
-  document.querySelector('body').style.overflow = 'hidden';
+  // document.querySelector('body').style.overflow = 'hidden';
   document.querySelector('body').style.height = '100vh';
 }
 
