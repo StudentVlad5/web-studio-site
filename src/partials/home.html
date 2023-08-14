@@ -1,8 +1,10 @@
 <section class="home section" id="home">
     <div class="home__container container">
+
         <p class="home__text translate" data-en="Available for freelance work" data-ua="Можлива робота на фрілансі">//
             Available for freelance work</p>
         <article class="hero">
+        <div class="hero">
             <span class="hero__border">(</span>
             <img class="hero__avatar" src="./images/home/avatar.png" alt="avatar" width="79" height="79"
                 loading="lazy" />
@@ -12,22 +14,25 @@
                 <use href="./images/sprite.svg#flower"></use>
             </svg>
         </article>
-        <h1 class="home__title title translate"
+        </div>
+         <h1 class="home__title title translate"
             data-en="I create websites for businesses that help to become market leaders."
             data-ua="Я створюю сайти для компаній, які допомагають стати лідерами ринку.">I create websites for
             businesses that help to become market leaders.</h1>
+
         <audio src="/src/mp3/Voicy_Anastasia.mp3" id="audio" data-audio="owner" class="audio" preload="metadata"
             loop="true"></audio>
         <div class="home__player player" id="player">
             <div class="player__wrapper">
                 <div class="player__road">
                     <div class="player__row">
-                        <button class="player__btn" type="button" data-play='play' data-audio="owner">
+                        <button class="player__btn" type="button" data-play='play' data-audio="owner" aria-label="play">
                             <svg class="player__icon" width="12" height="12">
                                 <use href="./images/sprite.svg#play"></use>
                             </svg>
                         </button>
-                        <button class="player__btn hidden" type="button" data-play='pause' data-audio="owner">
+                        <button class="player__btn hidden" type="button" data-play='pause' data-audio="owner"
+                            aria-label="pause">
                             <svg class="player__icon" width="12" height="12">
                                 <use href="./images/sprite.svg#pause"></use>
                             </svg>
@@ -36,43 +41,21 @@
                             data-ua="Послухайте бачення Анастасії">Listen to Anastasia’s vision</span>
                     </div>
                     <div class="player__row">
-                        <div class="sound-set">
+                        <div class="sound-set" data-audio="owner">
                             <svg class="player__icon" width="15" height="15" data-sound="off" data-audio="owner">
                                 <use href="./images/sprite.svg#sound_off"></use>
                             </svg>
-
-                            <svg class="player__icon hidden" width="15" height="15" data-sound="on" data-audio="owner">
-                                <use href="./images/sprite.svg#sound_1"></use>
-                            </svg>
-                            <svg class="player__icon hidden" width="15" height="15" data-sound="on" data-audio="owner">
-                                <use href="./images/sprite.svg#sound_2"></use>
-                            </svg>
-                            <svg class="player__icon hidden" width="15" height="15" data-sound="on" data-audio="owner">
-                                <use href="./images/sprite.svg#sound_3"></use>
-                            </svg>
-                            <svg class="player__icon hidden" width="15" height="15" data-sound="on" data-audio="owner">
-                                <use href="./images/sprite.svg#sound_4"></use>
-                            </svg>
-                            <svg class="player__icon hidden" width="15" height="15" data-sound="on" data-audio="owner">
-                                <use href="./images/sprite.svg#sound_5"></use>
-                            </svg>
-                            <svg class="player__icon hidden" width="15" height="15" data-sound="on" data-audio="owner">
-                                <use href="./images/sprite.svg#sound_6"></use>
-                            </svg>
-                            <svg class="player__icon hidden" width="15" height="15" data-sound="on" data-audio="owner">
-                                <use href="./images/sprite.svg#sound_7"></use>
-                            </svg>
-                            <svg class="player__icon hidden" width="15" height="15" data-sound="on" data-audio="owner">
-                                <use href="./images/sprite.svg#sound_8"></use>
-                            </svg>
-                            <svg class="player__icon hidden" width="15" height="15" data-sound="on" data-audio="owner">
-                                <use href="./images/sprite.svg#sound_9"></use>
-                            </svg>
+                            <div class="progress hidden" data-sound="on" data-audio="owner">
+                                <div class="progress__bar"></div>
+                                <div class="progress__bar"></div>
+                                <div class="progress__bar"></div>
+                                <div class="progress__bar"></div>
+                            </div>
                         </div>
                         <span class="player__time" data-play='time' data-audio="owner">00:20</span>
                     </div>
                 </div>
-                <button class="player__switch-subtitle" type="button" data-audio="owner">
+                <button class="player__switch-subtitle" type="button" data-audio="owner" aria-label="subtitle">
                     <svg class="player__icon" width="10" height="10">
                         <use href="./images/sprite.svg#arrow-right2"></use>
                     </svg>A</button>

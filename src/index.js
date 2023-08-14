@@ -14,6 +14,7 @@ import './js/components/player';
 import './js/components/translate-switch';
 import './js/components/google-translate';
 import './js/functions/audio-player';
+import './js/components/getBgcServices';
 import './js/functions/subtitels';
 import './js/functions/animation';
-import "./js/functions/scroll-left-and-right";
+import './js/functions/scroll-left-and-right';

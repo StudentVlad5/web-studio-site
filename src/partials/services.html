@@ -1,15 +1,14 @@
 <section class="services section" id="services">
     <div class="services__wrap">
-        <div class="services__subsection titles services__subsection--titles">
-            <div class="services__title-group">
-                <h2 class="services__title title translate" data-en="What services" data-ua="Які послуги">What services
-                </h2>
-                <h2 class="services__title title translate" data-en="do I provide?" data-ua="я надаю?">do I provide?
-                </h2>
-            </div>
-        </div>
-        <ul class="services__subsection cards services__subsection--cards">
-            <li class="services__card card">
+    <div class="services__subsection titles">
+        <h2 class="services__title title translate" data-en="What services do I provide?" data-ua="Які послуги я надаю?">What services do I provide?
+        </h2>
+    </div>
+    <div class="services__subsection cards">
+        <h2 class="services__title title title--fixed translate" data-en=""What services do I provide?" data-ua="Які послуги я надаю?">What services do I provide?
+        </h2>
+        <ul class="services__cards-list">
+            <li class="services__card card" id="sentinel">
                 <div class="card__header">
                     <div class="card__terms text"><span class="translate" data-en="Terms"
                             data-ua="Терміни">Terms:</span><span class="translate" data-en="4 days+" data-ua="4 дні+">4
@@ -45,7 +44,7 @@
                     </ul>
                 </div>
             </li>
-            <li class="services__card card">
+            <li class="services__card card" id="sentinel">
                 <div class="card__header">
                     <div class="card__terms text"><span class="translate" data-en="Terms"
                             data-ua="Терміни">Terms:</span><span class="translate" data-en="4 days+" data-ua="4 дні+">4
@@ -82,7 +81,7 @@
                     </ul>
                 </div>
             </li>
-            <li class="services__card card">
+            <li class="services__card card" id="sentinel">
                 <div class="card__header">
                     <div class="card__terms text"><span class="translate" data-en="Terms"
                             data-ua="Терміни">Terms:</span><span class="translate" data-en="4 days+" data-ua="4 дні+">4
@@ -90,6 +89,7 @@
                     <p class="card__count text text--white"><span class="card__count-current">03</span> / <span
                             class="card__count-total">04</span></p>
                 </div>
+
                 <div class="card__titles text--white">
                     <h3 class="card__title translate" data-en="Corporate website" data-ua="Корпоративний сайт">Corporate
                         website</h3>
@@ -120,7 +120,7 @@
                     </ul>
                 </div>
             </li>
-            <li class="services__card card">
+            <li class="services__card card" id="sentinel">
                 <div class="card__header">
                     <div class="card__terms text"><span class="translate" data-en="Terms"
                             data-ua="Терміни">Terms:</span><span class="translate" data-en="4 days+" data-ua="4 дні+">4
@@ -160,13 +160,8 @@
                 </div>
             </li>
         </ul>
+
         <div class="services__subsection image services__subsection--image">
-            <div class="services__title-group">
-                <h2 class="services__title title translate" data-en="Start to work now" data-ua="Почніть працювати зараз">Start to work now
-                </h2>
-                <button class="contacts-btn translate" data-en="Contact us" data-ua="Зв'яжіться з нами" type="button">Contact
-                    us</button>
-            </div>
             <picture>
                 <source media="(min-width:1440px )"
                     srcset="./images/services/laptop_desk.webp 1x, ./images/services/laptop_desk@2x.webp 2x"
@@ -179,6 +174,24 @@
                     sizes="(min-width:1440px) 1288px, (max-width:1439,98px) 1023px, 100vw" width="1023" height="706"
                     loading="lazy">
             </picture>
+
+    </div>
+    <div class="services__subsection image">
+        <div class="services__title-group">
+            <h2 class="services__title title translate" data-en="Start to work now" data-ua="Почніть працювати зараз">Start to work now</h2>
+            <button class="contacts-btn translate" type="button data-en="Contact us" data-ua="Зв'яжіться з нами"">Contact us</button>
         </div>
+        <picture>
+            <source media="(min-width:1440px )"
+                srcset="./images/services/laptop_desk.webp 1x, ./images/services/laptop_desk@2x.webp 2x"
+                type="image/webp" />
+            <source media="(max-width:1439px)"
+                srcset="./images/services/laptop_mob.webp 1x, ./images/services/laptop_mob@2x.webp 2x"
+                type="image/webp" />
+            <img class="services__image" src="./images/services/laptop_desk.png" alt="Anastasia"
+                srcset="./images/services/laptop_desk.png 1288w, ./images/services/laptop_desk@2x.png 3316w"
+                sizes="(min-width:1440px) 1288px, (max-width:1439px) 1023px, 100vw" width="1023" height="706"
+                loading="lazy">
+        </picture>
     </div>
 </section>

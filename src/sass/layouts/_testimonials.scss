@@ -1,22 +1,22 @@
-  .testimonials__section {
+  .testimonials {
     position: relative;
-    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     margin: 0;
     scroll-behavior: smooth;
     z-index: 5;
-
     @include mq(desktop) {
-      height: 2800px;
-      width: calc(100vw - 300px);
+      height: 100vh;
+      padding:0;
+      border-radius: 0%;
+      border:0;
+      outline-style: none;
     }
-  }
 
-  .testimonials__listOfClients-wrap {
+  &__listOfClients-wrap {
     position: absolute;
     top: 0;
     left: 0;
@@ -27,30 +27,26 @@
     scrollbar-width: none;
 
     @include mq(desktop) {
-      overflow: auto;
+      position: inherit;
       -ms-overflow-style: initial;
-      scrollbar-width: thin;
-      width: 2500px;
+      width: 2600px;
     }
   }
-  .testimonials__wrap--container {
-    height: 100%;
+  &__wrap {
+    height: 100vh;
     width: 100vw;
     @include mq(desktop) {
-      display: flex;
       position: relative;
-      flex-direction: column;
-      height: 100%;
-      width: 100vw;
+      flex-direction: row;
     }
   }
 
-  .testimonials__listOfClients-wrap::-webkit-scrollbar {
+  &__listOfClients-wrap::-webkit-scrollbar {
     width: 0;
     height: 0;
   }
 
-  .testimonials__listOfClients {
+  &__listOfClients {
     transform: translate(0, 0);
     opacity: 0;
     transition: all 1s ease 1s;
@@ -61,27 +57,29 @@
     width: 100%;
     height: 100%;
 
+
     @include mq(desktop) {
       display: flex;
       flex-direction: row;
-      width: 2500px;
+      gap: 110px;
+      width: 2600px;
       padding: 0;
       overflow: hidden;
+      opacity: 1;
     }
   }
 
-  .testimonials__listOfClients::-webkit-scrollbar {
+  &__listOfClients::-webkit-scrollbar {
     width: 0;
     height: 0;
   }
 
-  .testimonials__listOfClients._active {
+  &__listOfClients._active {
     transform: translate(0, 0);
-    opacity: 0.8;
-    background-color: rgba(255,255,255, 0.001);
+    opacity: 1;
   }
 
-  .testimonials__wrap {
+  &__wrap.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -91,69 +89,84 @@
     height: 100%;
     background-color: var(--bgc-accent);
   }
-
-  .title-cases {
+  &__title {
     color: var(--bgc-main);
-  }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: -2.6px;
+    text-transform: uppercase;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 525;
+    line-height: 50px;
 
-  .scroll-cases {
-    width: 100%;
-    height: 100vh;
-    background-color: var(--bgc-accent);
-  }
-
-  .testimonials__title {
-    color: var(--bgc-main);
     @include mq(desktop){
       letter-spacing: -4.29px;
       font-size: 78px;
       font-weight: 600;
       line-height: 70px;
-      animation: scaleAnimation 2s ease-in;
+      animation: scaleAnimation .7s ease-in;
     }
   }
 
-  .testimonials__scroll {
+  &__scroll {
     display: flex;
     position: absolute;
     bottom: 20px;
     left: 50%;
     transform: translate(-50%, 0%);
   }
-
-  // client wrap
-  .client-wrap {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 250px;
-    height: 50px;
-  }
-
-  .client-data {
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .testimonials__text-toScroll {
+  &__text-toScroll {
     color: var(--bgc-stroke);
   }
 
-  .testimonials__flower-scroll {
+  &__flower-scroll {
     margin: 4px;
     animation: flowerAnim 2s 1s infinite normal linear;
   }
-
-  // client wrap
-  .wrapper {
-    padding: 0;
-    margin: 0;
-    width: 100%;
+  &__text-toScroll {
+    color: var(--bgc-stroke);
+  }
+  &__client-container:last-child {
+    margin-bottom: 200px;
+    @include mq(desktop) {
+      margin-bottom: 0;
+    }
   }
 
-  .testimonials__client-container{
+  &__listOfClients>&__client-container:nth-child(2n+1) {
+    transform: translate(-120%, 0);
+    align-items: start;
+    padding: 0 20px;
+
+    @include mq(desktop) {
+      transform: translate(0, 0);
+      margin: 0;
+      align-items: start;
+    }
+  }
+
+  &__listOfClients>&__client-container:nth-child(2n) {
+    align-items: end;
+    transform: translate(+120%, 0);
+    padding: 0 20px;
+
+    @include mq(desktop) {
+      margin: 0;
+      align-items: start;
+      transform: translate(0, 0);
+    }
+  }
+
+  &__client-container.aos-animate {
+    transform: translate(0%, 0);
+    transition: var(--anims);
+  }
+
+  &__client-container{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -166,240 +179,70 @@
       align-items: start;
       height: 100%;
     }
-
   }
-
-  .testimonials__client-container:last-child {
-    margin-bottom: 200px;
-    @include mq(desktop) {
-      margin-bottom: 0;
-    }
-  }
-
-  .testimonials__client-coordinate2,
-  .testimonials__client-coordinate5
-   {
-    @include mq(desktop) {
-      margin-top: 450px;
-      transform: scale(1.3);
-      height: 100%;
-    }
-  }
-  .testimonials__client-coordinate1,
-  .testimonials__client-coordinate4
-   {
-    @include mq(desktop) {
-      margin-top: 200px;
-      transform: scale(1.3);
-      height: 100%;
-    }
-  }
-  .testimonials__client-coordinate3,
-  .testimonials__client-coordinate6
-  {
-   @include mq(desktop) {
-     margin-top: 700px;
-     transform: scale(1.3);
-     height: 100%;
-   }
- }
-  .testimonials__client-container:nth-child(2n+1) {
-    transform: translate(-120%, 0);
-
-    @include mq(desktop) {
-      transform: translate(0, 0);
-      margin-top: 0;
-      align-items: start;
-      // margin-top: 800px;
-    }
-  }
-
-  .testimonials__client-container:nth-child(2n) {
-    transform: translate(+120%, 0);
-
-    @include mq(desktop) {
-      transform: translate(0, 0);
-      transform: scale(1.5);
-      margin: 0;
-      align-items: start;
-      // margin-top: 400px;
-    }
-  }
-
-  .testimonials__client-container.aos-animate {
-    transform: translate(0%, 0);
-    transition: var(--anims);
-  }
-
-  .testimonials__listOfClients>.testimonials__client-container:nth-child(2n+1) {
-    transform: translate(+120%, 0);
-    align-items: start;
-    padding: 0 20px;
-
-    @include mq(desktop) {
-      transform: translate(0, 0);
-      margin: 0;
-      align-items: start;
-      // margin-top: 400px;
-    }
-  }
-
-  .testimonials__listOfClients>.testimonials__client-container:nth-child(2n) {
-    align-items: end;
-    padding: 0 20px;
-
-    @include mq(desktop) {
-      margin: 0;
-      align-items: start;
-    }
-  }
-
-  .testimonials__client-box {
+    &__client-box {
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    width: 250px;
-    height: 100%;
+    width: 275px;
+    // height: 100%;
+  }
+  &__client-box > .player__wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
   }
 
-  .testimonials__client-wrap {
+  &__client-wrap {
     display: flex;
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    width: 250px;
+    width: 275px;
     height: 70px;
   }
 
-  .testimonials__client-data {
+  &__client-data {
     padding: 5px;
     display: flex;
     flex-direction: column;
   }
 
-  .testimonials__client-data p {
+  &__client-data p {
     color: var(--bgc-main);
     font-weight: 400;
     line-height: 1.2;
     font-size: 16px;
   }
 
-  .testimonials__client-data p:nth-child(2) {
+  &__client-data p:nth-child(2) {
     color: var(--bgc-main);
     font-weight: 200;
     font-size: 12px;
   }
 
-  .testimonials__client-img {
+  &__client-img {
     border-radius: 50%;
     border: 1px solid var(--bgc-main);
     width: 50px;
     height: 50px;
   }
 
-  .fa-play {
-    width: 12px;
-    height: 12px;
-    fill: var(--bgc-main);
-    color: var(--bgc-main);
+  &-navigation.player__road > &_row{
+    justify-content: end;
+    width: 100%;
   }
 
-
-  // AUDIO STYLES
-
-  .testimonials-navigation.player__road {
+  &-navigation.player__road {
     background-color: var(--bgc-main);
     color: var(--bgc-accent);
+    width: 100%;
   }
-
-  .action-btn.action-btn-big.player__btn {
-    background-color: var(--bgc-main);
-  }
-
-  .testimonials__switchSubtitleBtn>.player__icon {
-    fill: var(--cl-txt-accent);
-  }
-
-  .music-container {
-    position: relative;
-  }
-
-  .action-btn:hover {
-    outline: 0;
-    color: var(--cl-txt-grey-light);
-  }
-
-  .music-info {
-    display: block;
-    text-align: center;
-    width: 12px;
-    height: 12px;
-    opacity: 1;
-  }
-
-  .range-container__wraper {
-    width: 120px;
-  }
-
-  .range-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .progress-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.85px;
-    position: relative;
-    cursor: pointer;
-    margin: 1.5px;
-    height: 15px;
-  }
-
-  .progress {
-    display: inline;
-    border-radius: 0.25em;
-    height: 12px;
-    width: 1.5px;
-    border-left: 1.5px solid var(--bgc-accent);
-    transition: height 0.1s linear;
-    opacity: 0.5;
-  }
-
-  .progress:first-child,
-  .progress:last-child {
-    height: 5px;
-  }
-
-  .progress:nth-child(2),
-  .progress:nth-child(4) {
-    height: 7.5px;
-  }
-
-  .progress:nth-child(3) {
-    height: 10px;
-  }
-
-  .player_slider {
-    width: 0.75rem;
-    height: 3rem;
-  }
-
-  .is-hide {
-    display: none;
-  }
-
-  .fas {
-    width: 20px;
-    height: 20px;
-  }
-
-  // subtitres
-  .testimonials__subtitle-container {
+  &__subtitle-container {
     position: absolute;
     max-width: 340px;
     min-width: 300px;
@@ -417,11 +260,11 @@
     flex-direction: row;
     justify-content: start;
     align-items: start;
-    top: 120px;
-    left: 30px;
+    top: 30px;
+    left: 40px;
   }
 
-  .testimonials__subtitlesBtn {
+  &__subtitlesBtn {
     width: 35px;
     min-height: 100%;
     display: flex;
@@ -432,17 +275,12 @@
     color: var(--bgc-accent);
   }
 
-  .testimonials__switchSubtitleBtn {
+  &__switchSubtitleBtn {
     cursor: pointer;
     background-color: var(--bgc-main);
     color: var(--cl-txt-accent)
   }
-
-  .player__btn {
-    cursor: pointer;
-  }
-
-  .testimonials-subtitles {
+  &-subtitles {
     width: 100%;
     padding: 20px;
     background-color: var(--bgc-main);
@@ -451,7 +289,7 @@
     opacity: 0;
   }
 
-  .testimonials-subtitles--icon {
+  &-subtitles--icon {
     position: absolute;
     z-index: 20;
     top: -11px;
@@ -460,7 +298,67 @@
     fill: var(--bgc-main);
     transform: rotate(90deg);
   }
+  &__client-coordinate2,
+  &__client-coordinate5
+   {
+    @include mq(desktop) {
+      transform: scale(1.15);
+      height: 100%;
+    }
+  }
+  &__client-coordinate1,
+  &__client-coordinate4
+   {
+    @include mq(desktop) {
+      margin-top: -350px;
+      transform: scale(1.15);
+      height: 100%;
+    }
+  }
+  &__client-coordinate3,
+  &__client-coordinate6
+  {
+   @include mq(desktop) {
+     margin-top: 350px;
+     transform: scale(1.15);
+     height: 100%;
+   }
+ }
+  }
+
+  .action-btn.action-btn-big.player__btn {
+    background-color: var(--bgc-main);
+  }
+
+  .testimonials__switchSubtitleBtn>.player__icon {
+    fill: var(--cl-txt-accent);
+  }
+
+  .music-container {
+    position: relative;
+    width: 100%;
+  }
+
+  .action-btn:hover {
+    outline: 0;
+    color: var(--cl-txt-grey-light);
+  }
+
+  .player__name {
+    white-space: nowrap
+  }
+  .time{
+     width: 40px
+  }
+
+  .player__btn {
+    cursor: pointer;
+  }
 
   .is-opacity {
     opacity: 1;
+  }
+
+  .sound-set .progress.testimonials > .progress__bar{
+    border-left: 2px solid var(--cl-txt-accent);
   }
