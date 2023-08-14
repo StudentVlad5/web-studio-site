@@ -21,7 +21,7 @@
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 
-    overflow: hidden;
+    // overflow: hidden;
     scroll-behavior: smooth;
   }
 
@@ -69,18 +69,23 @@
   }
 
   &__subsection.image {
+    position: relative;
     height: 100%;
     padding: 200px 0;
+
     text-align: center;
     background-color: var(--bgc-main);
 
     @include mq(desktop) {
-      padding: 0 150px;
       display: flex;
       flex-direction: row;
       align-items: center;
-      width: 100%;
+
+      width: 80%;
       height: 100vh;
+      padding-left: 150px;
+
+      overflow: visible;
     }
 
     & .services__title-group {
@@ -89,8 +94,10 @@
       flex-direction: column;
       justify-content: center;
 
-      margin-right: 155px;
-      height: 100vh;
+      @include mq(desktop) {
+        height: 100vh;
+        margin-right: 155px;
+      }
     }
 
     & .contacts-btn {
@@ -110,6 +117,18 @@
 
   &__image {
     margin-top: 100px;
+
+    @include mq(desktop) {
+      position: absolute;
+      top: 50%;
+      left: 1000px;
+      transform: translateY(-50%);
+    }
+
+    &.scale {
+      scale: 1.5;
+      transition: all 1.5s;
+    }
   }
 }
 

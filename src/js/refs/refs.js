@@ -43,5 +43,6 @@ export default function getRefs() {
     subsectionTitles: document.querySelector('.services__subsection.titles'),
     subsectionCards: document.querySelector('.services__subsection.cards'),
     titleServices: document.querySelector('.services__title'),
+    servicesImage: document.querySelector('.services__image'),
   };
 }
