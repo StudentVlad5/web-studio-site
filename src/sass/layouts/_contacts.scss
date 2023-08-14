@@ -8,6 +8,7 @@
 
 .contacts-title {
   margin-bottom: 40px;
+
   @media screen and (min-width: 1280px) {
     text-align: center;
     margin-bottom: 100px;
@@ -38,10 +39,9 @@
     cursor: pointer;
 
     width: 100%;
-    min-width: 388px;
 
-    @media screen and (max-width: 1440px) {
-      width: 100%;
+    @media screen and (min-width: 1440px) {
+      min-width: 388px;
     }
 
     &:hover,
@@ -61,15 +61,16 @@
       opacity: 1;
     }
 
-    &:hover ~ span,
-    &:focus ~ span,
-    &:not(:placeholder-shown) ~ span {
+    &:hover~span,
+    &:focus~span,
+    &:not(:placeholder-shown)~span {
       color: red;
       transform: translateY(0);
 
       color: var(--cl-txt-grey);
       font-size: 10px;
-      line-height: 13.83px; /* 138.298% */
+      line-height: 13.83px;
+      /* 138.298% */
       letter-spacing: -0.221px;
     }
 
@@ -82,7 +83,8 @@
       font-size: 16px;
       font-style: normal;
       font-weight: 600;
-      line-height: 20px; /* 125% */
+      line-height: 20px;
+      /* 125% */
       letter-spacing: -0.32px;
 
       transform: translateY(20px);
@@ -122,14 +124,15 @@
       opacity: 1;
     }
 
-    &:hover ~ span,
-    &:focus ~ span,
-    &:not(:placeholder-shown) ~ span {
+    &:hover~span,
+    &:focus~span,
+    &:not(:placeholder-shown)~span {
       color: red;
       transform: translateY(0);
       color: var(--cl-txt-grey);
       font-size: 10px;
-      line-height: 13.83px; /* 138.298% */
+      line-height: 13.83px;
+      /* 138.298% */
       letter-spacing: -0.221px;
     }
   }
@@ -145,7 +148,8 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
-  line-height: 18px; /* 128.571% */
+  line-height: 18px;
+  /* 128.571% */
   letter-spacing: -0.7px;
   padding: 9px 26px;
   border-color: transparent;
@@ -191,7 +195,8 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
-    line-height: 20px; /* 125% */
+    line-height: 20px;
+    /* 125% */
     letter-spacing: -0.32px;
     margin-bottom: 10px;
   }
@@ -208,8 +213,10 @@
   &-inp {
     position: absolute;
     left: -9999px;
-    &:checked + span {
+
+    &:checked+span {
       background-color: mix(#fff, #1e2eb8, 84%);
+
       &:before {
         box-shadow: inset 0 0 0 0.4375em #1e2eb8;
       }
@@ -221,7 +228,8 @@
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
-    line-height: 18px; /* 128.571% */
+    line-height: 18px;
+    /* 128.571% */
     letter-spacing: -0.7px;
 
     display: flex;
@@ -229,9 +237,11 @@
     padding: 0.375em 0.75em 0.375em 0.375em;
     border-radius: 99em;
     transition: 0.25s ease;
+
     &:hover {
       background-color: mix(#fff, #1e2eb8, 84%);
     }
+
     &:before {
       display: flex;
       flex-shrink: 0;
@@ -266,7 +276,8 @@
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
-    line-height: 20px; /* 125% */
+    line-height: 20px;
+    /* 125% */
     letter-spacing: -0.32px;
   }
 
@@ -277,11 +288,13 @@
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
-    line-height: 18px; /* 128.571% */
+    line-height: 18px;
+    /* 128.571% */
     letter-spacing: -0.7px;
     border-radius: 100px;
     border: 1px solid var(--bgc-accent);
     margin-left: 10px;
+
     @media screen and (min-width: 1280px) {
       margin-right: 20px;
     }
@@ -297,7 +310,8 @@
     font-size: 14px;
     font-style: normal;
     font-weight: 600;
-    line-height: 18px; /* 128.571% */
+    line-height: 18px;
+    /* 128.571% */
     letter-spacing: -0.7px;
     margin: 10px 0;
 
