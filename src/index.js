@@ -12,7 +12,7 @@ import './js/components/testimonialsOfClients';
 import './js/components/getSubtitleOfAudio';
 import './js/components/player';
 import './js/components/translate-switch';
-import './js/components/google-translate';
+import './js/components/translate';
 import './js/components/getBgcServices';
 import './js/components/scale-image';
 import './js/functions/subtitels';
