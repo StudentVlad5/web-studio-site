@@ -41,9 +41,7 @@ export default window.onload = function () {
   eleHeader = document.getElementById(idOfHeader);
   if (refs.menuBtnRef.getAttribute('aria-expanded') === 'true') {
     document.addEventListener('scroll', onScroll, false);
-  }
-
-  if (window.innerWidth >= '1440') {
+  } else if (window.innerWidth >= '1440') {
     document.removeEventListener('scroll', onScroll, false);
-  }
+  } else document.addEventListener('scroll', onScroll, true);
 };

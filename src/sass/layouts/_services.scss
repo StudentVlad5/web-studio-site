@@ -5,7 +5,7 @@
   background-color: var(--bgc-second);
   border-radius: 10px;
 
-  z-index: 25;
+  z-index: 5;
   transition: all var(--slow-anim);
 
   @include mq(desktop) {
@@ -59,7 +59,7 @@
 
     @include mq(desktop) {
       margin: 0;
-      padding: 150px;
+      // padding: 150px;
       width: 100%;
     }
 
