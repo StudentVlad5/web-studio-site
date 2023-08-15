@@ -12,27 +12,17 @@ function navHighlighter() {
     console.log('section:', section);
 
     const sectionHeight = section.offsetHeight;
-    const sectionTop = section.offsetTop - 100;
     console.log('sectionHeight:', sectionHeight);
-    console.log(' sectionTop:', sectionTop);
+    const sectionTop = section.offsetTop - 100;
+    console.log('sectionTop:', sectionTop);
 
     const sectionWidth = section.offsetLeft;
-    console.log(' sectionWidth:', sectionWidth);
+    console.log('sectionWidth:', sectionWidth);
 
     if (section.parentElement.className !== 'windowForScrolling') {
       if (scrollY < sectionTop && link.classList.contains('active')) {
-        console.log(
-          "link.classList.contains('active'):",
-          link.classList.contains('active')
-        );
-        console.log('scrollY < sectionTop:', scrollY < sectionTop);
         link.classList.add('active');
       } else if (scrollY > sectionTop && scrollY < sectionTop + sectionHeight) {
-        console.log(
-          'scrollY < sectionTop + sectionHeight:',
-          scrollY < sectionTop + sectionHeight
-        );
-        console.log('scrollY > sectionTop :', scrollY > sectionTop);
         link.classList.add('active');
       } else {
         link.classList.remove('active');
@@ -40,25 +30,30 @@ function navHighlighter() {
     }
 
     if (section.parentElement.className === 'windowForScrolling') {
-      if (sectionWidth === 0) {
-        console.log('sectionWidth === 0:', sectionWidth === 0);
-
-        link.classList.remove('active');
-        scrollY >= sectionWidth + 1754 && link.classList.toggle('active');
-      } else if (scrollY >= sectionWidth) {
-        console.log('scrollY >= sectionWidth:', scrollY >= sectionWidth);
-
-        link.classList.remove('active');
-      } else if (
-        scrollY > sectionWidth &&
-        scrollY <= sectionWidth + sectionHeight
-      ) {
-        console.log(
-          'scrollY >= sectionWidth + sectionHeight:',
-          scrollY >= sectionWidth + sectionHeight
-        );
-
-        link.classList.add('active');
+      if (section.id === 'testimonials') {
+        if (
+          scrollY >= sectionWidth + 1700 &&
+          scrollY <= sectionWidth + 1700 + sectionHeight
+        ) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      } else if (section.id === 'services') {
+        if (
+          scrollY >= sectionWidth + 1420 &&
+          scrollY <= sectionWidth + sectionHeight + 1420
+        ) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      } else if (section.id === 'about') {
+        if (scrollY >= sectionWidth - 2776 && scrollY <= sectionWidth - 770) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
       }
     }
   });
