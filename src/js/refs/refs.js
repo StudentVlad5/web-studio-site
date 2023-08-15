@@ -14,6 +14,12 @@ export default function getRefs() {
     word2: document.getElementById('word2'),
     switcher: document.getElementById('switcher'),
 
+    translateButtons: document.querySelectorAll('.translate-button'),
+    translateElements: document.querySelectorAll('.translate'),
+    hiddenText1: document.querySelector('.hidden-text1'),
+    hiddenText2: document.querySelector('.hidden-text2'),
+    // switcher: document.getElementById('switcher'),
+
     //==========  player ==========
     audio: document.querySelectorAll('.audio'),
     switchVolume: document.querySelectorAll('.sound__vol'),
