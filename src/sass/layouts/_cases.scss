@@ -25,7 +25,7 @@
   &__item-img {
     display: block;
 
-    @media screen and(min-width: 1280px) {
+    @include mq(desktop) {
       display: none;
     }
   }
@@ -33,7 +33,7 @@
   &__item-imgDesk {
     display: none;
 
-    @media screen and(min-width: 1280px) {
+    @include mq(desktop) {
       display: block;
       width: 1120px;
       height: 566px;
@@ -43,7 +43,7 @@
   &__item-imgFlags {
     display: none;
 
-    @media screen and(min-width: 1280px) {
+    @include mq(desktop) {
       display: block;
       position: absolute;
       right: 20px;
@@ -62,7 +62,7 @@
     margin-top: 20px;
     margin-bottom: 10px;
 
-    @media screen and (min-width: 1280px) {
+    @include mq(desktop) {
       font-size: 41px;
       font-weight: 500;
       line-height: 46px;
@@ -86,7 +86,7 @@
 .title-desk {
   display: none;
 
-  @media screen and (min-width: 1280px) {
+  @include mq(desktop) {
     display: block;
   }
 }
@@ -94,7 +94,7 @@
 .title-mob {
   display: block;
 
-  @media screen and (min-width: 1280px) {
+  @include mq(desktop) {
     display: none;
   }
 }
@@ -183,7 +183,7 @@
   position: relative;
   margin-bottom: 30px;
 
-  @media screen and (min-width: 1280px) {
+  @include mq(desktop) {
     width: auto;
   }
 
@@ -203,7 +203,7 @@
   padding: 0;
   z-index: 10;
 
-  @media screen and (min-width: 1280px) {
+  @include mq(desktop) {
     padding: 0 20px;
   }
 }
