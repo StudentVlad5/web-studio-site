@@ -10,7 +10,6 @@ let scrolledY = '';
 
 window.addEventListener('scroll', function () {
   scrolledY = window.scrollY;
-  console.log(scrolledY);
   if (window.innerWidth > 1439) {
     if (scrolledY > 1850 && scrolledY < 4000) {
       fixedWindow.style.position = 'fixed';

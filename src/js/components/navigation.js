@@ -9,15 +9,10 @@ function navHighlighter() {
 
   refs.navLinks.forEach(link => {
     let section = document.querySelector(link.hash);
-    console.log('section:', section);
-
     const sectionHeight = section.offsetHeight;
-    console.log('sectionHeight:', sectionHeight);
     const sectionTop = section.offsetTop - 100;
-    console.log('sectionTop:', sectionTop);
-
     const sectionWidth = section.offsetLeft;
-    console.log('sectionWidth:', sectionWidth);
+
 
     if (section.parentElement.className !== 'windowForScrolling') {
       if (scrollY < sectionTop && link.classList.contains('active')) {
