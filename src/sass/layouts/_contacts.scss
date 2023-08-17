@@ -1,7 +1,4 @@
 .contacts {
-  &__container-wrap {
-    padding: 0 20px;
-  }
 
   &__container {
     @include mq(desktop) {
@@ -13,14 +10,6 @@
 
   &__title {
     margin-bottom: 40px;
-    color: var(--cl-txt-main);
-    letter-spacing: -4.29px;
-    text-transform: uppercase;
-    width: 563px;
-    font-size: 78px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 70px;
 
     @include mq(desktop) {
       text-align: center;
