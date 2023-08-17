@@ -28,7 +28,9 @@ refs.translateButtons.forEach(button => {
   });
 });
 
-refs.switcher.addEventListener('click', function () {
-  const selectedLang = this.checked ? 'ua' : 'en';
-  updateLanguage(selectedLang);
+refs.switcher.forEach(el => {
+  el.addEventListener('click', function () {
+    const selectedLang = this.checked ? 'ua' : 'en';
+    updateLanguage(selectedLang);
+  });
 });
