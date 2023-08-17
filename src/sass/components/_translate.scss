@@ -23,12 +23,12 @@
     transition: color var(--anim);
     color: var(--cl-txt-accent);
   }
-
-  &--isActive {
-    color: var(--cl-txt-accent);
-  }
 }
 
+
+.label--isActive {
+  color: var(--cl-txt-accent);
+}
 .switch {
   display: flex;
   cursor: pointer;

@@ -10,9 +10,9 @@ export default function getRefs() {
     menuLinks: document.querySelector('.js-mobile-menu-links'),
 
     //==========  translate ==========
-    word1: document.getElementById('word1'),
-    word2: document.getElementById('word2'),
-    switcher: document.getElementById('switcher'),
+    word1: document.querySelectorAll('.word1'),
+    word2: document.querySelectorAll('.word2'),
+    switcher: document.querySelectorAll('.switcher'),
 
     translateButtons: document.querySelectorAll('.translate-button'),
     translateElements: document.querySelectorAll('.translate'),
