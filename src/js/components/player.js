@@ -107,26 +107,43 @@ function SwitchVolume(e) {
   const action = e.currentTarget.dataset.vol;
 
   if (action === 'off') {
-    refs.volumeOn.forEach(btn => {
-      btn.classList.remove('hidden');
-    });
-    refs.volumeOff.forEach(btn => {
-      btn.classList.add('hidden');
-    });
-
-    refs.audio.forEach(track => {
-      track.volume = 1;
-    });
+    soundOnActive();
+    localStorage.setItem('selectedSound', 'on');
   } else {
-    refs.volumeOn.forEach(btn => {
-      btn.classList.add('hidden');
-    });
-    refs.volumeOff.forEach(btn => {
-      btn.classList.remove('hidden');
-    });
-
-    refs.audio.forEach(track => {
-      track.volume = 0;
-    });
+    soundOffActive();
+    localStorage.setItem('selectedSound', 'off');
   }
+}
+
+const savedSound = localStorage.getItem('selectedSound') || 'on';
+if (savedSound === 'on') {
+  soundOnActive();
+} else {
+  soundOffActive();
+}
+
+function soundOnActive() {
+  refs.volumeOn.forEach(btn => {
+    btn.classList.remove('hidden');
+  });
+  refs.volumeOff.forEach(btn => {
+    btn.classList.add('hidden');
+  });
+
+  refs.audio.forEach(track => {
+    track.volume = 1;
+  });
+}
+
+function soundOffActive() {
+  refs.volumeOn.forEach(btn => {
+    btn.classList.add('hidden');
+  });
+  refs.volumeOff.forEach(btn => {
+    btn.classList.remove('hidden');
+  });
+
+  refs.audio.forEach(track => {
+    track.volume = 0;
+  });
 }

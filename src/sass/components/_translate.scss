@@ -18,6 +18,7 @@
   &:first-child {
     padding-right: 5px;
   }
+
   &:hover,
   &:focus {
     transition: color var(--anim);
@@ -29,6 +30,7 @@
 .label--isActive {
   color: var(--cl-txt-accent);
 }
+
 .switch {
   display: flex;
   cursor: pointer;
@@ -36,7 +38,7 @@
   .translate__inp {
     display: none;
 
-    & + span {
+    &+span {
       padding-left: 47px;
       display: block;
       position: relative;
@@ -52,19 +54,19 @@
       }
 
       &:before {
-        top: -2px;
+        top: 0;
         left: 0;
         width: 42px;
-        height: 24px;
+        height: 20px;
         border: 1px solid var(--bgc-stroke);
         transition: all 0.3s ease;
       }
 
       &:after {
-        width: 18px;
-        height: 18px;
+        width: 16px;
+        height: 16px;
         background: var(--bgc-accent);
-        top: 1px;
+        top: 2px;
         left: 3px;
         box-shadow: 0 1px 3px rgba(#121621, 0.1);
         transition: all 0.45s ease;
@@ -79,7 +81,7 @@
     }
 
     &:checked {
-      & + span {
+      &+span {
         &::after {
           transform: translate(18px, 0);
         }

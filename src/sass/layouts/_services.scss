@@ -56,10 +56,11 @@
     position: relative;
 
     margin: 143px auto;
+    padding: 0 16px;
 
     @include mq(desktop) {
       margin: 0;
-      // padding: 150px;
+      padding: 0;
       width: 100%;
     }
 
@@ -146,7 +147,8 @@
 }
 
 .card {
-  width: 343px;
+  width: 100%;
+  max-width: 343px;
   padding: 20;
 
   background-color: var(--bgc-accent);

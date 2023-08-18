@@ -18,4 +18,9 @@ body {
     background-color: var(--bgc-main);
 
     position: relative;
+    overflow-x: hidden;
+
+    @include mq(desktop) {
+        overflow-x: scroll;
+    }
 }
