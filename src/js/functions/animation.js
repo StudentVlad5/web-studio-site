@@ -3,6 +3,7 @@ const animClients = document.querySelector(".testimonials__listOfClients");
 
 if (animItems.length > 0) {
   window.addEventListener("scroll", animOnScroll);
+
   function animOnScroll() {
     for (let index = 0; index < animItems.length; index++) {
       const animItem = animItems[index];
@@ -38,6 +39,6 @@ function offset(el) {
   return { top: rect.top + scrollTop, left: rect.left + scrollLeft };
 }
 
-setTimeout(() => {
-  animOnScroll();
-}, 300);
+// setTimeout(() => {
+//   animOnScroll();
+// }, 300);
