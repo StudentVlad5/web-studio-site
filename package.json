@@ -3,7 +3,7 @@
   "source": "src/index.html",
   "version": "0.1.0",
   "description": "",
-  "homepage": "https://studentvlad5.github.io/web-studio-site/",
+  "homepage": "https://web-studio-yvh6.onrender.com/",
   "scripts": {
     "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /web-studio-site/"
