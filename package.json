@@ -6,7 +6,7 @@
   "homepage": "https://web-studio-yvh6.onrender.com/",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /web-studio-site/"
+    "build": "parcel build src/*.html --public-url /web-studio-yvh6.onrender.com/"
   },
   "repository": {
     "type": "git",
