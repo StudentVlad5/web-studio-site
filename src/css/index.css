@@ -1408,6 +1408,7 @@ a {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
 .slides::-webkit-scrollbar {
@@ -2170,6 +2171,7 @@ a {
   .card:nth-child(4) {
     transform: translateY(80px);
     transform: translateX(520px);
+    margin-left: 150px;
   }
   .card.fixed {
     transition: all 5.5s;

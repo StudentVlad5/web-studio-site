@@ -183,46 +183,38 @@
     padding: 30;
 
     &:nth-child(1) {
-      transform: translateY(200px);
-      transform: translateX(0);
+      transform: translate(0, 200px);
     }
 
     &:nth-child(2) {
-      transform: translateY(160px);
-      transform: translateX(340px);
+      transform: translate(200px, 160px)
     }
 
     &:nth-child(3) {
-      transform: translateY(120px);
-      transform: translateX(480px);
+      transform: translate(400px, 120px);
     }
 
     &:nth-child(4) {
-      transform: translateY(80px);
-      transform: translateX(520px);
+      transform: translate(600px, 80px);
     }
 
     &.fixed {
       transition: all 5.5s;
 
       &:nth-child(1) {
-        transform: translateY(-100px);
-        transform: translateX(0);
+        transform: translate(0, -100px );
       }
 
       &:nth-child(2) {
-        transform: translateY(-60px);
-        transform: translateX(340px);
+        transform: translate(200px, -60px);
       }
 
       &:nth-child(3) {
-        transform: translateY(-20px);
-        transform: translateX(480px);
+        transform: translate(400px, -20px);
       }
 
       &:nth-child(4) {
-        transform: translateY(20px);
-        transform: translateX(520px);
+        transform: translate(600px, 20px);
       }
     }
   }
