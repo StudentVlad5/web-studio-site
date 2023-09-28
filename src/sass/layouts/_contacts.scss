@@ -67,7 +67,7 @@
       &:focus~span,
       &:not(:placeholder-shown)~span {
         color: red;
-        transform: translateY(0);
+        transform: translate(0,0);
 
         color: var(--cl-txt-grey);
         font-size: 10px;
@@ -88,7 +88,7 @@
         line-height: 20px;
         letter-spacing: -0.32px;
 
-        transform: translateY(20px);
+        transform: translate(0,20px);
         transition: transform 150ms linear;
       }
     }
@@ -129,7 +129,7 @@
       &:focus~span,
       &:not(:placeholder-shown)~span {
         color: red;
-        transform: translateY(0);
+        transform: translate(0,0);
         color: var(--cl-txt-grey);
         font-size: 10px;
         line-height: 13.83px;

@@ -19,12 +19,12 @@
 
     &-hide {
         display: none;
-        transform: translateY(-73px);
+        transform: translate(0,-73px);
     }
 
     &-show {
         display: flex;
-        transform: translateY(0);
+        transform: translate(0,0);
     }
 
     @include mq(desktop) {
