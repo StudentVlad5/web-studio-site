@@ -136,6 +136,7 @@ function addClientsRewiers() {
                       id="play${item.clientId}"
                       data-play="play"
                       data-audio="${item.clientId}"
+                      aria-label="play reveiw ${item.clientId}"
                       class="action-btn action-btn-big player__btn play--btn"
                     >
                     <svg
@@ -150,6 +151,7 @@ function addClientsRewiers() {
                       id="pause${item.clientId}"
                       data-play="pause"
                       data-audio="${item.clientId}"
+                      aria-label="pause reveiw ${item.clientId}"
                       class="action-btn action-btn-big player__btn hidden pause--btn"
                     >
                       <svg
@@ -191,6 +193,7 @@ function addClientsRewiers() {
                     class="player__switch-subtitle testimonials__switchSubtitleBtn switchSubtitleBtn_${item.clientId}"
                     data-count="switchSubtitleBtn_${item.clientId}"
                     data-audio=${item.clientId}
+                    aria-label="switchSubtitle reveiw ${item.clientId}"
                     >
                     <svg class="player__icon" width="10" height="10">
                       <use href="${sprite}#arrow-right2"></use>
